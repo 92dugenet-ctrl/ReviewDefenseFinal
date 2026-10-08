@@ -131,19 +131,19 @@
   const init = async () => {
     // Le registre est la source de vérité ; aucun article n’est réécrit ici.
     try {
-      const response = await fetch("/data/articles.json", {cache:"no-cache"});
+      const response = await fetch("/content/articles/data/articles.json", {cache:"no-cache"});
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const registry = await response.json();
       if (!Array.isArray(registry) || registry.length === 0) throw new Error("Registre éditorial vide");
       articles = registry.map(item => {
-        const topic = categoryToTopic[item.category] || "cas-concrets";
+        const topic = categoryToTopic[item.category] || categoryToTopic[item.category_label] || "cas-concrets";
         const html = item.html || "";
         const illustration = item.illustration || "";
         return {
           id:String(item.id),
           sourceId:item.id,
           topic,
-          type:item.type || "Guide pratique",
+          type:item.type || "Guide",
           title:item.title || "Ressource ReviewDefense",
           intro:item.meta_description || "",
           html,
@@ -164,7 +164,7 @@
       articleMap = {};
       topics.forEach(topic => { topic.count = 0; });
       const roots = document.querySelectorAll("[data-topic-mosaic], [data-content-mosaic]");
-      roots.forEach(root => root.innerHTML = '<p class="resource-connector-error">Le catalogue des articles n’est pas encore déployé. Le connecteur attend data/articles.json et les fichiers associés.</p>');
+      roots.forEach(root => root.innerHTML = '<p class="resource-connector-error">Le catalogue des articles n’est pas encore déployé. Le connecteur attend content/articles/data/articles.json et les fichiers associés.</p>');
     }
 
     const view = document.body.dataset.resourceView;
