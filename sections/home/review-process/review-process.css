@@ -1,0 +1,3 @@
+/* HOME 04 — decision narrative */
+#home-process { background: var(--rd-bg); padding: 150px 0; }
+.rd-process__intro, .rd-process__story { width: min(1120px, calc(100% - 64px)); margin-left: auto; margin-right: auto; }
