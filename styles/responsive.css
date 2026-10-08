@@ -1,1 +1,8 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+/* ReviewDefense — global responsive rules */
+@media (max-width: 900px) {
+  :root { --rd-gutter: 32px; }
+}
+@media (max-width: 560px) {
+  :root { --rd-gutter: 24px; }
+  .rd-shell { width: min(var(--rd-max), calc(100% - var(--rd-gutter))); }
+}
