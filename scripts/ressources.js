@@ -110,7 +110,7 @@
       paragraph.push(line);
     }
     flush(); closeList();
-    return out.join("\\n");
+    return out.join("\n");
   };
 
   const loadArticleBody = async article => {
@@ -126,7 +126,7 @@
         }
       }
       if (article.markdown) {
-        const response = await fetch(article.markdown, {headers: {"Accept":"text/markdown, text/plain"});
+        const response = await fetch(article.markdown, {headers: {"Accept":"text/markdown, text/plain"}});
         if (response.ok) {
           const markdown = (await response.text()).replace(/^# .+\n/, "").replace(/^\*\*.+?\*\*\n/m, "").replace(/^## SEO[\s\S]*?(?=^## )/m, "");
           body.innerHTML = markdownToHtml(markdown);
