@@ -1,1 +1,101 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+/* ReviewDefense — global motion system V24 */
+:root {
+  --rd-motion-distance: 24px;
+  --rd-motion-duration: 700ms;
+  --rd-motion-stagger: 70ms;
+  --rd-motion-ease: cubic-bezier(.22,1,.36,1);
+}
+html { scroll-behavior: smooth; }
+body { overflow-x: clip; }
+.rd-scroll-progress {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: var(--rd-primary);
+}
+.rd-motion-item {
+  opacity: 0;
+  transform: translate3d(0, var(--rd-motion-distance), 0) scale(.985);
+  transition: opacity var(--rd-motion-duration) var(--rd-motion-ease),
+    transform var(--rd-motion-duration) var(--rd-motion-ease);
+  transition-delay: var(--rd-motion-delay, 0ms);
+  will-change: opacity, transform;
+}
+.rd-motion-item.is-visible { opacity: 1; transform: none; }
+.rd-motion-item[data-motion="fade"] { transform: none; }
+.rd-motion-item[data-motion="fade"].is-visible { transform: none; }
+.rd-motion-item[data-motion="left"] { transform: translate3d(-28px, 0, 0); }
+.rd-motion-item[data-motion="right"] { transform: translate3d(28px, 0, 0); }
+.rd-motion-item[data-motion="scale"] { transform: scale(.94); }
+.rd-motion-item[data-motion="scale"].is-visible { transform: scale(1); }
+.rd-motion-item[data-motion="left"].is-visible,
+.rd-motion-item[data-motion="right"].is-visible { transform: translate3d(0, 0, 0); }
+.rd-motion-group { --rd-motion-delay: 0ms; }
+.rd-motion-group > .rd-motion-item:nth-child(2) { --rd-motion-delay: 70ms; }
+.rd-motion-group > .rd-motion-item:nth-child(3) { --rd-motion-delay: 140ms; }
+.rd-motion-group > .rd-motion-item:nth-child(4) { --rd-motion-delay: 210ms; }
+.rd-motion-group > .rd-motion-item:nth-child(5) { --rd-motion-delay: 280ms; }
+.rd-motion-group > .rd-motion-item:nth-child(6) { --rd-motion-delay: 350ms; }
+.rd-motion-group > .rd-motion-item:nth-child(7) { --rd-motion-delay: 420ms; }
+.rd-parallax { --rd-parallax-y: 0px; transform: translate3d(0, var(--rd-parallax-y), 0); }
+.rd-magnetic { transition: transform 220ms var(--rd-motion-ease); }
+.rd-motion-wipe { position: relative; overflow: hidden; }
+.rd-motion-wipe::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--rd-ink);
+  transform: translateX(0);
+  transition: transform 900ms var(--rd-motion-ease);
+  pointer-events: none;
+}
+.rd-motion-wipe.is-visible::after { transform: translateX(101%); }
+.rd-page-enter { animation: rd-page-enter 650ms var(--rd-motion-ease) both; }
+@keyframes rd-page-enter { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.rd-header-scrolling [data-global-header] { box-shadow: 0 8px 30px rgba(11,22,48,.05); }
+.resource-topic, .resource-content {
+  --rd-tile-y: 0px;
+  --rd-tile-scale: 1;
+  transform: translate3d(0, var(--rd-tile-y), 0) scale(var(--rd-tile-scale));
+}
+.resource-topic:hover, .resource-content:hover {
+  --rd-tile-y: -5px;
+  --rd-tile-scale: 1.008;
+}
+.resource-topic::before, .resource-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at var(--rd-mx, 75%) var(--rd-my, 25%), rgba(37,99,235,.10), transparent 32%);
+  opacity: 0;
+  transition: opacity 450ms var(--rd-motion-ease);
+  pointer-events: none;
+}
+.resource-topic:hover::before, .resource-content:hover::before { opacity: 1; }
+.rd-mosaic-visual {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  width: 96px;
+  height: 96px;
+  opacity: .72;
+  pointer-events: none;
+  transition: transform 700ms var(--rd-motion-ease), opacity 400ms ease;
+}
+.resource-topic:hover .rd-mosaic-visual { transform: translate3d(-4px, 4px, 0) rotate(2deg); opacity: 1; }
+@media (max-width: 760px) {
+  :root { --rd-motion-distance: 16px; }
+  .rd-mosaic-visual { width: 72px; height: 72px; right: 12px; top: 12px; opacity: .55; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .rd-motion-item, .rd-parallax, .rd-magnetic, .rd-page-enter,
+  .rd-mosaic-visual, .resource-topic, .resource-content { transition: none !important; animation: none !important; transform: none !important; }
+  .rd-motion-wipe::after { display: none; }
+}
