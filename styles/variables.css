@@ -1,1 +1,42 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+/* ReviewDefense — global design tokens */
+:root {
+  --rd-bg: #f8fafc;
+  --rd-surface: #ffffff;
+  --rd-ink: #0b1630;
+  --rd-ink-soft: #536078;
+  --rd-muted: #718096;
+  --rd-primary: #2563eb;
+  --rd-primary-hover: #172b52;
+  --rd-primary-soft: #eaf2ff;
+  --rd-success: #16856a;
+  --rd-success-soft: #e8f6f1;
+  --rd-warning: #b7791f;
+  --rd-warning-soft: #fff5df;
+  --rd-suspicion: #c45a4a;
+  --rd-suspicion-soft: #fbe9ea;
+  --rd-danger: #b42318;
+  --rd-danger-soft: #fdecec;
+  --rd-border: #e2e8f0;
+  --rd-border-strong: #cbd5e1;
+  --rd-max: 1280px;
+  --rd-gutter: 48px;
+  --rd-radius: 16px;
+  --rd-radius-small: 12px;
+  --rd-radius-graphic: 20px;
+  --rd-shadow: 0 8px 30px rgba(11,22,48,.06);
+  --rd-shadow-strong: 0 20px 60px rgba(11,22,48,.10);
+  --rd-space-1: 4px;
+  --rd-space-2: 8px;
+  --rd-space-3: 12px;
+  --rd-space-4: 16px;
+  --rd-space-5: 24px;
+  --rd-space-6: 32px;
+  --rd-space-7: 48px;
+  --rd-space-8: 64px;
+  --rd-space-9: 96px;
+  --rd-space-10: 128px;
+  --rd-ease: cubic-bezier(.22,1,.36,1);
+  --rd-fast: 160ms;
+  --rd-normal: 280ms;
+  --rd-slow: 500ms;
+}
