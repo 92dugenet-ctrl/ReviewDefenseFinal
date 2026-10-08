@@ -1,0 +1,8 @@
+/* ReviewDefense — global responsive rules */
+@media (max-width: 900px) {
+  :root { --rd-gutter: 32px; }
+}
+@media (max-width: 560px) {
+  :root { --rd-gutter: 24px; }
+  .rd-shell { width: min(var(--rd-max), calc(100% - var(--rd-gutter))); }
+}

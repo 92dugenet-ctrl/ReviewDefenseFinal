@@ -1,0 +1,9 @@
+/* ReviewDefense — global reset */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; background: var(--rd-bg); color: var(--rd-ink); }
+img, video, svg { max-width: 100%; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--rd-primary); outline-offset: 4px; }
+::selection { background: var(--rd-primary-soft); color: var(--rd-ink); }

@@ -1,0 +1,5 @@
+/* ReviewDefense — global utilities */
+.rd-muted { color: var(--rd-muted); }
+.rd-border-top { border-top: 1px solid var(--rd-border); }
+.rd-border-bottom { border-bottom: 1px solid var(--rd-border); }
+.rd-no-margin { margin: 0 !important; }

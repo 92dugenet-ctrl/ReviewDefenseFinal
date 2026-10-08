@@ -1,0 +1,20 @@
+/* ReviewDefense — typography system */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, p { margin-top: 0; }
+h1, h2, h3, h4 { color: var(--rd-ink); font-weight: 600; }
+h1 { font-size: clamp(42px, 5vw, 72px); line-height: 1.02; letter-spacing: -.04em; }
+h2 { font-size: clamp(30px, 3.5vw, 48px); line-height: 1.08; letter-spacing: -.03em; }
+h3 { font-size: 22px; line-height: 1.2; letter-spacing: -.02em; }
+p { color: var(--rd-ink-soft); }
+a { color: inherit; }
+.rd-label, .rd-eyebrow { font-size: 11px; line-height: 1.4; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.rd-number, [data-score], .tabular-nums { font-variant-numeric: tabular-nums; font-weight: 600; }

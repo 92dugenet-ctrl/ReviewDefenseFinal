@@ -1,0 +1,23 @@
+/* ReviewDefense — global layout primitives */
+.rd-shell { width: min(var(--rd-max), calc(100% - var(--rd-gutter))); margin: 0 auto; }
+.rd-eyebrow { margin: 0 0 16px; color: var(--rd-ink-soft); }
+.rd-lead { color: var(--rd-ink-soft); line-height: 1.65; }
+.rd-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: var(--rd-radius-small);
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: transform var(--rd-fast) var(--rd-ease), background var(--rd-fast) ease,
+    border-color var(--rd-fast) ease, color var(--rd-fast) ease;
+}
+.rd-button--primary { background: var(--rd-ink); color: #fff; }
+.rd-button--primary:hover { background: var(--rd-primary-hover); transform: translateY(-1px); }
+.rd-button--secondary { border-color: var(--rd-border-strong); background: transparent; color: var(--rd-ink); }
+.rd-button--secondary:hover { background: var(--rd-surface); border-color: var(--rd-ink); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
