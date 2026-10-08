@@ -1,0 +1,3 @@
+/* 05 — Score */
+#analyse-score .analyse-score-value { opacity: .1; transform: scale(.92); transition: opacity .8s ease, transform .8s ease; }
+#analyse-score.is-active .analyse-score-value { opacity: 1; transform: scale(1); }
