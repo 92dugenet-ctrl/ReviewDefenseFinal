@@ -1,0 +1,9 @@
+/* STRUCTURE ONLY — 04 */
+.solution-decider__inner { max-width: 900px; margin: 0 auto; padding: 200px 32px; text-align: center; }
+.solution-decider__header { margin-bottom: 110px; }
+.solution-decider__score { display: grid; place-items: center; gap: 16px; margin-bottom: 90px; }
+.placeholder--score { width: 220px; height: 180px; }
+.placeholder--score-label { width: 180px; height: 30px; }
+.solution-decider__signals { max-width: 640px; margin: 0 auto 80px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.placeholder--signal { min-height: 100px; }
+.placeholder--explanation { max-width: 620px; min-height: 130px; margin: auto; }
