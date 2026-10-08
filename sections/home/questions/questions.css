@@ -1,0 +1,2 @@
+/* HOME 03 — question selector */
+#home-questions { max-width: 1180px; margin: 0 auto; padding: 150px 32px; display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,430px); gap: 80px; }
