@@ -88,19 +88,54 @@
     renderContent(topic.id);
   };
 
+  const markdownToHtml = source => {
+    const escape = value => escapeHtml(value);
+    const inline = value => escape(value)
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g, "<em>$1</em>")
+      .replace(/`(.+?)`/g, "<code>$1</code>");
+    const lines = source.replace(/\r/g, "").split("\n");
+    const out = [];
+    let paragraph = [];
+    let list = false;
+    const flush = () => { if (paragraph.length) { out.push("<p>" + inline(paragraph.join(" ")) + "</p>"); paragraph = []; } };
+    const closeList = () => { if (list) { out.push("</ul>"); list = false; } };
+    for (const raw of lines) {
+      const line = raw.trim();
+      if (!line) { flush(); closeList(); continue; }
+      const heading = line.match(/^(#{1,4})\s+(.+)$/);
+      if (heading) { flush(); closeList(); const level = Math.min(heading[1].length + 1, 6); out.push(`<h${level}>${inline(heading[2])}</h${level}>`); continue; }
+      if (/^-\s+/.test(line)) { flush(); if (!list) { out.push("<ul>"); list = true; } out.push("<li>" + inline(line.replace(/^-\s+/, "")) + "</li>"); continue; }
+      closeList();
+      paragraph.push(line);
+    }
+    flush(); closeList();
+    return out.join("\\n");
+  };
+
   const loadArticleBody = async article => {
     const body = document.querySelector("[data-article-body]");
     if (!body) return;
     try {
-      const response = await fetch(article.html, {headers: {"Accept":"text/html"}});
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const source = await response.text();
-      const parsed = new DOMParser().parseFromString(source, "text/html");
-      const articleBody = parsed.querySelector(".article-body") || parsed.querySelector("article");
-      if (!articleBody) throw new Error("Contenu d’article introuvable");
-      body.innerHTML = articleBody.innerHTML;
+      if (article.html) {
+        const response = await fetch(article.html, {headers: {"Accept":"text/html"}});
+        if (response.ok) {
+          const parsed = new DOMParser().parseFromString(await response.text(), "text/html");
+          const articleBody = parsed.querySelector(".article-body") || parsed.querySelector("article");
+          if (articleBody) { body.innerHTML = articleBody.innerHTML; return; }
+        }
+      }
+      if (article.markdown) {
+        const response = await fetch(article.markdown, {headers: {"Accept":"text/markdown, text/plain"});
+        if (response.ok) {
+          const markdown = (await response.text()).replace(/^# .+\n/, "").replace(/^\*\*.+?\*\*\n/m, "").replace(/^## SEO[\s\S]*?(?=^## )/m, "");
+          body.innerHTML = markdownToHtml(markdown);
+          return;
+        }
+      }
+      throw new Error("Contenu d’article introuvable");
     } catch (error) {
-      body.innerHTML = '<p class="resource-connector-error">Le contenu complet de cet article n’est pas encore disponible. Vérifiez la présence des fichiers éditoriaux dans content/articles/html.</p>';
+      body.innerHTML = '<p class="resource-connector-error">Le contenu complet de cet article n’est pas encore disponible. Vérifiez les fichiers dans content/articles/html et content/articles/markdown.</p>';
     }
   };
 
@@ -137,7 +172,7 @@
       if (!Array.isArray(registry) || registry.length === 0) throw new Error("Registre éditorial vide");
       articles = registry.map(item => {
         const topic = categoryToTopic[item.category] || categoryToTopic[item.category_label] || "cas-concrets";
-        const html = item.html || "";
+        const html = item.html || "";\n        const markdown = item.markdown || "";
         const illustration = item.illustration || "";
         return {
           id:String(item.id),
