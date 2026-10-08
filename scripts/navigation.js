@@ -1,0 +1,1 @@
+// ReviewDefense — reserved for future route-aware navigation enhancements.
