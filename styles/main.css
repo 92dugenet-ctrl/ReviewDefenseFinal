@@ -1,1 +1,11 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+/* ReviewDefense — Global styles entry point */
+@import url("./reset.css");
+@import url("./variables.css");
+@import url("./typography.css");
+@import url("./layout.css");
+@import url("./animations.css");
+@import url("./motion-system.css");
+@import url("./responsive.css");
+@import url("./utilities.css");
+
+/* Component styles are loaded by the final build pipeline. */
