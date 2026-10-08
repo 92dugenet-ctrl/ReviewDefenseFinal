@@ -1,0 +1,3 @@
+/* 04 — Signals */
+#analyse-signals [data-signal] { transition: transform .6s ease, opacity .6s ease; }
+#analyse-signals.is-active [data-signal] { transform: translate(0, 0); opacity: 1; }
