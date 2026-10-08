@@ -1,1 +1,11 @@
-The requested file reference is not currently visible. Use files.search or files.list to rediscover the file, then retry with a returned ref_id or file_id.
+/* ReviewDefense — purposeful motion system */
+@keyframes rd-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes rd-fade-up { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes rd-soft-pulse { 0%,100% { opacity: .45; } 50% { opacity: .9; } }
+.rd-hover-lift { transition: transform var(--rd-normal) var(--rd-ease), box-shadow var(--rd-normal) ease, border-color var(--rd-normal) ease; }
+.rd-hover-lift:hover { transform: translateY(-3px); box-shadow: var(--rd-shadow); }
+.rd-reveal { animation: rd-fade-up 500ms var(--rd-ease) both; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
