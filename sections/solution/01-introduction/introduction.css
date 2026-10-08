@@ -1,0 +1,8 @@
+/* STRUCTURE ONLY — 01 */
+.solution-introduction__inner { min-height: 78vh; max-width: 1180px; margin: 0 auto; padding: 140px 32px; display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; align-items: center; }
+.solution-introduction__copy { display: grid; gap: 24px; }
+.placeholder--eyebrow { width: 110px; height: 14px; }
+.placeholder--title { width: min(520px, 100%); height: 130px; }
+.placeholder--short-copy { width: 360px; height: 54px; }
+.placeholder--media { min-height: 480px; }
+@media (max-width: 800px) { .solution-introduction__inner { grid-template-columns: 1fr; } }
