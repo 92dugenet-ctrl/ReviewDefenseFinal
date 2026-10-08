@@ -1,0 +1,3 @@
+/* HOME 01 — spatial opening */
+#home-hero { min-height: 760px; position: relative; overflow: hidden; background: var(--rd-bg); }
+.rd-hero-video__media { position: absolute; inset: 0; background: radial-gradient(circle at 72% 38%, rgba(37,99,235,.10), transparent 28%), radial-gradient(circle at 22% 70%, rgba(11,22,48,.05), transparent 26%); }
