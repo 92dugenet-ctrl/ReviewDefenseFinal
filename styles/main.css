@@ -8,6 +8,61 @@
 @import url("./responsive.css");
 @import url("./utilities.css");
 
+/* Public page sections: keep all imports before CSS rules so browsers load the illustrations and animations. */
+@import url("../sections/analyse/01-introduction/introduction.css");
+@import url("../sections/analyse/02-context/context.css");
+@import url("../sections/analyse/03-observation/observation.css");
+@import url("../sections/analyse/04-signals/signals.css");
+@import url("../sections/analyse/05-score/score.css");
+@import url("../sections/analyse/06-explanation/explanation.css");
+@import url("../sections/analyse/07-decision/decision.css");
+@import url("../sections/analyse/08-actions/actions.css");
+@import url("../sections/analyse/09-walkthrough/walkthrough.css");
+@import url("../sections/analyse/10-conclusion/conclusion.css");
+@import url("../sections/home/decision/decision.css");
+@import url("../sections/home/hero-video/hero-video.css");
+@import url("../sections/home/questions/questions.css");
+@import url("../sections/home/review-process/review-process.css");
+@import url("../sections/home/review-scan/review-scan.css");
+@import url("../sections/intelligence/01-introduction/introduction.css");
+@import url("../sections/intelligence/02-layers/layers.css");
+@import url("../sections/intelligence/03-sources/sources.css");
+@import url("../sections/intelligence/04-signals/signals.css");
+@import url("../sections/intelligence/05-reasoning/reasoning.css");
+@import url("../sections/intelligence/06-explanation/explanation.css");
+@import url("../sections/intelligence/07-context/context.css");
+@import url("../sections/intelligence/08-human-loop/human-loop.css");
+@import url("../sections/intelligence/09-walkthrough/walkthrough.css");
+@import url("../sections/intelligence/10-conclusion/conclusion.css");
+@import url("../sections/reponse/01-introduction/introduction.css");
+@import url("../sections/reponse/02-understand/understand.css");
+@import url("../sections/reponse/03-type/type.css");
+@import url("../sections/reponse/04-compose/compose.css");
+@import url("../sections/reponse/05-tone/tone.css");
+@import url("../sections/reponse/06-edit/edit.css");
+@import url("../sections/reponse/07-variants/variants.css");
+@import url("../sections/reponse/08-validation/validation.css");
+@import url("../sections/reponse/09-decision/decision.css");
+@import url("../sections/reponse/10-conclusion/conclusion.css");
+@import url("../sections/signalement/01-introduction/introduction.css");
+@import url("../sections/signalement/02-context/context.css");
+@import url("../sections/signalement/03-grounds/grounds.css");
+@import url("../sections/signalement/04-evidence/evidence.css");
+@import url("../sections/signalement/05-recommendation/recommendation.css");
+@import url("../sections/signalement/06-validation/validation.css");
+@import url("../sections/signalement/07-report/report.css");
+@import url("../sections/signalement/08-followup/followup.css");
+@import url("../sections/signalement/09-alternative/alternative.css");
+@import url("../sections/signalement/10-conclusion/conclusion.css");
+@import url("../sections/solution/01-introduction/introduction.css");
+@import url("../sections/solution/02-questions/questions.css");
+@import url("../sections/solution/03-comprendre/comprendre.css");
+@import url("../sections/solution/04-decider/decider.css");
+@import url("../sections/solution/05-agir/agir.css");
+@import url("../sections/solution/06-interface/interface.css");
+@import url("../sections/solution/07-conclusion/conclusion.css");
+
+
 main { min-height: 60vh; }
 main > section { position: relative; padding: var(--rd-space-10) 0; }
 main > section:nth-child(even) { background: rgba(255,255,255,.55); }
@@ -206,56 +261,3 @@ button { color: var(--rd-ink); }
   .rd-security-orbit { width:96vw; }
   .rd-security-orbit [data-orbit-node] { width:88px; transform:rotate(calc(var(--i,0) * 60deg)) translateY(-175px) rotate(calc(var(--i,0) * -60deg)); }
 }
-/* Public page sections: load their styles globally so the visual composition and motion remain intact on GitHub Pages. */
-@import url("../sections/analyse/01-introduction/introduction.css");
-@import url("../sections/analyse/02-context/context.css");
-@import url("../sections/analyse/03-observation/observation.css");
-@import url("../sections/analyse/04-signals/signals.css");
-@import url("../sections/analyse/05-score/score.css");
-@import url("../sections/analyse/06-explanation/explanation.css");
-@import url("../sections/analyse/07-decision/decision.css");
-@import url("../sections/analyse/08-actions/actions.css");
-@import url("../sections/analyse/09-walkthrough/walkthrough.css");
-@import url("../sections/analyse/10-conclusion/conclusion.css");
-@import url("../sections/home/decision/decision.css");
-@import url("../sections/home/hero-video/hero-video.css");
-@import url("../sections/home/questions/questions.css");
-@import url("../sections/home/review-process/review-process.css");
-@import url("../sections/home/review-scan/review-scan.css");
-@import url("../sections/intelligence/01-introduction/introduction.css");
-@import url("../sections/intelligence/02-layers/layers.css");
-@import url("../sections/intelligence/03-sources/sources.css");
-@import url("../sections/intelligence/04-signals/signals.css");
-@import url("../sections/intelligence/05-reasoning/reasoning.css");
-@import url("../sections/intelligence/06-explanation/explanation.css");
-@import url("../sections/intelligence/07-context/context.css");
-@import url("../sections/intelligence/08-human-loop/human-loop.css");
-@import url("../sections/intelligence/09-walkthrough/walkthrough.css");
-@import url("../sections/intelligence/10-conclusion/conclusion.css");
-@import url("../sections/reponse/01-introduction/introduction.css");
-@import url("../sections/reponse/02-understand/understand.css");
-@import url("../sections/reponse/03-type/type.css");
-@import url("../sections/reponse/04-compose/compose.css");
-@import url("../sections/reponse/05-tone/tone.css");
-@import url("../sections/reponse/06-edit/edit.css");
-@import url("../sections/reponse/07-variants/variants.css");
-@import url("../sections/reponse/08-validation/validation.css");
-@import url("../sections/reponse/09-decision/decision.css");
-@import url("../sections/reponse/10-conclusion/conclusion.css");
-@import url("../sections/signalement/01-introduction/introduction.css");
-@import url("../sections/signalement/02-context/context.css");
-@import url("../sections/signalement/03-grounds/grounds.css");
-@import url("../sections/signalement/04-evidence/evidence.css");
-@import url("../sections/signalement/05-recommendation/recommendation.css");
-@import url("../sections/signalement/06-validation/validation.css");
-@import url("../sections/signalement/07-report/report.css");
-@import url("../sections/signalement/08-followup/followup.css");
-@import url("../sections/signalement/09-alternative/alternative.css");
-@import url("../sections/signalement/10-conclusion/conclusion.css");
-@import url("../sections/solution/01-introduction/introduction.css");
-@import url("../sections/solution/02-questions/questions.css");
-@import url("../sections/solution/03-comprendre/comprendre.css");
-@import url("../sections/solution/04-decider/decider.css");
-@import url("../sections/solution/05-agir/agir.css");
-@import url("../sections/solution/06-interface/interface.css");
-@import url("../sections/solution/07-conclusion/conclusion.css");
