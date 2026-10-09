@@ -1,0 +1,96 @@
+name: Import ReviewDefenseFinal resource articles
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_zip:
+        description: Relative path to the uploaded 91-article ZIP in the selected branch
+        required: true
+        type: string
+        default: "Review_Defense_91_Articles_Complete_Site_Package (2).zip"
+  push:
+    branches:
+      - prepare/91-article-import
+    paths:
+      - ".github/workflows/import-resource-articles.yml"
+      - "scripts/import_resource_articles.py"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reviewdefensefinal-resource-import-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  import-articles:
+    name: Validate and import 91 articles
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout selected branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate ZIP path
+        id: input
+        shell: bash
+        env:
+          REQUESTED_ZIP: ${{ inputs.source_zip || 'Review_Defense_91_Articles_Complete_Site_Package (2).zip' }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          raw = os.environ["REQUESTED_ZIP"]
+          path = Path(raw)
+          if path.is_absolute() or ".." in path.parts or path.suffix.lower() != ".zip":
+              raise SystemExit("Chemin ZIP refusé : fournir un chemin relatif .zip sans '..'.")
+          resolved = path.resolve()
+          if not resolved.is_file() or Path.cwd().resolve() not in resolved.parents:
+              raise SystemExit(f"ZIP introuvable dans la branche : {raw}")
+          print(f"ZIP source confirmé : {raw}")
+          PY
+          echo "zip_path=$REQUESTED_ZIP" >> "$GITHUB_OUTPUT"
+
+      - name: Import and validate article package
+        run: python scripts/import_resource_articles.py --zip "${{ steps.input.outputs.zip_path }}" --root .
+
+      - name: Verify generated files
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          items = json.loads(Path("content/articles/registry.json").read_text(encoding="utf-8"))
+          assert len(items) == 91, f"Expected 91 registry entries, got {len(items)}"
+          for item in items:
+              slug = item["slug"]
+              assert Path("ressources", slug, "index.html").is_file(), slug
+              assert Path(item["html_file"]).is_file(), item["html_file"]
+              assert Path(item["markdown_file"]).is_file(), item["markdown_file"]
+              assert Path(item["illustration_file"]).is_file(), item["illustration_file"]
+          assert Path("ressources/index.html").is_file()
+          print("OK: 91 article pages, 91 HTML sources, 91 Markdown files, 91 SVG illustrations, index and registry.")
+          PY
+
+      - name: Commit imported resources
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add ressources content/articles assets/articles
+          if git diff --cached --quiet; then
+            echo "No generated changes to commit."
+            exit 0
+          fi
+          git commit -m "Import 91 ReviewDefense resource articles"
+          git push origin "HEAD:${{ github.ref_name }}"
