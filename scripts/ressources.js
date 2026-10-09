@@ -1,6 +1,9 @@
 (() => {
   "use strict";
 
+  const siteBase = location.pathname.startsWith("/ReviewDefenseFinal/") ? "/ReviewDefenseFinal" : "";
+  const sitePath = path => siteBase && typeof path === "string" && path.startsWith("/") ? siteBase + path : path;
+
   // Connecteur éditorial ReviewDefense :
   // data/articles.json = registre éditorial ; content/articles/html = contenu ;
   // assets/articles = illustrations. Le site conserve son gabarit et sa mosaïque.
@@ -118,7 +121,7 @@
     if (!body) return;
     try {
       if (article.html) {
-        const response = await fetch(article.html, {headers: {"Accept":"text/html"}});
+        const response = await fetch(sitePath(article.html), {headers: {"Accept":"text/html"}});
         if (response.ok) {
           const parsed = new DOMParser().parseFromString(await response.text(), "text/html");
           const articleBody = parsed.querySelector(".article-body") || parsed.querySelector("article");
@@ -155,7 +158,7 @@
     if (back) back.href = `theme.html?theme=${encodeURIComponent(topic.id)}`;
     const visual = document.querySelector("[data-article-visual]");
     if (visual && article.illustration) {
-      visual.innerHTML = `<img class="rd-article-illustration" src="${escapeHtml(article.illustration)}" alt="Illustration — ${escapeHtml(article.title)}" loading="eager">`;
+      visual.innerHTML = `<img class="rd-article-illustration" src="${escapeHtml(sitePath(article.illustration))}" alt="Illustration — ${escapeHtml(article.title)}" loading="eager">`;
     }
     loadArticleBody(article);
     const related = document.querySelector("[data-related-grid]");
@@ -166,7 +169,7 @@
   const init = async () => {
     // Le registre est la source de vérité ; aucun article n’est réécrit ici.
     try {
-      const response = await fetch("/content/articles/data/articles.json", {cache:"no-cache"});
+      const response = await fetch(sitePath("/content/articles/data/articles.json"), {cache:"no-cache"});
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       const registry = await response.json();
       if (!Array.isArray(registry) || registry.length === 0) throw new Error("Registre éditorial vide");
