@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="500" viewBox="0 0 1400 500" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Illustration de montagnes ReviewDefense</title>
+  <desc id="desc">Relief abstrait de montagnes en lignes bleues très claires, utilisé comme illustration décorative du pied de page.</desc>
+  <defs>
+    <linearGradient id="sky" x1="700" y1="0" x2="700" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3F7FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="ridgeA" x1="700" y1="80" x2="700" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D9E6FC" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#EDF3FD" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="ridgeB" x1="700" y1="180" x2="700" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BFD2F3" stop-opacity=".58"/>
+      <stop offset="1" stop-color="#E7EFFC" stop-opacity=".08"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="500" fill="url(#sky)"/>
+  <circle cx="1080" cy="105" r="46" fill="#E3ECFC" fill-opacity=".55"/>
+  <path d="M0 365 132 290 235 330 390 165 510 270 658 115 790 260 915 180 1050 300 1175 215 1400 350V500H0V365Z" fill="url(#ridgeA)"/>
+  <path d="m0 405 175-95 135 54 180-132 132 104 157-98 126 94 142-64 120 86 133-72v218H0V405Z" fill="url(#ridgeB)"/>
+  <path d="m390 165 52 46 68 59m148-155 55 70 77 75m125-155 53 72 82 48m125-10 56 42" stroke="#C1D4F4" stroke-opacity=".7" stroke-width="2" stroke-linecap="round"/>
+  <path d="M0 433c155-37 267-5 405-26s229-42 365-15 241 39 360 13 180-12 270 5" stroke="#C9D9F5" stroke-opacity=".65" stroke-width="2"/>
+  <path d="M0 466c185-22 300 11 465-4s271-30 408-9 320 26 527-6" stroke="#D9E4F8" stroke-opacity=".8" stroke-width="2"/>
+</svg>
