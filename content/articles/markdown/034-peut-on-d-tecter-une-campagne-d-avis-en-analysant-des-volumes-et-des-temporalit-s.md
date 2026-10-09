@@ -1,21 +1,21 @@
-# Comment reconnaître un faux avis Google sans se fier uniquement au texte ?
+# Peut-on détecter une campagne d’avis en analysant des volumes et des temporalités ?
 
-**Avis_fictifs · Guide pratique**
+**Score_de_suspicion · Guide pratique**
 
 ## SEO — Données éditoriales
 
 - **Mot-clé principal :** avis clients
 - **Mots-clés secondaires :** avis Google, réputation, gestion des avis
 - **Intention de recherche :** informationnelle / pratique
-- **Title SEO :** Comment reconnaître un faux avis Google sans se fier… | Review Defense
-- **Meta description :** Comment reconnaître un faux avis Google sans se fier uniquement au texte ? : guide pratique, points à vérifier, erreurs à éviter et conseils pour gérer les avis
-- **Slug conseillé :** comment-reconna-tre-un-faux-avis-google-sans-se-fier-uniquement-au-texte
+- **Title SEO :** Peut-on détecter une campagne d’avis en analysant des… | Review Defense
+- **Meta description :** Peut-on détecter une campagne d’avis en analysant des volumes et des temporalités ? : guide pratique, points à vérifier, erreurs à éviter et conseils pour gérer
+- **Slug conseillé :** peut-on-d-tecter-une-campagne-d-avis-en-analysant-des-volumes-et-des-tempor
 - **Angle éditorial :** réponse concrète à la question recherchée, avec méthode, mise en situation et application opérationnelle.
 
 
 ## Le vrai problème derrière la question
 
-La question « Comment reconnaître un faux avis Google sans se fier uniquement au texte ? » paraît appeler une réponse simple. En pratique, le avis fictifs oblige à distinguer plusieurs situations qui peuvent produire un résultat très différent. Le point de départ de cet article est donc **identifier les signaux suspects sans confondre anomalie et preuve de fraude**.
+La question « Peut-on détecter une campagne d’avis en analysant des volumes et des temporalités ? » paraît appeler une réponse simple. En pratique, le score de suspicion oblige à distinguer plusieurs situations qui peuvent produire un résultat très différent. Le point de départ de cet article est donc **produire un indicateur explicable qui aide à prioriser sans prétendre établir la vérité**.
 
 Le point délicat n’est pas de trouver un indice spectaculaire, mais de déterminer ce que cet indice permet réellement de conclure. Un même comportement peut avoir une explication parfaitement légitime ou devenir pertinent lorsqu’il se combine avec d’autres éléments. L’analyse doit donc partir de faits observables, comparer ces faits au fonctionnement habituel de l’établissement et conserver les incertitudes au lieu de les transformer en accusation.
 
@@ -86,14 +86,14 @@ L’automatisation peut accélérer la collecte, le classement, la comparaison e
 
 ## Pourquoi le contexte change ici la décision
 
-Pour « Comment reconnaître un faux avis Google sans se fier uniquement au texte ? », le même signal peut avoir une signification différente selon le volume habituel d’avis, le secteur, la saison, le nombre d’établissements, l’existence d’une campagne marketing ou un incident client récent. Un indicateur isolé ne suffit donc pas à conclure.
+Pour « Peut-on détecter une campagne d’avis en analysant des volumes et des temporalités ? », le même signal peut avoir une signification différente selon le volume habituel d’avis, le secteur, la saison, le nombre d’établissements, l’existence d’une campagne marketing ou un incident client récent. Un indicateur isolé ne suffit donc pas à conclure.
 
 Dans ce dossier, l’équipe doit surtout se demander : **qu’est-ce qui est inhabituel par rapport au fonctionnement normal de cette entreprise, et quelles données permettent réellement de le démontrer ?** Cette question est plus utile qu’une recherche automatique de coupable ou de certitude.
 
 ## Mise en situation — cas concret
 
 ### Le cas
-Le restaurant familial connaît une situation directement liée à la question « Comment reconnaître un faux avis Google sans se fier uniquement au texte ? ». Sur 12 avis examinés cette semaine, plusieurs attirent l’attention. La direction ne veut ni ignorer le problème ni réagir trop vite. Elle désigne donc une personne responsable du dossier et fixe un objectif simple : pouvoir expliquer, pour chaque décision, **ce qui a été observé, ce qui a été vérifié et pourquoi telle action a été choisie**.
+Le magasin de prêt-à-porter connaît une situation directement liée à la question « Peut-on détecter une campagne d’avis en analysant des volumes et des temporalités ? ». Sur 64 avis examinés cette semaine, plusieurs attirent l’attention. La direction ne veut ni ignorer le problème ni réagir trop vite. Elle désigne donc une personne responsable du dossier et fixe un objectif simple : pouvoir expliquer, pour chaque décision, **ce qui a été observé, ce qui a été vérifié et pourquoi telle action a été choisie**.
 
 ### Déroulement
 Le premier passage consiste à figer les éléments disponibles : URL de l’avis, date et heure, note, texte, captures et événement déclencheur. Le responsable ajoute ensuite le contexte métier pertinent : commande, réservation, intervention, échange avec le service client ou absence d’information exploitable. Il ne collecte pas davantage de données personnelles que nécessaire.
@@ -121,7 +121,7 @@ L’intérêt opérationnel est de conserver l’historique : avis analysé, sig
 
 ## Les points essentiels à retenir
 
-- Pour **Comment reconnaître un faux avis Google sans se fier uniquement au texte ?**, commencer par les faits observables plutôt que par une conclusion.
+- Pour **Peut-on détecter une campagne d’avis en analysant des volumes et des temporalités ?**, commencer par les faits observables plutôt que par une conclusion.
 - Distinguer clairement **signal, indice, élément vérifiable et preuve**.
 - Choisir une action proportionnée : répondre, vérifier, signaler, documenter, surveiller ou escalader.
 - Conserver la chronologie et les éléments qui permettent à un tiers de comprendre la décision.
@@ -137,7 +137,7 @@ Cet article présente une méthode générale de gestion des avis.
 
 ## Mini-FAQ — réponses pratiques
 
-### Par quoi commencer pour « Comment reconnaître un faux avis Google sans se fier uniquement au texte » ?
+### Par quoi commencer pour « Peut-on détecter une campagne d’avis en analysant des volumes et des temporalités » ?
 Commencez par définir précisément le problème à traiter et par conserver les éléments qui permettent de vérifier les faits.
 Ne partez pas directement d’une conclusion : identifiez d’abord ce qui est certain, ce qui doit être vérifié et ce qui reste inconnu.
 Cette première étape permet ensuite de choisir une action proportionnée et de conserver un dossier compréhensible si la situation évolue.
