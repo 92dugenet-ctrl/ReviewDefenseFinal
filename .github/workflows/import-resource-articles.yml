@@ -83,11 +83,15 @@ jobs:
 
       - name: Commit imported resources
         shell: bash
+        env:
+          SOURCE_ZIP: ${{ steps.input.outputs.zip_path }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ressources content/articles assets/articles
+          # Le ZIP sert de source à l'import, mais ne doit pas être publié avec le site.
+          rm -- "$SOURCE_ZIP"
+          git add -A -- ressources content/articles assets/articles "$SOURCE_ZIP"
           if git diff --cached --quiet; then
             echo "No generated changes to commit."
             exit 0
