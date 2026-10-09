@@ -1,1 +1,71 @@
-/* 06-explanation — section-specific presentation hooks. */
+/* Intelligence — restrained explanation tabs and accessible states. */
+#intelligence-explanation .intelligence-explanation-list {
+  min-width: 0;
+  align-content: center;
+  gap: 10px;
+}
+#intelligence-explanation .intelligence-explanation-list [role="tab"] {
+  width: 100%;
+  min-width: 0;
+  padding: 15px 16px;
+  border: 1px solid var(--rd-border);
+  border-radius: var(--rd-radius-small);
+  background: var(--rd-surface);
+  color: var(--rd-ink);
+  text-align: left;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: border-color 160ms ease, background 160ms ease;
+}
+#intelligence-explanation .intelligence-explanation-list [role="tab"]:hover,
+#intelligence-explanation .intelligence-explanation-list [role="tab"].is-active {
+  border-color: var(--rd-border-strong);
+  background: #f8faff;
+}
+#intelligence-explanation .intelligence-explanation-list [role="tab"]:focus-visible {
+  outline: 2px solid var(--rd-primary);
+  outline-offset: 3px;
+}
+#intelligence-explanation .intelligence-explanation-panel {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid var(--rd-border);
+  border-radius: var(--rd-radius-small);
+  background: var(--rd-surface);
+}
+#intelligence-explanation .intelligence-explanation-panel[hidden] {
+  display: none !important;
+}
+#intelligence-explanation .intelligence-explanation-panel strong {
+  display: block;
+  margin: 0 0 5px;
+  color: var(--rd-ink);
+  font-size: 13px;
+  font-weight: 600;
+}
+#intelligence-explanation .intelligence-explanation-panel p {
+  margin: 0 0 14px;
+  color: var(--rd-ink-soft);
+  font-size: 14px;
+  line-height: 1.65;
+}
+#intelligence-explanation .intelligence-explanation-panel p:last-child {
+  margin-bottom: 0;
+}
+#intelligence-explanation .intelligence-score strong {
+  font-variant-numeric: tabular-nums;
+}
+#intelligence-explanation .intelligence-note {
+  max-width: 680px;
+  color: var(--rd-ink-soft);
+  font-size: 13px;
+}
+@media (max-width: 700px) {
+  #intelligence-explanation .intelligence-explanation-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
+  }
+  #intelligence-explanation .intelligence-explanation-panel {
+    padding: 17px;
+  }
+}
