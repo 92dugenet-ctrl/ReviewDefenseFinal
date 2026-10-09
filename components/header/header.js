@@ -52,6 +52,7 @@
       const response = await fetch(sitePath(menus[key]), { credentials: "same-origin" });
       if (!response.ok) throw new Error(response.status);
       container.innerHTML = await response.text();
+      rewriteRootPaths(container);
       container.classList.add("is-open");
       triggers.forEach((item) => item.setAttribute("aria-expanded", String(item === trigger)));
     } catch (error) {
