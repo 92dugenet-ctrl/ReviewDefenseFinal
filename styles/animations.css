@@ -5,7 +5,3 @@
 .rd-hover-lift { transition: transform var(--rd-normal) var(--rd-ease), box-shadow var(--rd-normal) ease, border-color var(--rd-normal) ease; }
 .rd-hover-lift:hover { transform: translateY(-3px); box-shadow: var(--rd-shadow); }
 .rd-reveal { animation: rd-fade-up 500ms var(--rd-ease) both; }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
-}

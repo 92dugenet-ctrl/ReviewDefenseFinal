@@ -1,0 +1,7 @@
+/* Shared homepage typography: restrained headings, readable copy, consistent labels. */
+.rd-home > section h2 { max-width: 640px; margin: 0 0 12px; font-size: clamp(23px, 2.25vw, 30px); line-height: 1.22; letter-spacing: -.025em; font-weight: 600; }
+.rd-home > section h3 { margin: 0 0 8px; font-size: 17px; line-height: 1.35; letter-spacing: -.015em; font-weight: 600; }
+.rd-home > section p { font-size: 14px; line-height: 1.7; }
+.rd-home .rd-home-kicker, .rd-home .rd-process__intro > span { display: inline-block; margin-bottom: 10px; color: var(--rd-ink-soft); font-size: 10px; line-height: 1.4; letter-spacing: .11em; font-weight: 600; }
+.rd-home > section p:last-child { margin-bottom: 0; }
+@media (max-width: 560px) { .rd-home > section h2 { font-size: 23px; } }

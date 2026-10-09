@@ -1,7 +1,7 @@
 /* HOME 01 — restrained, editorial video opening.
    Keep all copy in its own left column: no text is laid over the footage. */
 #home-hero {
-  min-height: 590px;
+  min-height: 520px;
   display: flex;
   align-items: center;
   position: relative;

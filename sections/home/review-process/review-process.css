@@ -1,3 +1,24 @@
-/* HOME 04 — decision narrative */
-#home-process { background: var(--rd-bg); padding: 150px 0; }
-.rd-process__intro, .rd-process__story { width: min(1120px, calc(100% - 64px)); margin-left: auto; margin-right: auto; }
+/* HOME 04 — review process */
+#home-process { width: 100%; max-width: none; padding-block: 38px; background: var(--rd-bg); }
+#home-process .rd-process__intro, #home-process .rd-process__story { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+#home-process .rd-process__intro { margin-bottom: 20px; }
+#home-process .rd-process__intro h2 { max-width: 680px; }
+#home-process .rd-process__story { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+#home-process .rd-process__step { min-width: 0; min-height: 150px; padding: 22px; border: 1px solid var(--rd-border); border-radius: var(--rd-radius); background: var(--rd-surface); cursor: pointer; transition: border-color 180ms ease, background 180ms ease, transform 180ms ease; }
+#home-process .rd-process__step > span { display: block; margin-bottom: 26px; color: var(--rd-primary); font-size: 10px; font-weight: 600; letter-spacing: .12em; }
+#home-process .rd-process__step h3 { margin-bottom: 8px; }
+#home-process .rd-process__step p { margin: 0; color: var(--rd-ink-soft); }
+#home-process .rd-process__step:hover { transform: translateY(-2px); }
+#home-process .rd-process__step--active { border-color: var(--rd-primary); background: var(--rd-primary-soft); }
+#home-process .rd-process__step:focus-visible { outline: 2px solid var(--rd-primary); outline-offset: 3px; }
+@media (max-width: 900px) {
+  #home-process { padding-block: 30px; }
+  #home-process .rd-process__story { grid-template-columns: 1fr; }
+  #home-process .rd-process__step { min-height: 0; }
+  #home-process .rd-process__step > span { margin-bottom: 12px; }
+}
+@media (max-width: 560px) {
+  #home-process .rd-process__intro, #home-process .rd-process__story { width: calc(100% - 40px); }
+  #home-process { padding-block: 24px; }
+}
+@media (prefers-reduced-motion: reduce) { #home-process .rd-process__step { transition: none; } #home-process .rd-process__step:hover { transform: none; } }
