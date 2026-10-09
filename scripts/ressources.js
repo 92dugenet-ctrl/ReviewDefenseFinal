@@ -70,7 +70,7 @@
     const query = document.querySelector("[data-resource-search]")?.value.trim().toLocaleLowerCase("fr") || "";
     const visible = articles.filter(article => {
       const topic = topicMap[article.topic] || topics[0];
-      const formatOk = !filter || article.topic === filter || article.type === filter;
+      const formatOk = !filter || article.topic === filter || article.type === filter || labelForType(article.type).toLocaleLowerCase("fr") === filter.toLocaleLowerCase("fr");
       return formatOk && (!query || `${article.title} ${topic.title} ${article.intro || ""}`.toLocaleLowerCase("fr").includes(query));
     });
     root.innerHTML = visible.map(card).join("");
