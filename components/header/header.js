@@ -1,5 +1,16 @@
 // ReviewDefense — Global Header
 (() => {
+  const siteBase = location.pathname.startsWith("/ReviewDefenseFinal/") ? "/ReviewDefenseFinal" : "";
+  const sitePath = path => siteBase && path.startsWith("/") ? siteBase + path : path;
+  const rewriteRootPaths = (root) => {
+    root.querySelectorAll("[href^='/'], [src^='/']").forEach((element) => {
+      for (const attribute of ["href", "src"]) {
+        const value = element.getAttribute(attribute);
+        if (value && value.startsWith("/") && !value.startsWith(siteBase + "/")) element.setAttribute(attribute, sitePath(value));
+      }
+    });
+  };
+
   const header = document.querySelector("[data-header]");
   const mobileToggle = document.querySelector("[data-mobile-toggle]");
   const mobilePanel = document.querySelector("[data-mobile-panel]");
@@ -38,7 +49,7 @@
     if (!menus[key]) return;
     if (trigger.getAttribute("aria-expanded") === "true") return closeMenus();
     try {
-      const response = await fetch(menus[key], { credentials: "same-origin" });
+      const response = await fetch(sitePath(menus[key]), { credentials: "same-origin" });
       if (!response.ok) throw new Error(response.status);
       container.innerHTML = await response.text();
       container.classList.add("is-open");
