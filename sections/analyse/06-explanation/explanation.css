@@ -1,2 +1,25 @@
 /* 06 — Explanation */
-#analyse-explanation .analyse-explanation-panel { min-height: 90px; }
+#analyse-explanation .analyse-explanation-panel {
+  min-height: 90px;
+  padding: 20px 22px;
+  border: 1px solid var(--rd-border);
+  border-radius: var(--rd-radius-small);
+  background: var(--rd-surface);
+  color: var(--rd-ink-soft);
+  line-height: 1.65;
+}
+
+#analyse-explanation .analyse-explanation-panel[hidden] {
+  display: none !important;
+}
+
+#analyse-explanation .analyse-signal-list [role="tab"] {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+}
+
+#analyse-explanation .analyse-signal-list [role="tab"]:focus-visible {
+  outline: 2px solid var(--rd-primary);
+  outline-offset: 3px;
+}
