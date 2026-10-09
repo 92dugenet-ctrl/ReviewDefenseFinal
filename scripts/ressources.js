@@ -64,7 +64,7 @@
     if (!root) return;
     const query = document.querySelector("[data-resource-search]")?.value.trim().toLocaleLowerCase("fr") || "";
     const visible = topics.filter(topic => !query || `${topic.title} ${topic.description}`.toLocaleLowerCase("fr").includes(query));
-    root.innerHTML = visible.map(topic => `<a class="resource-topic" href="theme.html?theme=${encodeURIComponent(topic.id)}"><img class="rd-mosaic-visual" src="../../assets/mosaic/${topic.id}.svg" alt="" aria-hidden="true"><span class="resources-eyebrow">${topic.count} ressources</span><h3>${escapeHtml(topic.title)}</h3><p>${escapeHtml(topic.description)}</p></a>`).join("");
+    root.innerHTML = visible.map(topic => `<a class="resource-topic" href="theme.html?theme=${encodeURIComponent(topic.id)}"><img class="rd-mosaic-visual" src="../../assets/mosaic/${topic.id === "methodes" ? "ia" : topic.id}.svg" alt="" aria-hidden="true"><span class="resources-eyebrow">${topic.count} ressources</span><h3>${escapeHtml(topic.title)}</h3><p>${escapeHtml(topic.description)}</p></a>`).join("");
   };
 
   const renderContent = filter => {
