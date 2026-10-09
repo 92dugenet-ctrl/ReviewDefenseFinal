@@ -3,7 +3,11 @@
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const addMotionItems = () => {
     const selectors = [
-      "main > section",
+      "main:not(.rd-home) > section",
+      ".rd-home > #home-hero > .rd-hero-video__content",
+      ".rd-home > #home-review-scan > .rd-home-scan__intro",
+      ".rd-home > #home-questions > .rd-home-questions__heading",
+      ".rd-home > #home-decision > .rd-decision-copy",
       "main > section > header",
       "main > section > .solution-introduction__copy",
       "main > section > .solution-introduction__visual",
@@ -19,7 +23,7 @@
       "main > section > .rd-security-content",
       "main > section > .rd-tariffs-card",
       "main > section > .rd-tariffs-copy",
-      "main > section > .rd-home-conclusion",
+      ".rd-home > .rd-home-conclusion",
       ".resources-intro__copy, .resources-intro__note, .resources-section-head, .resources-format-copy, .resources-format-nav"
     ];
     document.querySelectorAll(selectors.join(",")).forEach((element, index) => {
@@ -29,7 +33,7 @@
       if (index % 5 === 1) element.dataset.motion = "left";
       if (index % 5 === 2) element.dataset.motion = "right";
     });
-    document.querySelectorAll(".questions-list, .rd-process__story, .rd-decision-board, .resources-topic-mosaic, .resources-content-mosaic, .resources-related-grid, .rd-signal-grid, .rd-card-grid").forEach(group => group.classList.add("rd-motion-group"));
+    document.querySelectorAll(".rd-questions__list, .rd-scan-signals, .rd-process__story, .rd-decision-board, .resources-topic-mosaic, .resources-content-mosaic, .resources-related-grid, .rd-signal-grid, .rd-card-grid").forEach(group => group.classList.add("rd-motion-group"));
     document.querySelectorAll(".rd-motion-group > *").forEach(item => {
       if (!item.dataset.motionReady) {
         item.dataset.motionReady = "true";

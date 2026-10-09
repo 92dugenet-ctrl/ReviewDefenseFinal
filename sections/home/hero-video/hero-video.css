@@ -121,35 +121,6 @@
   font-size: 10px;
 }
 
-/* Quiet typography across the homepage: visuals and examples lead the page. */
-.rd-home > section h2 {
-  max-width: 640px;
-  margin-bottom: 14px;
-  font-size: clamp(23px, 2.25vw, 30px);
-  line-height: 1.22;
-  letter-spacing: -.025em;
-  font-weight: 600;
-}
-
-.rd-home > section h3 {
-  font-size: 17px;
-  line-height: 1.35;
-  letter-spacing: -.015em;
-  font-weight: 600;
-}
-
-.rd-home > section p {
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.rd-home .rd-home-kicker,
-.rd-home .rd-process__intro > span {
-  margin-bottom: 10px;
-  font-size: 10px;
-  letter-spacing: .11em;
-}
-
 @media (min-width: 901px) {
   #home-hero .rd-hero-video__content { padding-right: 24px; }
 }
@@ -188,7 +159,6 @@
   #home-hero .rd-hero-video__intro { font-size: 14px; }
   #home-hero .rd-hero-actions { margin: 18px 0; }
   #home-hero .rd-hero-review { padding: 13px; }
-  .rd-home > section h2 { font-size: 23px; }
 }
 
 /* Respect visitors who prefer less motion. */

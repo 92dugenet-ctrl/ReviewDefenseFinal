@@ -93,9 +93,18 @@ body { overflow-x: clip; }
   :root { --rd-motion-distance: 16px; }
   .rd-mosaic-visual { width: 72px; height: 72px; right: 12px; top: 12px; opacity: .55; }
 }
+
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
   .rd-motion-item, .rd-parallax, .rd-magnetic, .rd-page-enter,
-  .rd-mosaic-visual, .resource-topic, .resource-content { transition: none !important; animation: none !important; transform: none !important; }
-  .rd-motion-wipe::after { display: none; }
+  .rd-mosaic-visual, .resource-topic, .resource-content {
+    animation: none !important; transform: none !important; will-change: auto !important;
+  }
+  .rd-motion-wipe::after { display: none !important; }
 }
