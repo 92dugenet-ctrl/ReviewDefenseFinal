@@ -1,1 +1,116 @@
-.rd-analyse{background:#fff;color:#10233f}.analyse-shell{width:min(1120px,calc(100% - 64px));min-height:70vh;margin:auto;padding:120px 0;display:grid;align-content:center;gap:28px}.analyse-eyebrow{font-size:11px;letter-spacing:.16em;font-weight:700}.analyse-lead{max-width:720px;font-size:clamp(18px,2vw,24px);line-height:1.5}.analyse-review-card,.analyse-score-card,.analyse-product-frame{border:1px solid rgba(16,35,63,.14);background:#fbfcfe;border-radius:22px}.analyse-review-card{padding:42px}.analyse-score-card{padding:36px;text-align:center}.analyse-score-value{font-size:72px;line-height:1;font-weight:400}.analyse-signals{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.analyse-signals article{padding:24px;border-top:1px solid rgba(16,35,63,.18)}.analyse-explanation-panel{padding:28px;background:#f5f8fc}.analyse-actions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.analyse-actions-grid article{padding:24px;border:1px solid rgba(16,35,63,.12)}.analyse-product-frame{min-height:560px;padding:30px}@media(max-width:760px){.analyse-signals,.analyse-actions-grid{grid-template-columns:1fr}.analyse-shell{width:min(100% - 36px,680px)}}
+/* ReviewDefense — Analyse page: centered, restrained editorial layout. */
+.rd-analyse {
+  background: #fff;
+  color: var(--rd-ink, #10233f);
+}
+
+.rd-analyse > section {
+  padding-block: clamp(64px, 7vw, 96px);
+}
+
+.rd-analyse .analyse-section-shell {
+  width: min(960px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.analyse-shell {
+  width: min(960px, calc(100% - 48px));
+  min-height: 70vh;
+  margin: auto;
+  padding: 96px 0;
+  display: grid;
+  align-content: center;
+  gap: 28px;
+}
+
+.analyse-eyebrow {
+  font-size: 11px;
+  letter-spacing: .16em;
+  font-weight: 700;
+}
+
+.analyse-lead {
+  max-width: 680px;
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.55;
+}
+
+.analyse-review-card,
+.analyse-score-card,
+.analyse-product-frame {
+  border: 1px solid rgba(16, 35, 63, .12);
+  background: #fff;
+  border-radius: 18px;
+}
+
+.analyse-review-card {
+  padding: clamp(24px, 4vw, 36px);
+}
+
+.analyse-score-card {
+  padding: 32px;
+  text-align: center;
+}
+
+.analyse-score-value {
+  font-size: clamp(64px, 8vw, 96px);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.analyse-signals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.analyse-signals article {
+  padding: 22px;
+  border-top: 1px solid rgba(16, 35, 63, .16);
+}
+
+.analyse-explanation-panel {
+  padding: 24px;
+  background: #f7f9fc;
+}
+
+.analyse-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.analyse-actions-grid article {
+  padding: 22px;
+  border: 1px solid rgba(16, 35, 63, .12);
+  border-radius: 14px;
+}
+
+.analyse-product-frame {
+  min-height: 480px;
+}
+
+@media (max-width: 760px) {
+  .rd-analyse > section {
+    padding-block: 56px;
+  }
+
+  .rd-analyse .analyse-section-shell,
+  .analyse-shell {
+    width: min(100% - 36px, 680px);
+  }
+
+  .analyse-signals,
+  .analyse-actions-grid,
+  .analyse-context-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .analyse-review-card {
+    padding: 24px;
+  }
+
+  .analyse-product-frame {
+    min-height: 0;
+  }
+}
