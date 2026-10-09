@@ -120,9 +120,14 @@ def main() -> int:
                 "markdown_file": str(md_out.relative_to(root)).replace("\\", "/"),
                 "illustration_file": str(svg_out.relative_to(root)).replace("\\", "/"),
             })
+        registry_json = json.dumps(registry, ensure_ascii=False, indent=2) + "\n"
         registry_path = root / "content/articles/registry.json"
         registry_path.parent.mkdir(parents=True, exist_ok=True)
-        registry_path.write_text(json.dumps(registry, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        registry_path.write_text(registry_json, encoding="utf-8")
+        # Le connecteur de ressources du site lit précisément ce chemin.
+        site_registry_path = root / "content/articles/data/articles.json"
+        site_registry_path.parent.mkdir(parents=True, exist_ok=True)
+        site_registry_path.write_text(registry_json, encoding="utf-8")
         cards = []
         for item, *_ in records:
             title = html.escape(item["title"])
