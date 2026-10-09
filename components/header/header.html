@@ -1,28 +1,84 @@
-<!-- ReviewDefense — Global Header -->
+<!-- ReviewDefense — Global Header and hover mega-menus -->
 <header class="rd-header" data-header>
   <div class="rd-header__inner">
     <a class="rd-header__brand" href="/" aria-label="ReviewDefense — Accueil">
       <img src="/components/header/logo/logo.svg" alt="ReviewDefense" class="rd-header__logo">
     </a>
     <nav class="rd-header__nav" aria-label="Navigation principale">
-      <a class="rd-header__link" href="/pages/solution.html">Produit</a>
-      <a class="rd-header__link" href="/pages/comment-ca-marche.html">Solutions</a>
-      <a class="rd-header__link" href="/pages/intelligence.html">Méthode</a>
-      <a class="rd-header__link" href="/pages/tarifs.html">Tarifs</a>
-      <a class="rd-header__link" href="/pages/ressources/index.html">Ressources</a>
+      <div class="rd-header__item">
+        <a class="rd-header__link" href="/pages/solution.html">Produit</a>
+        <button class="rd-header__menu-toggle" type="button" aria-label="Afficher le menu Produit" aria-expanded="false" aria-controls="rd-menu-product" data-menu-toggle><span aria-hidden="true">⌄</span></button>
+        <section class="rd-header__mega" id="rd-menu-product" aria-label="Menu Produit" data-mega-menu>
+          <div class="rd-header__mega-intro"><span class="rd-header__eyebrow">LE PRODUIT</span><h2>Comprendre avant d’agir.</h2><p>Les outils pour analyser les avis et choisir une réponse adaptée.</p><a class="rd-header__all-link" href="/pages/solution.html">Découvrir le produit <span aria-hidden="true">→</span></a></div>
+          <div class="rd-header__mega-grid">
+            <a class="rd-header__mega-card" href="/pages/solution.html#solution-comprendre"><span class="rd-header__card-index">01</span><span><strong>Analyse des avis</strong><small>Lire le contenu et son contexte.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/solution.html#solution-decider"><span class="rd-header__card-index">02</span><span><strong>Score de suspicion</strong><small>Comprendre les signaux et leurs limites.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/solution.html#solution-agir"><span class="rd-header__card-index">03</span><span><strong>Réponses intelligentes</strong><small>Préparer une réponse adaptée à la situation.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/solution.html#solution-interface"><span class="rd-header__card-index">04</span><span><strong>Défense &amp; signalement</strong><small>Structurer les démarches, sans promesse de retrait.</small></span><span class="rd-header__arrow">↗</span></a>
+          </div>
+        </section>
+      </div>
+      <div class="rd-header__item">
+        <a class="rd-header__link" href="/pages/comment-ca-marche.html">Solutions</a>
+        <button class="rd-header__menu-toggle" type="button" aria-label="Afficher le menu Solutions" aria-expanded="false" aria-controls="rd-menu-solutions" data-menu-toggle><span aria-hidden="true">⌄</span></button>
+        <section class="rd-header__mega" id="rd-menu-solutions" aria-label="Menu Solutions" data-mega-menu>
+          <div class="rd-header__mega-intro"><span class="rd-header__eyebrow">VOS SITUATIONS</span><h2>Une réponse selon le contexte.</h2><p>Parcourez le cheminement de l’avis jusqu’à la décision.</p><a class="rd-header__all-link" href="/pages/comment-ca-marche.html">Voir comment ça marche <span aria-hidden="true">→</span></a></div>
+          <div class="rd-header__mega-grid">
+            <a class="rd-header__mega-card" href="/pages/comment-ca-marche.html#review"><span class="rd-header__card-index">01</span><span><strong>Comprendre un avis</strong><small>Remettre le texte dans son contexte.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/comment-ca-marche.html#analysis"><span class="rd-header__card-index">02</span><span><strong>Examiner les signaux</strong><small>Repérer ce qui mérite une vérification.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/comment-ca-marche.html#decision"><span class="rd-header__card-index">03</span><span><strong>Choisir une action</strong><small>Répondre, examiner ou signaler.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/comment-ca-marche.html#followup"><span class="rd-header__card-index">04</span><span><strong>Suivre les décisions</strong><small>Conserver un historique clair.</small></span><span class="rd-header__arrow">↗</span></a>
+          </div>
+        </section>
+      </div>
+      <div class="rd-header__item">
+        <a class="rd-header__link" href="/pages/intelligence.html">Méthode</a>
+        <button class="rd-header__menu-toggle" type="button" aria-label="Afficher le menu Méthode" aria-expanded="false" aria-controls="rd-menu-method" data-menu-toggle><span aria-hidden="true">⌄</span></button>
+        <section class="rd-header__mega" id="rd-menu-method" aria-label="Menu Méthode" data-mega-menu>
+          <div class="rd-header__mega-intro"><span class="rd-header__eyebrow">LA MÉTHODE</span><h2>Des signaux expliqués, pas des verdicts automatiques.</h2><p>Une analyse structurée, nuancée et vérifiable.</p><a class="rd-header__all-link" href="/pages/intelligence.html">Explorer la méthode <span aria-hidden="true">→</span></a></div>
+          <div class="rd-header__mega-grid">
+            <a class="rd-header__mega-card" href="/pages/intelligence.html#intelligence-layers"><span class="rd-header__card-index">01</span><span><strong>Sources &amp; contexte</strong><small>Comprendre les informations disponibles.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/intelligence.html#intelligence-signals"><span class="rd-header__card-index">02</span><span><strong>Détection des signaux</strong><small>Identifier les éléments à examiner.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/intelligence.html#intelligence-reasoning"><span class="rd-header__card-index">03</span><span><strong>Explication du score</strong><small>Rendre le raisonnement lisible.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/intelligence.html#intelligence-explanation"><span class="rd-header__card-index">04</span><span><strong>Limites &amp; validation</strong><small>La décision finale reste humaine.</small></span><span class="rd-header__arrow">↗</span></a>
+          </div>
+        </section>
+      </div>
+      <div class="rd-header__item">
+        <a class="rd-header__link" href="/pages/tarifs.html">Tarifs</a>
+        <button class="rd-header__menu-toggle" type="button" aria-label="Afficher le menu Tarifs" aria-expanded="false" aria-controls="rd-menu-pricing" data-menu-toggle><span aria-hidden="true">⌄</span></button>
+        <section class="rd-header__mega rd-header__mega--compact" id="rd-menu-pricing" aria-label="Menu Tarifs" data-mega-menu>
+          <div class="rd-header__mega-intro"><span class="rd-header__eyebrow">LES OFFRES</span><h2>Choisissez le niveau adapté.</h2><p>De l’audit ponctuel à l’accompagnement continu.</p><a class="rd-header__all-link" href="/pages/tarifs.html">Voir tous les tarifs <span aria-hidden="true">→</span></a></div>
+          <div class="rd-header__mega-grid">
+            <a class="rd-header__mega-card" href="/pages/tarifs.html#audit"><span class="rd-header__card-index">01</span><span><strong>Audit réputation</strong><small>Analyser un volume d’avis.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/tarifs.html#traitement"><span class="rd-header__card-index">02</span><span><strong>Traitement ponctuel</strong><small>Préparer les actions adaptées.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/tarifs.html#packs"><span class="rd-header__card-index">03</span><span><strong>Packs</strong><small>Traiter plusieurs situations.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/tarifs.html#protection"><span class="rd-header__card-index">04</span><span><strong>Protection continue</strong><small>Suivre sa réputation dans le temps.</small></span><span class="rd-header__arrow">↗</span></a>
+          </div>
+        </section>
+      </div>
+      <div class="rd-header__item">
+        <a class="rd-header__link" href="/pages/ressources/index.html">Ressources</a>
+        <button class="rd-header__menu-toggle" type="button" aria-label="Afficher le menu Ressources" aria-expanded="false" aria-controls="rd-menu-resources" data-menu-toggle><span aria-hidden="true">⌄</span></button>
+        <section class="rd-header__mega rd-header__mega--compact" id="rd-menu-resources" aria-label="Menu Ressources" data-mega-menu>
+          <div class="rd-header__mega-intro"><span class="rd-header__eyebrow">LA BIBLIOTHÈQUE</span><h2>Des réponses aux questions concrètes.</h2><p>Guides, analyses et cas clients réunis par situation.</p><a class="rd-header__all-link" href="/pages/ressources/index.html">Toutes les ressources <span aria-hidden="true">→</span></a></div>
+          <div class="rd-header__mega-grid">
+            <a class="rd-header__mega-card" href="/pages/ressources/guides.html"><span class="rd-header__card-index">01</span><span><strong>Guides pratiques</strong><small>Des repères pour passer à l’action.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/ressources/blog.html"><span class="rd-header__card-index">02</span><span><strong>Analyses &amp; articles</strong><small>Comprendre les enjeux des avis.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/ressources/cas-clients.html"><span class="rd-header__card-index">03</span><span><strong>Cas clients</strong><small>Explorer des situations concrètes.</small></span><span class="rd-header__arrow">↗</span></a>
+            <a class="rd-header__mega-card" href="/pages/ressources/index.html"><span class="rd-header__card-index">04</span><span><strong>Explorer par situation</strong><small>Retrouver tous les thèmes.</small></span><span class="rd-header__arrow">↗</span></a>
+          </div>
+        </section>
+      </div>
     </nav>
-    <button class="rd-header__mobile-toggle" type="button" aria-label="Ouvrir le menu"
-            aria-expanded="false" data-mobile-toggle>
+    <button class="rd-header__mobile-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-mobile-toggle>
       <span></span><span></span>
     </button>
   </div>
   <div class="rd-header__mobile-panel" data-mobile-panel aria-hidden="true">
     <nav aria-label="Navigation mobile">
-      <a href="/pages/solution.html">Produit</a>
-      <a href="/pages/comment-ca-marche.html">Solutions</a>
-      <a href="/pages/intelligence.html">Méthode</a>
-      <a href="/pages/tarifs.html">Tarifs</a>
-      <a href="/pages/ressources/index.html">Ressources</a>
+      <a href="/pages/solution.html">Produit</a><a href="/pages/comment-ca-marche.html">Solutions</a><a href="/pages/intelligence.html">Méthode</a><a href="/pages/tarifs.html">Tarifs</a><a href="/pages/ressources/index.html">Ressources</a>
+      <div class="rd-header__mobile-subnav"><a href="/pages/solution.html#solution-comprendre">Analyse des avis</a><a href="/pages/solution.html#solution-decider">Score de suspicion</a><a href="/pages/solution.html#solution-agir">Réponses &amp; actions</a><a href="/pages/ressources/index.html">Bibliothèque de ressources</a></div>
     </nav>
   </div>
 </header>
