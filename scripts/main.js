@@ -8,7 +8,7 @@
 
   const loadScript = (src) => new Promise((resolve, reject) => {
     const script = document.createElement("script");
-    script.src = src;
+    script.src = sitePath(src);
     script.async = false;
     script.onload = resolve;
     script.onerror = () => reject(new Error(`ReviewDefense: impossible de charger ${src}`));
