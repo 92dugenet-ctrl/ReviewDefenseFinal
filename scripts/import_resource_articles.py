@@ -124,7 +124,7 @@ def main() -> int:
         registry_path = root / "content/articles/registry.json"
         registry_path.parent.mkdir(parents=True, exist_ok=True)
         registry_path.write_text(registry_json, encoding="utf-8")
-        # Le connecteur de ressources du site lit précisément ce chemin.
+        # Le connecteur de ressources du site lit précisément ce chemin; conserver ce registre à jour.
         site_registry_path = root / "content/articles/data/articles.json"
         site_registry_path.parent.mkdir(parents=True, exist_ok=True)
         site_registry_path.write_text(registry_json, encoding="utf-8")
