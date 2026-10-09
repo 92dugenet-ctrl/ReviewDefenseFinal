@@ -1,7 +1,21 @@
 // ReviewDefense — global public-site runtime.
 (() => {
+  const siteBase = location.pathname.startsWith("/ReviewDefenseFinal/") ? "/ReviewDefenseFinal" : "";
+  const sitePath = (path) => siteBase && path.startsWith("/") && !path.startsWith(siteBase + "/") ? siteBase + path : path;
+
+  const rewriteRootPaths = (root) => {
+    root.querySelectorAll("[href^='/'], [src^='/']").forEach((element) => {
+      for (const attribute of ["href", "src"]) {
+        const value = element.getAttribute(attribute);
+        if (value && value.startsWith("/") && !value.startsWith(siteBase + "/")) {
+          element.setAttribute(attribute, sitePath(value));
+        }
+      }
+    });
+  };
+
   const loadText = async (url) => {
-    const response = await fetch(url, { credentials: "same-origin" });
+    const response = await fetch(sitePath(url), { credentials: "same-origin" });
     if (!response.ok) throw new Error(`ReviewDefense: ${response.status} ${url}`);
     return response.text();
   };
@@ -19,6 +33,7 @@
     const target = document.querySelector(selector);
     if (!target || target.dataset.mounted === "true") return false;
     target.innerHTML = await loadText(url);
+    rewriteRootPaths(target);
     target.dataset.mounted = "true";
     return true;
   };
