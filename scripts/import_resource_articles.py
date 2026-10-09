@@ -23,7 +23,7 @@ ARTICLE_CSS = """
 .article-hero{margin:28px 0 36px}.article-hero img{display:block;width:100%;height:auto;border-radius:18px;border:1px solid var(--rd-border,#dce2e8)}
 .article-body{font-size:1.06rem;line-height:1.82;color:var(--rd-ink,#18212b)}.article-body h2{font-size:clamp(1.45rem,3vw,2rem);line-height:1.2;letter-spacing:-.02em;margin:2.3em 0 .7em}.article-body h3{font-size:1.25rem;margin:1.8em 0 .5em}.article-body p,.article-body ul,.article-body ol{margin:0 0 1.2em}.article-body li{margin:.35em 0}.article-body a{color:var(--rd-primary,#315be8);text-underline-offset:3px}
 .article-site-footer{border-top:1px solid var(--rd-border,#dce2e8);padding:28px max(24px,calc((100% - 1140px)/2));color:var(--rd-ink-soft,#536171);font-size:.9rem}
-.resources-index{width:min(1140px,calc(100% - 40px));margin:64px auto 96px}.resources-index h1{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.04em;line-height:1.08;margin:.2em 0}.resources-lede{max-width:720px;color:var(--rd-ink-soft,#536171);font-size:1.1rem;line-height:1.7}
+.resources-index{width:min(1140px,calc(100% - 40px));margin:108px auto 96px}.resources-index h1{font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-.04em;line-height:1.08;margin:.2em 0}.resources-lede{max-width:720px;color:var(--rd-ink-soft,#536171);font-size:1.1rem;line-height:1.7}
 .resources-search{width:100%;max-width:560px;margin:28px 0;padding:14px 16px;border:1px solid var(--rd-border,#dce2e8);border-radius:10px;font:inherit;background:white;color:inherit}
 .resources-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.resource-card{display:flex;flex-direction:column;gap:12px;padding:22px;border:1px solid var(--rd-border,#dce2e8);border-radius:16px;background:var(--rd-surface,#fff);text-decoration:none;color:inherit;transition:transform .16s ease,border-color .16s ease}.resource-card:hover{transform:translateY(-3px);border-color:var(--rd-primary,#315be8)}.resource-card small{color:var(--rd-ink-soft,#536171);text-transform:uppercase;letter-spacing:.08em;font-size:.7rem}.resource-card strong{line-height:1.35;font-size:1.08rem}.resource-card span{font-size:.88rem;color:var(--rd-ink-soft,#536171);margin-top:auto}
 @media(max-width:800px){.resources-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.article-page{margin:36px auto 60px}.article-site-header{padding:18px 20px}}
@@ -60,10 +60,12 @@ def inject_page(raw_html: str, item: dict) -> str:
         raw_html = re.sub(r'</head>', f'<meta name="description" content="{description}"></head>', raw_html, count=1, flags=re.I)
     if re.search(r'<link\s+rel=["\']stylesheet["\']\s+href=["\']\.\./\.\./styles/main\.css["\']', raw_html, re.I) is None:
         raw_html = re.sub(r'</head>', '<link rel="stylesheet" href="../../styles/main.css"><style>' + ARTICLE_CSS + '</style></head>', raw_html, count=1, flags=re.I)
-    header = ('<header class="article-site-header"><a href="../../pages/accueil.html" aria-label="ReviewDefense, accueil">REVIEWDEFENSE</a>'
-              '<nav aria-label="Navigation principale"><a href="../../pages/accueil.html">Accueil</a><a href="../">Ressources</a></nav></header>')
+    header = '<div data-global-header></div>'
     footer = '<footer class="article-site-footer"><a href="../">Toutes les ressources</a> · ReviewDefense — Comprendre avant d’agir.</footer>'
+    raw_html = re.sub(r'</head>', '<link rel="stylesheet" href="../../components/header/header.css"></head>', raw_html, count=1, flags=re.I)
+    raw_html = raw_html.replace('margin:54px auto 88px', 'margin:108px auto 88px')
     raw_html = re.sub(r'<body([^>]*)>', lambda m: m.group(0) + header, raw_html, count=1, flags=re.I)
+    raw_html = re.sub(r'</body>', '<script src="../../scripts/main.js" defer></script></body>', raw_html, count=1, flags=re.I)
     raw_html = re.sub(r'</main>', '</main>' + footer, raw_html, count=1, flags=re.I)
     return raw_html
 
@@ -137,14 +139,15 @@ def main() -> int:
         index_html = """<!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Ressources et guides — ReviewDefense</title><meta name="description" content="91 guides pour comprendre les avis clients, analyser les signaux et choisir une action adaptée.">
-<link rel="stylesheet" href="../styles/main.css"><style>""" + ARTICLE_CSS + """</style></head><body>
-<header class="article-site-header"><a href="../pages/accueil.html">REVIEWDEFENSE</a><nav aria-label="Navigation principale"><a href="../pages/accueil.html">Accueil</a><a href="./" aria-current="page">Ressources</a></nav></header>
+<link rel="stylesheet" href="../styles/main.css"><style>""" + ARTICLE_CSS + """</style><link rel="stylesheet" href="../components/header/header.css"></head><body>
+<div data-global-header></div>
 <main class="resources-index"><p class="article-kicker">CENTRE DE RESSOURCES</p><h1>Comprendre les avis. Décider avec méthode.</h1>
 <p class="resources-lede">91 guides pratiques sur l’analyse des avis, la réputation en ligne, les règles des plateformes et les actions possibles. Un avis négatif n’est pas automatiquement un faux avis : le contexte compte.</p>
 <label for="resource-search">Rechercher un guide</label><input id="resource-search" class="resources-search" type="search" placeholder="Ex. faux avis, Google, réponse, signalement" autocomplete="off">
 <p id="resource-count" aria-live="polite">91 articles</p><div class="resources-grid" id="resources-grid">""" + "\n".join(cards) + """</div></main>
 <footer class="article-site-footer">ReviewDefense — Comprendre avant d’agir.</footer>
 <script>const input=document.getElementById('resource-search');const cards=[...document.querySelectorAll('.resource-card')];const count=document.getElementById('resource-count');input.addEventListener('input',()=>{const q=input.value.trim().toLocaleLowerCase('fr');let n=0;for(const card of cards){const show=card.dataset.search.includes(q);card.hidden=!show;if(show)n++;}count.textContent=n+' article'+(n>1?'s':'');});</script>
+<script src="../scripts/main.js" defer></script>
 </body></html>"""
         (root / "ressources/index.html").parent.mkdir(parents=True, exist_ok=True)
         (root / "ressources/index.html").write_text(index_html, encoding="utf-8")
