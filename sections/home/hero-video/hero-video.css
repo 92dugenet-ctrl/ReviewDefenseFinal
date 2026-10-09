@@ -1,8 +1,198 @@
-/* HOME 01 — spatial opening */
-#home-hero { min-height: 760px; position: relative; overflow: hidden; background: var(--rd-bg); }
-.rd-hero-video__media { position: absolute; inset: 0; background: radial-gradient(circle at 72% 38%, rgba(37,99,235,.10), transparent 28%), radial-gradient(circle at 22% 70%, rgba(11,22,48,.05), transparent 26%); }
+/* HOME 01 — restrained, editorial video opening.
+   Keep all copy in its own left column: no text is laid over the footage. */
+#home-hero {
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  padding-block: clamp(44px, 6vw, 76px);
+  background: #f8fafc;
+}
 
-.rd-hero-video__background { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.24; filter:saturate(.72) contrast(1.06); pointer-events:none; }
-.rd-hero-video__media::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg,rgba(248,250,252,.96) 0%,rgba(248,250,252,.78) 48%,rgba(248,250,252,.36) 100%); pointer-events:none; }
-.rd-hero-video__content { position:relative; z-index:1; }
-@media (prefers-reduced-motion: reduce) { .rd-hero-video__background { display:none; } }
+#home-hero .rd-hero-video__media {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 49%;
+  overflow: hidden;
+  background: #e8edf3;
+}
+
+#home-hero .rd-hero-video__background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: .92;
+  filter: saturate(.78) contrast(1.02);
+  pointer-events: none;
+}
+
+#home-hero .rd-hero-video__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f8fafc 0%, rgba(248,250,252,.66) 9%, rgba(248,250,252,0) 34%);
+  pointer-events: none;
+}
+
+#home-hero .rd-hero-video__content {
+  position: relative;
+  z-index: 1;
+  width: 47%;
+  max-width: 560px;
+  padding: 8px 0;
+}
+
+#home-hero .rd-home-kicker,
+#home-hero .rd-hero-video__content > .rd-home-kicker {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--rd-ink-soft);
+  font-size: 10px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: .13em;
+}
+
+#home-hero h1 {
+  max-width: 520px;
+  margin: 0 0 18px;
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  font-weight: 600;
+}
+
+#home-hero h1 span { display: block; }
+
+#home-hero .rd-hero-video__intro {
+  max-width: 430px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+#home-hero .rd-hero-actions {
+  gap: 10px;
+  margin: 22px 0 20px;
+}
+
+#home-hero .rd-button {
+  min-height: 40px;
+  padding-inline: 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 7px;
+}
+
+#home-hero .rd-hero-review {
+  max-width: 440px;
+  padding: 15px 17px;
+  box-shadow: 0 8px 26px rgba(24, 39, 62, .06);
+  background: rgba(255,255,255,.94);
+}
+
+#home-hero .rd-hero-review__top,
+#home-hero .rd-hero-review__signals {
+  font-size: 10px;
+}
+
+#home-hero .rd-hero-review > p {
+  margin: 10px 0;
+  color: var(--rd-ink);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#home-hero .rd-hero-review__signals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+#home-hero .rd-hero-review__signals span {
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #f2f5f8;
+  font-size: 10px;
+}
+
+/* Quiet typography across the homepage: visuals and examples lead the page. */
+.rd-home > section h2 {
+  max-width: 640px;
+  margin-bottom: 14px;
+  font-size: clamp(23px, 2.25vw, 30px);
+  line-height: 1.22;
+  letter-spacing: -.025em;
+  font-weight: 600;
+}
+
+.rd-home > section h3 {
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: -.015em;
+  font-weight: 600;
+}
+
+.rd-home > section p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.rd-home .rd-home-kicker,
+.rd-home .rd-process__intro > span {
+  margin-bottom: 10px;
+  font-size: 10px;
+  letter-spacing: .11em;
+}
+
+@media (min-width: 901px) {
+  #home-hero .rd-hero-video__content { padding-right: 24px; }
+}
+
+@media (max-width: 900px) {
+  #home-hero {
+    min-height: 0;
+    display: block;
+    padding-top: 360px;
+    padding-bottom: 42px;
+  }
+
+  #home-hero .rd-hero-video__media {
+    inset: 0 0 auto;
+    height: 330px;
+  }
+
+  #home-hero .rd-hero-video__media::after {
+    background: linear-gradient(180deg, rgba(248,250,252,0) 65%, #f8fafc 100%);
+  }
+
+  #home-hero .rd-hero-video__content {
+    width: 100%;
+    max-width: 620px;
+    padding: 0;
+  }
+
+  #home-hero h1 { max-width: 560px; }
+  #home-hero .rd-hero-review { max-width: 560px; }
+}
+
+@media (max-width: 560px) {
+  #home-hero { padding-top: 260px; padding-bottom: 30px; }
+  #home-hero .rd-hero-video__media { height: 235px; }
+  #home-hero h1 { font-size: 29px; }
+  #home-hero .rd-hero-video__intro { font-size: 14px; }
+  #home-hero .rd-hero-actions { margin: 18px 0; }
+  #home-hero .rd-hero-review { padding: 13px; }
+  .rd-home > section h2 { font-size: 23px; }
+}
+
+/* Respect visitors who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  #home-hero .rd-hero-video__background { display: none; }
+  #home-hero .rd-hero-video__media { background: #e8edf3 url("../../../assets/site/hero-review-defense.jpg") center/cover no-repeat; }
+}
