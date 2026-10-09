@@ -25,7 +25,7 @@
 .rd-header__brand { display:inline-flex; flex:0 0 auto; text-decoration:none; }
 .rd-header__logo { display:block; width:168px; height:auto; }
 .rd-header__nav { display:flex; align-items:center; gap:28px; margin-left:auto; }
-.rd-header__nav-trigger, .rd-header__link, .rd-header__login {
+.rd-header__nav-trigger, .rd-header__link {
   appearance:none; border:0; background:transparent; color:inherit;
   font:inherit; font-size:14px; line-height:1; text-decoration:none;
   cursor:pointer; white-space:nowrap;

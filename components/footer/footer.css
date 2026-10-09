@@ -31,7 +31,6 @@
   transition:transform 160ms ease,background 160ms ease;
 }
 .rd-footer__cta:hover { transform:translateY(-1px); background:var(--rd-primary-hover); }
-.rd-footer__login { color:var(--rd-navy); font-size:14px; text-decoration:none; }
 .rd-footer__nav {
   display:grid; grid-template-columns:repeat(4,1fr); gap:48px;
   padding:44px 0 48px; border-top:1px solid var(--rd-line); border-bottom:1px solid var(--rd-line);
