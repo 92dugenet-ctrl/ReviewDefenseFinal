@@ -621,7 +621,6 @@ main.rd-tarifs .tarifs-final h2 {
 }
 
 /* White-first product surfaces: borders before shadows, no oversized mockups. */
-main[class*="rd-"] article,
 main[class*="rd-"] .product-frame,
 main[class*="rd-"] .analyse-product-frame,
 main[class*="rd-"] .analyse-review-card,
@@ -797,3 +796,19 @@ main[class*="rd-"] .intelligence-cta {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* Specificity guard: keep the homepage decision panel light despite its ID-based rules. */
+main.rd-home #home-decision .rd-decision-status {
+  border: 1px solid var(--rd-border);
+  background: #f8faff;
+  color: var(--rd-ink);
+  box-shadow: none;
+}
+main.rd-home #home-decision .rd-decision-status span { color: var(--rd-ink-soft); }
+main.rd-home #home-decision .rd-decision-status strong {
+  margin: 12px 0 7px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+main.rd-home #home-decision .rd-decision-status p { color: var(--rd-ink-soft); }
