@@ -525,3 +525,275 @@ button { color: var(--rd-ink); }
  .rd-solution .product-content section:last-child{grid-column:auto}
  .rd-solution .conclusion-content{padding:28px 22px;border-radius:20px}
 }
+
+
+/* ReviewDefense — refinement pass: quiet typography, compact visuals, light surfaces.
+   Presentation only: keep validated copy, page order, links and interactions unchanged. */
+:root {
+  --rd-bg: #fbfcfe;
+  --rd-surface: #ffffff;
+  --rd-ink: #142033;
+  --rd-ink-soft: #596579;
+  --rd-muted: #7b8797;
+  --rd-primary: #316bd6;
+  --rd-primary-hover: #234f9d;
+  --rd-primary-soft: #f1f6ff;
+  --rd-border: #e7ebf1;
+  --rd-border-strong: #d7dee8;
+  --rd-radius: 12px;
+  --rd-radius-small: 8px;
+  --rd-radius-graphic: 14px;
+  --rd-shadow: 0 4px 18px rgba(20,32,51,.045);
+  --rd-shadow-strong: 0 10px 32px rgba(20,32,51,.075);
+  --rd-space-10: 88px;
+}
+
+/* A calmer type scale across the public product pages. */
+main[class*="rd-"] h1 {
+  max-width: 760px;
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  font-weight: 600;
+}
+main[class*="rd-"] h2 {
+  max-width: 720px;
+  font-size: clamp(23px, 2.35vw, 32px);
+  line-height: 1.24;
+  letter-spacing: -.025em;
+  font-weight: 600;
+}
+main[class*="rd-"] h3 {
+  font-size: 17px;
+  line-height: 1.35;
+  letter-spacing: -.012em;
+}
+main[class*="rd-"] p {
+  line-height: 1.7;
+}
+main[class*="rd-"] .eyebrow,
+main[class*="rd-"] [class$="-eyebrow"],
+main[class*="rd-"] [class$="-kicker"] {
+  font-size: 10px;
+  line-height: 1.45;
+  letter-spacing: .12em;
+  font-weight: 650;
+}
+
+/* Consistent reading width and less empty vertical space. */
+main.rd-solution > section,
+main.rd-analyse > section,
+main.rd-intelligence > section,
+main.rd-reponse > section,
+main.rd-signalement > section,
+main.rd-security > section,
+main.rd-how > section,
+main.rd-about > section,
+main.rd-tarifs > section {
+  padding-block: clamp(44px, 5.4vw, 76px);
+}
+main.rd-solution > section > header,
+main.rd-solution > section > .conclusion-content,
+main.rd-solution > section > .product-frame,
+main.rd-analyse .analyse-section-shell,
+main.rd-reponse .reponse-shell {
+  scroll-margin-top: 88px;
+}
+main.rd-solution .solution-introduction__copy h1,
+main.rd-analyse h1,
+main.rd-reponse h1,
+main.rd-security .rd-security-orbit-copy h1,
+main.rd-how .rd-how-hero h1,
+main.rd-about .rd-about-intro h1,
+main.rd-tarifs .tarifs-hero h1 {
+  font-size: clamp(30px, 3.4vw, 46px);
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  font-weight: 600;
+}
+main.rd-how .rd-how-copy h2,
+main.rd-how .rd-how-conclusion h2,
+main.rd-tarifs .tarifs-final h2 {
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.2;
+  letter-spacing: -.03em;
+  font-weight: 600;
+}
+
+/* White-first product surfaces: borders before shadows, no oversized mockups. */
+main[class*="rd-"] article,
+main[class*="rd-"] .product-frame,
+main[class*="rd-"] .analyse-product-frame,
+main[class*="rd-"] .analyse-review-card,
+main[class*="rd-"] .reponse-review-card,
+main[class*="rd-"] .reponse-compose-card,
+main[class*="rd-"] .reponse-validation-card,
+main[class*="rd-"] .rd-about-review-card,
+main[class*="rd-"] .rd-about-system-card,
+main[class*="rd-"] .rd-questions__result,
+main[class*="rd-"] .rd-scan-review,
+main[class*="rd-"] .rd-scan-result {
+  border-color: var(--rd-border);
+  border-radius: var(--rd-radius);
+  box-shadow: var(--rd-shadow);
+}
+main[class*="rd-"] .product-frame,
+main[class*="rd-"] .analyse-product-frame {
+  min-height: 0;
+}
+main[class*="rd-"] .product-sidebar {
+  background: #fafbfd;
+}
+main[class*="rd-"] .product-content section {
+  border-radius: 8px;
+  background: #fff;
+}
+main[class*="rd-"] .analysis-layer,
+main[class*="rd-"] .score-signals article,
+main[class*="rd-"] .analyse-context-grid article,
+main[class*="rd-"] .analyse-actions-grid article,
+main[class*="rd-"] .signalement-evidence-grid article {
+  border-radius: 8px;
+  box-shadow: none;
+}
+main[class*="rd-"] .rd-score-ring,
+main[class*="rd-"] .signalement-score-ring {
+  width: 144px;
+  height: 144px;
+  border-width: 8px;
+}
+main[class*="rd-"] .analyse-score-value {
+  font-size: clamp(58px, 6vw, 84px);
+}
+main[class*="rd-"] .rd-decision-object,
+main[class*="rd-"] .rd-branch-object,
+main[class*="rd-"] .rd-validation-object,
+main[class*="rd-"] .rd-interface-object {
+  min-height: 220px;
+}
+main[class*="rd-"] .rd-how-hero,
+main[class*="rd-"] .rd-how-stage {
+  min-height: 0;
+  gap: clamp(24px, 4vw, 52px);
+}
+main[class*="rd-"] .rd-how-hero {
+  min-height: 0;
+  padding-top: clamp(76px, 9vw, 112px);
+}
+main[class*="rd-"] .rd-how-conclusion {
+  min-height: 0;
+  padding: clamp(56px, 7vw, 88px) 24px;
+}
+main[class*="rd-"] .rd-how-hero h1,
+main[class*="rd-"] .rd-how-conclusion h2 {
+  line-height: 1.12;
+  letter-spacing: -.035em;
+}
+main[class*="rd-"] .review-object,
+main[class*="rd-"] .analysis-object,
+main[class*="rd-"] .rd-score-object,
+main[class*="rd-"] .rd-validation-object {
+  padding: clamp(18px, 2.5vw, 28px);
+  border-radius: 12px;
+  box-shadow: var(--rd-shadow);
+}
+
+/* Keep strong brand color as an accent, not a full-screen background. */
+main.rd-home .rd-decision-status {
+  min-height: 0;
+  padding: 22px 24px;
+  border: 1px solid var(--rd-border);
+  border-radius: 12px;
+  background: #f8faff;
+  color: var(--rd-ink);
+  box-shadow: none;
+}
+main.rd-home .rd-decision-status span { color: var(--rd-ink-soft); }
+main.rd-home .rd-decision-status strong {
+  margin: 12px 0 7px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+main.rd-home .rd-decision-status p { color: var(--rd-ink-soft); }
+main.rd-tarifs .tarifs-final {
+  background: #fbfcfe;
+  color: var(--rd-ink);
+  border-top: 1px solid var(--rd-border);
+}
+main.rd-tarifs .tarifs-final h2 { color: var(--rd-ink); }
+main.rd-tarifs .tarifs-final p { color: var(--rd-ink-soft); }
+main.rd-tarifs .tarifs-final a {
+  background: var(--rd-ink);
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Buttons and focus states remain restrained and legible. */
+main[class*="rd-"] button,
+main[class*="rd-"] a {
+  -webkit-tap-highlight-color: transparent;
+}
+main[class*="rd-"] button:focus-visible,
+main[class*="rd-"] a:focus-visible {
+  outline: 2px solid var(--rd-primary);
+  outline-offset: 3px;
+}
+main[class*="rd-"] .rd-button,
+main[class*="rd-"] .analyse-cta,
+main[class*="rd-"] .reponse-cta,
+main[class*="rd-"] .signalement-cta,
+main[class*="rd-"] .intelligence-cta {
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/* Compact layouts on tablets and phones. */
+@media (max-width: 900px) {
+  :root { --rd-gutter: 32px; }
+  main[class*="rd-"] h1 { font-size: clamp(29px, 5vw, 40px); }
+  main[class*="rd-"] h2 { font-size: clamp(23px, 3.4vw, 29px); }
+  main.rd-how .rd-how-hero,
+  main.rd-how .rd-how-stage { padding-block: 42px; }
+  main.rd-how .rd-how-hero { padding-top: 88px; }
+  main.rd-security .rd-security-orbit-hero { min-height: 0; padding-block: 48px; }
+  main.rd-security .rd-security-orbit-wrap { min-height: 360px; }
+  main.rd-about .rd-about-intro,
+  main.rd-about .rd-about-contrast,
+  main.rd-about .rd-about-choice,
+  main.rd-about .rd-about-conviction,
+  main.rd-about .rd-about-refus,
+  main.rd-about .rd-about-method,
+  main.rd-about .rd-about-conclusion { padding-block: 52px; min-height: 0; }
+  main.rd-tarifs .tarifs-hero { min-height: 0; padding-block: 100px 52px; }
+  main.rd-tarifs .tarifs-section { padding-block: 52px; }
+}
+@media (max-width: 560px) {
+  :root { --rd-gutter: 24px; }
+  main[class*="rd-"] h1 { font-size: 29px; line-height: 1.15; }
+  main[class*="rd-"] h2 { font-size: 23px; line-height: 1.25; }
+  main[class*="rd-"] p { font-size: 14px; }
+  main.rd-solution > section,
+  main.rd-analyse > section,
+  main.rd-intelligence > section,
+  main.rd-reponse > section,
+  main.rd-signalement > section,
+  main.rd-security > section,
+  main.rd-how > section,
+  main.rd-about > section,
+  main.rd-tarifs > section { padding-block: 36px; }
+  main.rd-how .rd-how-hero { padding-top: 78px; }
+  main.rd-security .rd-security-orbit-wrap { min-height: 290px; }
+  main.rd-security .rd-security-orbit { width: min(88vw, 360px); }
+  main.rd-tarifs .tarifs-hero { padding-top: 88px; }
+  main.rd-home .rd-decision-status { padding: 18px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  main[class*="rd-"] *,
+  main[class*="rd-"] *::before,
+  main[class*="rd-"] *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
