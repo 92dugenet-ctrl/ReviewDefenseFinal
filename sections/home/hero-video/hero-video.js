@@ -1,22 +1,45 @@
 (() => {
   const hero = document.querySelector("#home-hero");
-  if (!hero) return;
-  const media = hero.querySelector(".rd-hero-video__media");
-  const video = hero.querySelector("video");
+  const phrase = hero?.querySelector("[data-hero-phrase]");
+  if (!hero || !phrase) return;
+
+  const phrases = [
+    "Tu construis.",
+    "Tu répares.",
+    "Tu conseilles.",
+    "Tu accueilles.",
+    "Tu crées.",
+    "Tu entreprends."
+  ];
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-  if (reducedMotion) {
-    if (video) video.pause();
-    return;
-  }
-  if (!media || !finePointer) return;
-  hero.addEventListener("pointermove", event => {
-    if (event.pointerType !== "mouse") return;
-    const rect = hero.getBoundingClientRect();
-    if (!rect.width || !rect.height) return;
-    const x = (event.clientX - rect.left) / rect.width - .5;
-    const y = (event.clientY - rect.top) / rect.height - .5;
-    media.style.transform = `translate3d(${(x * 6).toFixed(1)}px, ${(y * 6).toFixed(1)}px, 0)`;
+  if (reducedMotion) return;
+
+  let index = 0;
+  let intervalId;
+
+  const showNextPhrase = () => {
+    index = (index + 1) % phrases.length;
+    phrase.style.animation = "none";
+    phrase.textContent = phrases[index];
+    void phrase.offsetWidth;
+    phrase.style.animation = "";
+  };
+
+  const start = () => {
+    if (intervalId || document.hidden) return;
+    intervalId = window.setInterval(showNextPhrase, 2600);
+  };
+
+  const stop = () => {
+    if (!intervalId) return;
+    window.clearInterval(intervalId);
+    intervalId = undefined;
+  };
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) stop();
+    else start();
   });
-  hero.addEventListener("pointerleave", () => { media.style.transform = ""; });
+
+  start();
 })();
