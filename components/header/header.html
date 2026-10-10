@@ -78,4 +78,54 @@
   /* Menus déroulants sans flèches */
   .rd-nav-chevron { display: none !important; }
   .rd-nav-trigger { gap: 0 !important; }
+
+  /* Liquid Glass uniforme : le header s'efface au scroll et revient au survol */
+  .rd-header {
+    background: linear-gradient(115deg,rgba(255,255,255,.48),rgba(246,249,255,.34) 38%,rgba(231,239,255,.24)) !important;
+    -webkit-backdrop-filter: blur(30px) saturate(185%) contrast(108%) !important;
+    backdrop-filter: blur(30px) saturate(185%) contrast(108%) !important;
+    transition: background 360ms ease, backdrop-filter 360ms ease, box-shadow 360ms ease, border-color 360ms ease;
+  }
+  .rd-header::before { opacity:.82; transition:opacity 360ms ease; }
+  .rd-header.is-scrolled {
+    background:linear-gradient(115deg,rgba(248,250,255,.075),rgba(235,242,255,.035) 48%,rgba(255,255,255,.055)) !important;
+    -webkit-backdrop-filter:blur(28px) saturate(165%) contrast(105%) !important;
+    backdrop-filter:blur(28px) saturate(165%) contrast(105%) !important;
+    border-bottom-color:rgba(255,255,255,.12) !important;
+    box-shadow:0 1px 0 rgba(255,255,255,.08) inset,0 6px 24px rgba(28,42,70,.025) !important;
+  }
+  .rd-header.is-scrolled::before { opacity:.12; }
+  .rd-header.is-scrolled .rd-header__inner { opacity:.16; transition:opacity 360ms ease; }
+  .rd-header.is-scrolled:hover,
+  .rd-header.is-scrolled:focus-within {
+    background:linear-gradient(115deg,rgba(255,255,255,.88),rgba(242,247,255,.78) 48%,rgba(231,239,255,.72)) !important;
+    -webkit-backdrop-filter:blur(32px) saturate(190%) contrast(108%) !important;
+    backdrop-filter:blur(32px) saturate(190%) contrast(108%) !important;
+    border-bottom-color:rgba(255,255,255,.76) !important;
+    box-shadow:0 1px 0 rgba(255,255,255,.65) inset,0 10px 34px rgba(28,42,70,.10) !important;
+  }
+  .rd-header.is-scrolled:hover::before,
+  .rd-header.is-scrolled:focus-within::before { opacity:.9; }
+  .rd-header.is-scrolled:hover .rd-header__inner,
+  .rd-header.is-scrolled:focus-within .rd-header__inner { opacity:1; }
+  .rd-header .rd-nav-dropdown {
+    background:rgba(245,249,255,.76) !important;
+    -webkit-backdrop-filter:blur(30px) saturate(180%) !important;
+    backdrop-filter:blur(30px) saturate(180%) !important;
+    border-color:rgba(255,255,255,.64) !important;
+  }
+  @media (hover:none) {
+    .rd-header.is-scrolled {
+      background:linear-gradient(115deg,rgba(255,255,255,.70),rgba(242,247,255,.60) 48%,rgba(231,239,255,.54)) !important;
+      -webkit-backdrop-filter:blur(28px) saturate(180%) !important;
+      backdrop-filter:blur(28px) saturate(180%) !important;
+      border-bottom-color:rgba(255,255,255,.60) !important;
+    }
+    .rd-header.is-scrolled::before { opacity:.72; }
+    .rd-header.is-scrolled .rd-header__inner { opacity:1; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rd-header, .rd-header::before, .rd-header__inner { transition:none !important; }
+  }
+
 </style>
