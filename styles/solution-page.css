@@ -252,23 +252,41 @@
 }
 
 
-/* Typographie des listes à puces uniquement */
+/* Typographie et présentation des listes à puces */
 .solution-page__steps {
-  font-family: inherit;
-  font-size: clamp(9px, .85vw, 11px);
-  line-height: 1.55;
-  font-weight: 400;
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--solution-muted);
+  font-size: clamp(10px, .85vw, 11px);
+  line-height: 1.6;
 }
 .solution-page__steps li {
+  position: relative;
+  padding-left: 14px;
   font: inherit;
 }
+.solution-page__steps li::before {
+  content: "";
+  position: absolute;
+  top: .67em;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #8b9483;
+}
 .solution-page__steps strong {
-  font: inherit;
+  color: var(--solution-ink);
+  font-size: inherit;
   font-weight: 600;
 }
 @media (max-width: 760px) {
   .solution-page__steps {
     font-size: 11px;
     line-height: 1.65;
+    gap: 8px;
   }
 }
