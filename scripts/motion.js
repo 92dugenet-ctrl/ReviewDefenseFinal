@@ -10,6 +10,8 @@
       ".rd-home > #home-decision > .rd-decision-copy",
       "main > section > header",
       ".rd-solution-editorial .solution-editorial-card",
+      ".solution-reference-feature",
+      ".solution-reference-proof",
       "main > section > .solution-introduction__copy",
       "main > section > .solution-introduction__visual",
       "main > section > .questions-layout > *",
