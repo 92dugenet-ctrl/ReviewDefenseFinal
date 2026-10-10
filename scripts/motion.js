@@ -24,7 +24,8 @@
       "main > section > .rd-tariffs-card",
       "main > section > .rd-tariffs-copy",
       ".rd-home > .rd-home-conclusion",
-      ".resources-intro__copy, .resources-intro__note, .resources-section-head, .resources-format-copy, .resources-format-nav"
+      ".resources-intro__copy, .resources-intro__note, .resources-section-head, .resources-format-copy, .resources-format-nav",
+      ".rd-home-premium > #home-method > .rd-home-about"
     ];
     document.querySelectorAll(selectors.join(",")).forEach((element, index) => {
       if (element.dataset.motionReady) return;
