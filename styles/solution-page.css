@@ -78,8 +78,7 @@
   grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
   gap: clamp(10px, 1.5vw, 18px);
   align-items: stretch;
-  aspect-ratio: 2.05 / 1;
-  min-height: 170px;
+  min-height: 232px;
   padding: clamp(9px, 1.25vw, 14px);
   overflow: hidden;
   border: 1px solid rgba(40,45,36,.025);
@@ -228,10 +227,10 @@
   .solution-page__intro { margin-bottom: 18px; font-size: 10px; }
   .solution-page__nav a { grid-template-columns: 17px minmax(0,1fr); gap: 4px; padding: 8px 4px; font-size: 9px; }
   .solution-page__cta { margin-top: 15px; font-size: 9px; }
-  .solution-page__feature { aspect-ratio: 1.65 / 1; min-height: 145px; gap: 7px; padding: 7px; }
-  .solution-page__copy h2 { font-size: 10px; margin-bottom: 5px; }
-  .solution-page__copy p { font-size: 8px; line-height: 1.45; }
-  .solution-page__visual { padding: 5px; }
+  .solution-page__feature { grid-template-columns: 1fr; min-height: 0; gap: 14px; padding: 14px; }
+  .solution-page__copy h2 { font-size: 13px; margin-bottom: 7px; }
+  .solution-page__copy p { font-size: 11px; line-height: 1.65; }
+  .solution-page__visual { min-height: 150px; padding: 8px; }
   .solution-page__panel { padding: 6px; }
   .solution-page__panel-head { font-size: 8px; gap: 3px; }
   .solution-page__row { gap: 4px; padding: 5px 0; }
@@ -244,9 +243,9 @@
   .solution-page__sidebar h1 { font-size: 21px; }
   .solution-page__intro { font-size: 9px; }
   .solution-page__nav a { grid-template-columns: 15px minmax(0,1fr); font-size: 8px; }
-  .solution-page__feature { min-height: 138px; aspect-ratio: 1.4 / 1; }
-  .solution-page__copy h2 { font-size: 9px; }
-  .solution-page__copy p { font-size: 7px; }
+  .solution-page__feature { min-height: 0; }
+  .solution-page__copy h2 { font-size: 13px; }
+  .solution-page__copy p { font-size: 11px; line-height: 1.65; }
 }
 @media (prefers-reduced-motion: reduce) {
   .solution-page__nav a { transition: none; }
