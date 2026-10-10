@@ -1,1 +1,127 @@
-.rd-tarifs{background:#fff;color:#0b2445;overflow:hidden}.tarifs-shell{width:min(1220px,calc(100% - 48px));margin:auto}.tarifs-hero{min-height:88vh;padding:150px 0 90px;display:flex;align-items:center;background:linear-gradient(180deg,#fff,#f7faff)}.tarifs-hero__grid,.tarifs-section-head--split,.tarifs-comparison__grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}.tarifs-hero h1{font-size:clamp(50px,7vw,92px);line-height:.94;letter-spacing:-.065em;font-weight:500}.tarifs-mosaic{min-height:470px;border-radius:34px;border:1px solid rgba(11,36,69,.08);background:#f4f8fd}.tarifs-section{padding:110px 0}.tarifs-rail{overflow-x:auto}.tarifs-rail__track{display:flex;gap:18px;width:max-content}.tarif-card{width:300px;min-height:360px;padding:30px;border:1px solid rgba(11,36,69,.1);border-radius:24px;background:#fff}.protection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.protection-card{min-height:340px;padding:30px;border:1px solid rgba(11,36,69,.1);border-radius:24px;background:#fff}.tarifs-final{padding:150px 0;background:#0b2445;color:#fff;text-align:center}.tarifs-final h2{font-size:clamp(46px,6vw,82px);font-weight:500}@media(max-width:900px){.tarifs-hero__grid,.tarifs-section-head--split,.tarifs-comparison__grid,.protection-grid{grid-template-columns:1fr}}
+/* ReviewDefense pricing page — scoped styles. Shared header/footer remain loaded by scripts/main.js. */
+body.tarifs-page{margin:0;background:#fff;color:#0b1630;font-family:"Inter",ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body.tarifs-page *{box-sizing:border-box}
+.rd-tarifs{--tarif-ink:#0b1630;--tarif-muted:#68738a;--tarif-line:rgba(11,22,48,.12);--tarif-paper:#fff;--tarif-soft:#f5f7fa;overflow:hidden;background:#fff;color:var(--tarif-ink)}
+.rd-tarifs .tarifs-shell{width:min(1120px,calc(100% - 56px));margin-inline:auto}
+.rd-tarifs .tarifs-section{position:relative;padding:clamp(70px,9vw,118px) 0}
+.rd-tarifs .tarifs-eyebrow{display:block;margin:0 0 17px;color:#78849a;font-size:10px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.rd-tarifs h1,.rd-tarifs h2,.rd-tarifs h3,.rd-tarifs p{margin-top:0}
+.rd-tarifs h1{max-width:680px;margin-bottom:23px;font-size:clamp(42px,6.2vw,78px);font-weight:550;letter-spacing:-.065em;line-height:.99}
+.rd-tarifs h2{max-width:760px;margin-bottom:14px;font-size:clamp(31px,4.3vw,53px);font-weight:550;letter-spacing:-.05em;line-height:1.04}
+.rd-tarifs p{color:var(--tarif-muted);font-size:15px;line-height:1.7}
+.rd-tarifs .tarifs-hero{min-height:0;padding:clamp(100px,12vw,150px) 0 clamp(62px,8vw,96px);background:linear-gradient(180deg,#fff 0%,#fafbfd 100%)}
+.rd-tarifs .tarifs-hero__layout{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(330px,.9fr);gap:clamp(35px,7vw,92px);align-items:center}
+.rd-tarifs .tarifs-hero__copy>p:not(.tarifs-eyebrow){max-width:570px;font-size:clamp(15px,1.5vw,18px)}
+.rd-tarifs .tarifs-primary-link,.rd-tarifs .tarifs-final__inner>a{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:48px;margin-top:16px;padding:0 20px;border:1px solid #101d36;border-radius:3px;background:#101d36;color:#fff;text-decoration:none;font-size:12px;font-weight:650;transition:transform .2s ease,background .2s ease}
+.rd-tarifs .tarifs-primary-link:hover,.rd-tarifs .tarifs-final__inner>a:hover{transform:translateY(-2px);background:#2b3c5b}
+.rd-tarifs .tarifs-hero__notes{display:flex;flex-wrap:wrap;gap:9px 20px;margin-top:35px;color:#78849a;font-size:10px}
+.rd-tarifs .tarifs-hero__notes span:before{content:"";display:inline-block;width:5px;height:5px;margin:0 8px 2px 0;border-radius:50%;background:#7795b7}
+.rd-tarifs .tarifs-hero__mosaic{display:grid;grid-template-columns:1.05fr .85fr 1fr;grid-template-rows:116px 116px 92px;gap:8px;transform:rotate(1.5deg)}
+.rd-tarifs .mosaic-tile{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-width:0;padding:15px;overflow:hidden;border-radius:3px;background:#eaf0f7}
+.rd-tarifs .mosaic-tile>span:first-child{font-size:9px;letter-spacing:.1em;color:#60718c}
+.rd-tarifs .mosaic-tile b{font-size:13px;font-weight:550;letter-spacing:-.02em}
+.rd-tarifs .mosaic-tile i{display:block;height:5px;border-radius:2px;background:rgba(42,66,103,.18)}
+.rd-tarifs .tile-a{grid-column:1/3;background:#e9eef6}.rd-tarifs .tile-a i:nth-of-type(1){width:82%}.rd-tarifs .tile-a i:nth-of-type(2){width:60%}.rd-tarifs .tile-a i:nth-of-type(3){width:70%}
+.rd-tarifs .tile-b{background:#d6e1ef}.rd-tarifs .tile-b i:nth-of-type(1){width:70%}.rd-tarifs .tile-b i:nth-of-type(2){width:48%}
+.rd-tarifs .tile-c{grid-column:1/2;background:#263955;color:#fff}.rd-tarifs .tile-c>span:first-child{color:#c2d0e4}.rd-tarifs .tile-c i{background:rgba(255,255,255,.27)}.rd-tarifs .tile-c i:nth-of-type(1){width:85%}.rd-tarifs .tile-c i:nth-of-type(2){width:60%}.rd-tarifs .tile-c i:nth-of-type(3){width:75%}.rd-tarifs .tile-c i:nth-of-type(4){width:48%}
+.rd-tarifs .tile-d{display:grid;place-items:center;background:#c5d4e6}.rd-tarifs .mosaic-mark{font-size:38px!important;font-weight:500;letter-spacing:-.09em!important;color:#263955!important}
+.rd-tarifs .tile-e{background:#f0ede8;justify-content:center;font-size:11px;line-height:1.5;letter-spacing:.08em;font-weight:650}
+.rd-tarifs .tile-f{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:5px;padding:12px;background:#e8e9e4}
+.rd-tarifs .tile-f i{height:auto;border-radius:1px;background:#c6cec7}.rd-tarifs .tile-f i:nth-child(2n){background:#9ba99e}.rd-tarifs .tile-f i:nth-child(5){background:#3f5d50}
+.rd-tarifs .tarifs-section-head{max-width:760px;margin-bottom:38px}
+.rd-tarifs .tarifs-section-head>p:last-child{max-width:620px;margin-bottom:0}
+.rd-tarifs .tarifs-audit{background:#f7f8fa}
+.rd-tarifs .tarifs-audit-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(30px,7vw,88px);align-items:start}
+.rd-tarifs .tarifs-audit-intro{position:sticky;top:110px;padding:24px 0}
+.rd-tarifs .tarifs-audit-intro p{max-width:320px}
+.rd-tarifs .audit-stack{position:relative;width:170px;height:140px;margin:0 0 32px 10px}
+.rd-tarifs .audit-stack span{position:absolute;left:0;top:0;width:110px;height:116px;border:1px solid rgba(30,52,82,.18);border-radius:5px;background:#fff;box-shadow:0 10px 22px rgba(22,40,65,.05);transform:rotate(-13deg)}
+.rd-tarifs .audit-stack span:after{content:"";position:absolute;left:16px;right:16px;top:28px;height:4px;background:#dce5ef;box-shadow:0 14px #e7edf4,0 28px #e7edf4,0 42px #dce5ef}
+.rd-tarifs .audit-stack span:nth-child(2){left:25px;top:6px;transform:rotate(-4deg);background:#edf2f8}
+.rd-tarifs .audit-stack span:nth-child(3){left:42px;top:14px;transform:rotate(6deg);background:#d9e4f0}
+.rd-tarifs .audit-stack span:nth-child(4){left:59px;top:20px;transform:rotate(14deg);background:#263955}
+.rd-tarifs .audit-stack span:nth-child(4):after{background:#8fa5c0;box-shadow:0 14px #8fa5c0,0 28px #8fa5c0,0 42px #8fa5c0}
+.rd-tarifs .tarifs-mosaic-table{display:grid;border-top:1px solid var(--tarif-line)}
+.rd-tarifs .mosaic-row{display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px;min-height:59px;padding:13px 3px;border-bottom:1px solid var(--tarif-line);font-size:13px}
+.rd-tarifs .mosaic-row strong{font-size:18px;font-weight:600;letter-spacing:-.035em;font-variant-numeric:tabular-nums}
+.rd-tarifs .mosaic-row--head{min-height:42px;color:#7d8798;font-size:10px;text-transform:uppercase;letter-spacing:.09em}
+.rd-tarifs .mosaic-row--head span:last-child{text-align:right}
+.rd-tarifs .tarifs-rail{width:100%;overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-width:thin;scrollbar-color:#bdc9d8 transparent;padding:3px 2px 18px;scroll-snap-type:x proximity}
+.rd-tarifs .tarifs-rail__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(245px,1fr);gap:14px;width:max-content;min-width:100%}
+.rd-tarifs .tarif-card,.rd-tarifs .protection-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:24px;border:1px solid var(--tarif-line);border-radius:5px;background:#fff;scroll-snap-align:start;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.rd-tarifs .tarif-card{width:260px;min-height:390px}
+.rd-tarifs .tarif-card:hover,.rd-tarifs .protection-card:hover{transform:translateY(-4px);border-color:#9eafc5;box-shadow:0 14px 36px rgba(16,35,64,.07)}
+.rd-tarifs .tarif-card__index{color:#8a95a7;font-size:10px;letter-spacing:.1em}
+.rd-tarifs .tarif-card h3,.rd-tarifs .protection-card h3{margin:19px 0 9px;font-size:19px;font-weight:600;letter-spacing:-.035em;line-height:1.2}
+.rd-tarifs .tarif-card p,.rd-tarifs .protection-card>p:not(.pack-kicker){margin-bottom:20px;font-size:12px;line-height:1.65}
+.rd-tarifs .tarif-card>strong,.rd-tarifs .protection-card>strong{display:block;margin-top:auto;padding-top:18px;font-size:29px;font-weight:600;letter-spacing:-.055em;font-variant-numeric:tabular-nums}
+.rd-tarifs small{font-size:11px;font-weight:450;letter-spacing:0;color:#7b8698}
+.rd-tarifs .tarif-card--featured,.rd-tarifs .protection-card--featured{border-color:#6e88aa;background:#f4f7fb}
+.rd-tarifs .tarif-card--featured:before,.rd-tarifs .protection-card--featured:before{content:"";position:absolute;top:0;left:24px;right:24px;height:3px;background:#6c89ad}
+.rd-tarifs .tarif-card__art{display:flex;align-items:center;justify-content:center;gap:6px;height:100px;margin:22px 0 2px;border-radius:3px;background:#f1f4f8;overflow:hidden}
+.rd-tarifs .tarif-card__art i{display:block;width:23px;height:45px;border:1px solid #a9b9ce;border-radius:3px;background:#fff;box-shadow:0 6px 12px rgba(24,45,74,.05)}
+.rd-tarifs .art-analysis i:nth-child(2){height:63px;background:#dbe5f1}.rd-tarifs .art-analysis i:nth-child(3){height:32px}
+.rd-tarifs .art-report{background:#e9eef6}.rd-tarifs .art-report i{width:28px;height:53px}.rd-tarifs .art-report i:nth-child(2){transform:translateY(-8px);background:#d0deed}
+.rd-tarifs .art-dossier i{width:18px;height:58px}.rd-tarifs .art-dossier i:nth-child(2n){height:39px;background:#d5e0ed}
+.rd-tarifs .art-followup{background:#f0eee9}.rd-tarifs .art-followup i{width:22px;height:22px;border-radius:50%;background:#fff}.rd-tarifs .art-followup i:nth-child(2){width:50px;height:50px;border-color:#b2bdb5;background:#dce5df}
+.rd-tarifs .art-complete{background:#263955}.rd-tarifs .art-complete i{width:21px;height:46px;border-color:#7f95b4;background:#c9d6e6}.rd-tarifs .art-complete i:nth-child(2n){height:65px;background:#edf2f8}
+.rd-tarifs .tarifs-scroll-hint{display:flex;align-items:center;gap:12px;margin:7px 0 0;color:#8a94a4;font-size:10px}
+.rd-tarifs .tarifs-scroll-hint span{font-size:16px;letter-spacing:5px;color:#566b88}
+.rd-tarifs .tarifs-packs{background:#f7f8fa}
+.rd-tarifs .tarifs-rail--packs .tarifs-rail__track{grid-auto-columns:minmax(220px,1fr)}
+.rd-tarifs .pack-card{width:244px;min-height:350px;padding:22px}
+.rd-tarifs .pack-kicker{margin:22px 0 0!important;color:#8390a3!important;font-size:9px!important;font-weight:700;letter-spacing:.14em}
+.rd-tarifs .pack-card h3{margin:9px 0 7px}
+.rd-tarifs .pack-card>p:not(.pack-kicker){min-height:42px;margin-bottom:18px;font-size:12px}
+.rd-tarifs .pack-mosaic{display:grid;grid-template-columns:repeat(5,1fr);grid-auto-rows:12px;gap:4px;min-height:76px;align-content:center;padding:12px;border-radius:3px;background:#edf1f6}
+.rd-tarifs .pack-mosaic i{display:block;background:#c0cddd;border-radius:1px}
+.rd-tarifs .pack-mosaic i:nth-child(3n){background:#6f88a8}
+.rd-tarifs .pack-mosaic--10 i:nth-child(4n){background:#344d6c}
+.rd-tarifs .pack-mosaic--25{grid-template-columns:repeat(5,1fr);background:#e8ece7}.rd-tarifs .pack-mosaic--25 i{background:#b7c7bc}.rd-tarifs .pack-mosaic--25 i:nth-child(3n){background:#597565}
+.rd-tarifs .pack-mosaic--50{grid-template-columns:repeat(6,1fr);background:#eae7f0}.rd-tarifs .pack-mosaic--50 i{background:#c8bad8}.rd-tarifs .pack-mosaic--50 i:nth-child(3n){background:#8670a4}
+.rd-tarifs .pack-mosaic--100{grid-template-columns:repeat(7,1fr);background:#e7edf3}.rd-tarifs .pack-mosaic--100 i{background:#9fb4cb}.rd-tarifs .pack-mosaic--100 i:nth-child(3n){background:#304d70}
+.rd-tarifs .tarifs-section--soft{background:#f7f8fa}
+.rd-tarifs .protection-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.rd-tarifs .subscription-card{min-height:315px;padding:26px}
+.rd-tarifs .subscription-mark{display:flex;align-items:center;gap:5px;height:65px}
+.rd-tarifs .subscription-mark i{display:block;width:30px;height:30px;border:1px solid #9eb1c8;border-radius:50%;background:#e3ebf4}
+.rd-tarifs .subscription-mark--pro i:nth-child(2){width:43px;height:43px;background:#c8d8e9}
+.rd-tarifs .subscription-mark--business i{width:20px;height:20px;border-radius:3px;background:#dce4dd;border-color:#9eb5a5}.rd-tarifs .subscription-mark--business i:nth-child(2){width:30px;height:30px}.rd-tarifs .subscription-mark--business i:nth-child(3){width:40px;height:40px;background:#b8cbbb}
+.rd-tarifs .subscription-card h3{margin-top:11px}
+.rd-tarifs .tarifs-final{padding:clamp(80px,10vw,130px) 0;background:#101d36;color:#fff;text-align:center}
+.rd-tarifs .tarifs-final__inner{display:flex;min-height:0;flex-direction:column;align-items:center}
+.rd-tarifs .tarifs-final .tarifs-eyebrow{color:#a8b8ce}
+.rd-tarifs .tarifs-final h2{max-width:760px;margin-bottom:16px;font-size:clamp(38px,5.5vw,67px)}
+.rd-tarifs .tarifs-final p:not(.tarifs-eyebrow){max-width:530px;color:#c2cddd}
+.rd-tarifs .tarifs-final__inner>a{border-color:#fff;background:#fff;color:#101d36}
+.rd-tarifs .tarifs-final__inner>a:hover{background:#e9eef6}
+@media(max-width:850px){
+ .rd-tarifs .tarifs-hero__layout,.rd-tarifs .tarifs-audit-layout{grid-template-columns:1fr}
+ .rd-tarifs .tarifs-hero__mosaic{max-width:510px;width:100%;margin:12px auto 0}
+ .rd-tarifs .tarifs-audit-intro{position:static;padding:0}
+ .rd-tarifs .audit-stack{display:none}
+ .rd-tarifs .protection-grid{grid-template-columns:1fr}
+ .rd-tarifs .subscription-card{min-height:260px}
+}
+@media(max-width:560px){
+ .rd-tarifs .tarifs-shell{width:calc(100% - 36px)}
+ .rd-tarifs .tarifs-section{padding:62px 0}
+ .rd-tarifs .tarifs-hero{padding:90px 0 55px}
+ .rd-tarifs h1{font-size:clamp(39px,11vw,55px)}
+ .rd-tarifs h2{font-size:34px}
+ .rd-tarifs .tarifs-hero__layout{gap:28px}
+ .rd-tarifs .tarifs-hero__mosaic{grid-template-rows:90px 90px 74px;gap:5px}
+ .rd-tarifs .mosaic-tile{padding:10px}
+ .rd-tarifs .mosaic-tile b{font-size:11px}
+ .rd-tarifs .mosaic-mark{font-size:28px!important}
+ .rd-tarifs .tarifs-hero__notes{gap:8px 13px;font-size:9px}
+ .rd-tarifs .mosaic-row{min-height:55px;font-size:12px}
+ .rd-tarifs .mosaic-row strong{font-size:16px}
+ .rd-tarifs .tarifs-rail__track{grid-auto-columns: minmax(250px,82vw)}
+ .rd-tarifs .tarif-card{width: min(290px,82vw)}
+ .rd-tarifs .tarifs-rail--packs .tarifs-rail__track{grid-auto-columns:minmax(230px,78vw)}
+ .rd-tarifs .pack-card{width:min(270px,78vw)}
+}
+@media(prefers-reduced-motion:reduce){
+ .rd-tarifs *, .rd-tarifs *:before, .rd-tarifs *:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+}
