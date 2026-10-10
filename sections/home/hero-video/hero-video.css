@@ -65,7 +65,7 @@
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing {
   min-height: 1.08em;
-  color: #a9c7ff;
+  color: #f7f9fc;
 }
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing [data-hero-phrase] {
@@ -75,7 +75,7 @@
 }
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--fixed:last-child {
-  color: rgba(247, 249, 252, .94);
+  color: #f7f9fc;
 }
 
 @keyframes rd-hero-phrase-in {
