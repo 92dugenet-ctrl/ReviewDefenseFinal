@@ -40,7 +40,7 @@
 
   const init = async () => {
     try {
-      const headerMounted = await mount("[data-global-header]", "/components/header/header.html?v=liquid-glass-20261010");
+      const headerMounted = await mount("[data-global-header]", "/components/header/header.html?v=liquid-glass-hover-20261010");
       const footerMounted = await mount("[data-global-footer]", "/components/footer/footer.html?v=global-20261010");
       if (headerMounted) await loadScript("/components/header/header.js");
       if (footerMounted) await loadScript("/components/footer/footer.js");
