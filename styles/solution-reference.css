@@ -16,9 +16,14 @@
 .sr-logos strong{font-size:12px;color:#676e6b;font-weight:650;letter-spacing:.08em}
 .sr-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
 .sr-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(180px,1fr);gap:18px;align-items:stretch;min-height:calc(100svh - 110px);padding:22px;border:1px solid #f0f0eb;border-radius:8px;background:#f1f2ed;scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:92px}
-.sr-card-copy{padding:18px 14px;align-self:center}
-.sr-card-copy h2{margin:0 0 12px;font-size:clamp(21px,2vw,29px);line-height:1.16;letter-spacing:-.035em;font-weight:550}
-.sr-card-copy p{margin:0;color:#7c837e;font-size:14px;line-height:1.65;max-width:340px}
+.sr-card-copy{padding:18px 14px;align-self:start}
+.sr-card-copy h2{margin:0 0 14px;font-size:clamp(21px,2vw,29px);line-height:1.16;letter-spacing:-.035em;font-weight:550}
+.sr-card-copy p{margin:0 0 11px;color:#7c837e;font-size:14px;line-height:1.6;max-width:340px}
+.sr-card-copy ul{max-width:350px;margin:0 0 12px;padding-left:18px;color:#7c837e;font-size:13px;line-height:1.5}
+.sr-card-copy li{padding-left:2px;margin:0 0 7px}
+.sr-card-copy li::marker{color:#7c9a8a}
+.sr-card-copy strong{color:#424c46;font-weight:600}
+.sr-card-copy p:last-child{margin-bottom:0}
 .sr-visual{min-width:0;min-height:58svh;display:grid;place-items:center;padding:26px;border-radius:7px;background:#dedfd7;overflow:hidden}
 .sr-visual--blue{background:linear-gradient(140deg,#c4d4ed,#b9d9d2)}
 .sr-ui{width:min(100%,320px);padding:16px;border:1px solid #e7e8e2;border-radius:9px;background:#fff;box-shadow:0 8px 22px #273b2510;font-size:12px}
