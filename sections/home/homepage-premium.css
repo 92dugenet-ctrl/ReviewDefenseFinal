@@ -655,3 +655,25 @@ main.rd-home-premium > section,
 @media (prefers-reduced-motion: reduce) {
   #home-hero .rd-home-hero-button { transition: none; }
 }
+
+
+/* Extend the continuous white canvas to the page shell, header area and footer. */
+body.rd-home-body {
+  background: #ffffff !important;
+}
+main.rd-home-premium,
+main.rd-home-premium > section,
+main.rd-home-premium .rd-home-about,
+main.rd-home-premium .rd-home-method,
+main.rd-home-premium .rd-home-commitments {
+  background: #ffffff !important;
+}
+.rd-footer {
+  background: #ffffff !important;
+}
+.rd-home-premium .rd-home-steps,
+.rd-home-premium .rd-home-step,
+.rd-home-premium .rd-home-feature-card,
+.rd-home-premium .rd-home-value-card {
+  background-color: #ffffff;
+}
