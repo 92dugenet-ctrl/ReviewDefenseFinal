@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="/ReviewDefenseFinal/components/footer/footer.css">
 <link rel="stylesheet" href="/ReviewDefenseFinal/styles/solution-reference.css?v=white-home-typography-20261010">
 <link rel="stylesheet" href="/ReviewDefenseFinal/styles/securite-structure.css">
+<style>
+.methode-anchor-nav{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.methode-anchor-nav a{display:inline-flex;align-items:center;padding:11px 15px;border:1px solid var(--rd-border);border-radius:999px;background:var(--rd-surface);color:var(--rd-ink);text-decoration:none;font-size:14px;transition:background 180ms ease,border-color 180ms ease,transform 180ms ease}
+.methode-anchor-nav a:hover,.methode-anchor-nav a:focus-visible{background:var(--rd-primary-soft);border-color:var(--rd-primary);transform:translateY(-1px)}
+#securite,#questions-frequentes{scroll-margin-top:100px}
+@media(max-width:700px){.methode-anchor-nav{gap:8px}.methode-anchor-nav a{font-size:13px;padding:10px 12px}}
+</style>
 </head>
 <body>
 <div data-global-header></div>
@@ -21,6 +28,7 @@
     <p class="intelligence-lead">ReviewDefense vous aide à examiner les avis, comprendre les signaux disponibles et décider de la suite : répondre, vérifier davantage ou préparer un signalement lorsque les règles de la plateforme le permettent.</p>
     <article class="intelligence-review"><span>EXEMPLE D’AVIS</span><p>« Service décevant. Je ne reviendrai jamais. »</p><small>Exemple illustratif — aucun avis réel n’est analysé ici.</small></article>
     <div class="intelligence-human-flow"><a class="intelligence-cta" href="/ReviewDefenseFinal/pages/analyse.html">Découvrir l’analyse</a><a class="intelligence-cta" href="#methode-parcours">Voir les étapes</a></div>
+    <nav class="methode-anchor-nav" aria-label="Explorer les rubriques de la méthode"><a href="#methode-analyser">Méthode d’analyse</a><a href="#securite">Sécurité</a><a href="#questions-frequentes">Questions fréquentes</a></nav>
   </div>
 </section>
 <section id="methode-comprendre">
