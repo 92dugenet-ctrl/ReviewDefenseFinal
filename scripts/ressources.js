@@ -177,7 +177,8 @@
       if (!Array.isArray(registry) || registry.length === 0) throw new Error("Registre éditorial vide");
       articles = registry.map(item => {
         const topic = categoryToTopic[item.category] || categoryToTopic[item.category_label] || "cas-concrets";
-        const html = item.html || "";\n        const markdown = item.markdown || "";
+        const html = item.html || "";
+        const markdown = item.markdown || "";
         const illustration = item.illustration || "";
         return {
           id:String(item.id),
