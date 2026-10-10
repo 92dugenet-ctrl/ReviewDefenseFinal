@@ -690,3 +690,13 @@ main.rd-home-premium .rd-home-commitments {
 #home-hero.rd-home-hero-placeholder .rd-home-hero-copy {
   padding-block: 0;
 }
+
+
+/* Full-screen rhythm: one viewport for each of the three homepage chapters.
+   Use min-height so longer content on smaller screens is never clipped. */
+.rd-home-premium .rd-home-about,
+.rd-home-premium .rd-home-method,
+.rd-home-premium .rd-home-commitments {
+  min-height: 100vh;
+  min-height: 100svh;
+}
