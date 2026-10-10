@@ -41,9 +41,9 @@
   const init = async () => {
     try {
       const headerMounted = await mount("[data-global-header]", "/components/header/header.html?v=dropdown-glass-motion-20261010");
-      const footerMounted = await mount("[data-global-footer]", "/components/footer/footer.html?v=global-20261010");
+      const footerMounted = await mount("[data-global-footer]", "/components/footer/footer.html?v=footer-liquid-glass-reveal-20261010");
       if (headerMounted) await loadScript("/components/header/header.js");
-      if (footerMounted) await loadScript("/components/footer/footer.js");
+      if (footerMounted) await loadScript("/components/footer/footer.js?v=footer-liquid-glass-reveal-20261010");
     } catch (error) {
       console.error(error);
     }
