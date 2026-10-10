@@ -59,6 +59,8 @@
 .sr-proof-line{height:2px;background:#fff}
 .sr-proof-note{margin-top:18px;color:#8d938e;font-size:12px}
 html:has(.rd-solution-reference){scroll-snap-type:y mandatory;scroll-behavior:smooth}
+/* The manifesto is the first snap scene on Comment ça marche; do not skip to the first card. */
+html:has(.rd-solution-reference) .sr-manifeste--hero{scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:0}
 @media(max-width:760px){.rd-solution-reference .sr-intro{width:calc(100% - 36px);padding:calc(var(--rd-header-height, 76px) + 72px) 0 60px;grid-template-columns:1fr;gap:22px}.sr-sidebar{position:static}.sr-nav{grid-template-columns:1fr 1fr;gap:10px 14px}.sr-nav a{font-size:11px}.sr-cards{gap:28vh}.sr-card{grid-template-columns:1fr;gap:14px;min-height:0;padding:14px;scroll-margin-block:24vh}.sr-card-copy{padding:0 5px 8px;margin-top:-6px}.sr-card-copy h2{font-size:21px}.sr-card-copy p{font-size:12px}.sr-visual{min-height:0;padding:14px}.sr-ui{width:min(100%,320px)}.sr-bars{height:90px}}
 @media(max-width:390px){.sr-card{grid-template-columns:1fr;gap:10px}.sr-visual{min-height:0}.sr-card-copy p{max-width:none}.sr-nav{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){html:has(.rd-solution-reference){scroll-behavior:auto;scroll-snap-type:none}.sr-nav a{transition:none}}
