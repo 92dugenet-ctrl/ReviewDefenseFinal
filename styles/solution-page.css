@@ -250,3 +250,46 @@
 @media (prefers-reduced-motion: reduce) {
   .solution-page__nav a { transition: none; }
 }
+
+
+/* Explications détaillées des étapes */
+.solution-page__steps {
+  display: grid;
+  gap: 7px;
+  margin: 10px 0 0;
+  padding-left: 17px;
+  color: var(--solution-muted);
+  font-size: clamp(10px, .82vw, 11px);
+  line-height: 1.5;
+}
+.solution-page__steps li {
+  padding-left: 2px;
+}
+.solution-page__steps li::marker {
+  color: #87927e;
+}
+.solution-page__steps strong {
+  color: var(--solution-ink);
+  font-weight: 600;
+}
+.solution-page__copy .solution-page__note {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(48, 52, 46, .12);
+  color: #5d6559;
+  font-size: clamp(9px, .76vw, 10px);
+  line-height: 1.5;
+}
+.solution-page__copy .solution-page__note strong {
+  color: var(--solution-ink);
+}
+@media (max-width: 760px) {
+  .solution-page__steps {
+    gap: 8px;
+    font-size: 11px;
+    line-height: 1.55;
+  }
+  .solution-page__copy .solution-page__note {
+    font-size: 10px;
+  }
+}
