@@ -1205,3 +1205,168 @@ main.rd-home-premium .rd-home-feature-card--dark .rd-home-feature-button {
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--fixed:last-child {
   color: var(--rd-ink) !important;
 }
+
+
+/* FOUR FULL-SCREEN HOMEPAGE PARTS — 2026-10-10
+   1. Hero  2. Editorial intro + three steps  3. Two action cards  4. Commitments.
+   Keep all content visible: sections may grow naturally on smaller screens. */
+main.rd-home-premium > #home-hero,
+main.rd-home-premium > #home-method,
+main.rd-home-premium > #home-actions,
+main.rd-home-premium > #home-commitments {
+  box-sizing: border-box;
+  min-height: 100vh;
+  min-height: 100svh;
+  margin: 0;
+}
+main.rd-home-premium > #home-method {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(18px, 2.8vh, 30px);
+  padding: clamp(32px, 4.5vh, 54px) max(24px, calc((100% - 1160px) / 2));
+}
+main.rd-home-premium > #home-method > .rd-home-about {
+  width: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  flex: 0 0 auto;
+  align-items: center;
+}
+main.rd-home-premium > #home-method > .rd-home-about .rd-home-about-label {
+  margin-bottom: 16px;
+}
+main.rd-home-premium > #home-method > .rd-home-about p {
+  max-width: 850px;
+  margin-inline: auto;
+  font-size: clamp(16px, 1.35vw, 19px);
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+main.rd-home-premium > #home-method .rd-home-section-heading--center {
+  margin: 0;
+  padding: 0;
+}
+main.rd-home-premium > #home-method .rd-home-section-heading--center h2 {
+  margin-bottom: 8px;
+}
+main.rd-home-premium > #home-method .rd-home-steps {
+  flex: 0 0 auto;
+  margin: 0;
+}
+main.rd-home-premium > #home-method .rd-home-step {
+  min-height: clamp(132px, 16vh, 158px);
+}
+main.rd-home-premium > #home-actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(20px, 3vh, 34px);
+  padding: clamp(40px, 6vh, 68px) max(24px, calc((100% - 1040px) / 2));
+}
+main.rd-home-premium > #home-actions .rd-home-section-heading--feature {
+  width: 100%;
+  max-width: 780px;
+  margin: 0 auto;
+}
+main.rd-home-premium > #home-actions .rd-home-section-heading--feature h2 {
+  margin-bottom: 12px;
+}
+main.rd-home-premium > #home-actions .rd-home-feature-grid {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  gap: clamp(14px, 1.8vw, 20px);
+}
+main.rd-home-premium > #home-actions .rd-home-feature-visual {
+  height: clamp(176px, 23vh, 230px);
+  flex-basis: clamp(176px, 23vh, 230px);
+}
+main.rd-home-premium > #home-actions .rd-home-feature-content {
+  min-height: 160px;
+}
+main.rd-home-premium > #home-commitments {
+  justify-content: center;
+  gap: 0;
+  padding-top: clamp(38px, 5vh, 58px);
+  padding-bottom: clamp(28px, 4vh, 44px);
+}
+main.rd-home-premium > #home-commitments .rd-home-commitments__heading {
+  margin-bottom: clamp(18px, 2.5vh, 28px);
+}
+main.rd-home-premium > #home-commitments .rd-home-value-card--wide,
+main.rd-home-premium > #home-commitments .rd-home-value-card--compact {
+  min-height: clamp(168px, 22vh, 200px);
+}
+main.rd-home-premium > #home-commitments .rd-home-closing {
+  margin-top: clamp(18px, 2.5vh, 26px);
+  padding-top: clamp(15px, 2vh, 21px);
+}
+
+/* At medium widths, keep the second screen compact and preserve reading order. */
+@media (max-width: 820px) {
+  main.rd-home-premium > #home-method {
+    justify-content: flex-start;
+    gap: 22px;
+    padding: 48px 28px;
+  }
+  main.rd-home-premium > #home-method > .rd-home-about p {
+    max-width: 680px;
+    font-size: 17px;
+  }
+  main.rd-home-premium > #home-method .rd-home-steps {
+    grid-template-columns: 1fr;
+  }
+  main.rd-home-premium > #home-method .rd-home-step {
+    min-height: 0;
+  }
+  main.rd-home-premium > #home-actions {
+    justify-content: flex-start;
+    padding: 48px 28px;
+    gap: 24px;
+  }
+  main.rd-home-premium > #home-actions .rd-home-feature-content {
+    min-height: 150px;
+  }
+  main.rd-home-premium > #home-commitments {
+    justify-content: flex-start;
+  }
+}
+
+/* On phones, sections remain at least one screen high but can expand for stacked content. */
+@media (max-width: 560px) {
+  main.rd-home-premium > #home-method {
+    gap: 20px;
+    padding: 42px 20px 48px;
+  }
+  main.rd-home-premium > #home-method > .rd-home-about .rd-home-about-label {
+    margin-bottom: 14px;
+  }
+  main.rd-home-premium > #home-method > .rd-home-about p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  main.rd-home-premium > #home-method .rd-home-step {
+    min-height: 92px;
+  }
+  main.rd-home-premium > #home-actions {
+    padding: 44px 20px 48px;
+    gap: 22px;
+  }
+  main.rd-home-premium > #home-actions .rd-home-feature-grid {
+    grid-template-columns: 1fr;
+    max-width: 440px;
+    gap: 16px;
+  }
+  main.rd-home-premium > #home-actions .rd-home-feature-visual {
+    height: 180px;
+    flex-basis: 180px;
+  }
+  main.rd-home-premium > #home-actions .rd-home-feature-content {
+    min-height: 0;
+  }
+  main.rd-home-premium > #home-commitments {
+    padding: 44px 20px 30px;
+  }
+}
