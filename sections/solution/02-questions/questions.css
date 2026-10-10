@@ -1,9 +1,0 @@
-/* STRUCTURE ONLY — 02 */
-.solution-questions__inner { max-width: 1120px; margin: 0 auto; padding: 170px 32px; }
-.solution-questions__header { max-width: 620px; margin-bottom: 90px; }
-.solution-questions__layout { display: grid; grid-template-columns: 1fr 360px; gap: 120px; align-items: center; }
-.solution-questions__list { display: grid; }
-.placeholder-row { min-height: 76px; border: 0; border-bottom: 1px solid #ddd; background: transparent; }
-.solution-questions__result { display: grid; place-items: center; }
-.placeholder--vertical-product { width: 280px; aspect-ratio: 3 / 5; }
-@media (max-width: 800px) { .solution-questions__layout { grid-template-columns: 1fr; } }
