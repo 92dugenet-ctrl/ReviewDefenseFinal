@@ -33,7 +33,7 @@
       if (index % 5 === 1) element.dataset.motion = "left";
       if (index % 5 === 2) element.dataset.motion = "right";
     });
-    document.querySelectorAll(".rd-questions__list, .rd-scan-signals, .rd-process__story, .rd-decision-board, .resources-topic-mosaic, .resources-content-mosaic, .resources-related-grid, .rd-signal-grid, .rd-card-grid").forEach(group => group.classList.add("rd-motion-group"));
+    document.querySelectorAll(".rd-questions__list, .rd-scan-signals, .rd-process__story, .rd-decision-board, .resources-topic-mosaic, .resources-content-mosaic, .resources-related-grid, .rd-signal-grid, .rd-card-grid, .rd-home-steps, .rd-home-feature-grid, .rd-home-values").forEach(group => group.classList.add("rd-motion-group"));
     document.querySelectorAll(".rd-motion-group > *").forEach(item => {
       if (!item.dataset.motionReady) {
         item.dataset.motionReady = "true";
