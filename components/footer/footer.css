@@ -88,3 +88,63 @@
   .rd-footer__bottom { grid-template-columns:1fr auto; }
   .rd-footer__social { grid-column:2; }
 }
+
+/* Scroll reveal — liquid-glass inspired */
+.rd-footer {
+  isolation:isolate;
+  transform-origin:50% 100%;
+}
+.rd-footer__inner { position:relative; z-index:2; }
+.rd-footer__visual { z-index:0; }
+.rd-footer.rd-footer--motion-ready {
+  opacity:0;
+  transform:translate3d(0,34px,0) scale(.988);
+  filter:blur(9px);
+  clip-path:inset(3% 0 0 round 18px 18px 0 0);
+  transition:
+    opacity 720ms cubic-bezier(.2,.75,.25,1),
+    transform 820ms cubic-bezier(.16,1,.3,1),
+    filter 760ms ease,
+    clip-path 820ms cubic-bezier(.16,1,.3,1);
+  will-change:opacity,transform,filter;
+  pointer-events:none;
+}
+.rd-footer.rd-footer--motion-ready::before {
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:100%;
+  z-index:1;
+  pointer-events:none;
+  opacity:0;
+  background:
+    radial-gradient(ellipse at 18% 0%,rgba(255,255,255,.78),transparent 46%),
+    linear-gradient(115deg,rgba(255,255,255,.32),transparent 34%,rgba(225,237,255,.20) 72%,rgba(255,255,255,.34));
+  border-top:1px solid rgba(255,255,255,.72);
+  box-shadow:0 1px 0 rgba(255,255,255,.52) inset,0 -18px 48px rgba(32,52,90,.035);
+  transition:opacity 700ms ease;
+}
+.rd-footer.rd-footer--motion-ready.is-visible {
+  opacity:1;
+  transform:translate3d(0,0,0) scale(1);
+  filter:blur(0);
+  clip-path:inset(0 0 0 round 0);
+  pointer-events:auto;
+}
+.rd-footer.rd-footer--motion-ready.is-visible::before { opacity:.72; }
+@supports ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
+  .rd-footer.rd-footer--motion-ready::before {
+    -webkit-backdrop-filter:blur(18px) saturate(145%);
+    backdrop-filter:blur(18px) saturate(145%);
+  }
+}
+@media (max-width:900px) {
+  .rd-footer.rd-footer--motion-ready { transform:translate3d(0,22px,0) scale(.994); }
+  .rd-footer.rd-footer--motion-ready.is-visible { transform:translate3d(0,0,0) scale(1); }
+}
+@media (prefers-reduced-motion:reduce) {
+  .rd-footer.rd-footer--motion-ready,
+  .rd-footer.rd-footer--motion-ready::before {
+    opacity:1; transform:none; filter:none; clip-path:none; transition:none;
+  }
+}
