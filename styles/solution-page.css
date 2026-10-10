@@ -12,7 +12,7 @@
   margin-inline: auto;
   padding: clamp(112px, 12vw, 144px) 0 48px;
   display: grid;
-  grid-template-columns: minmax(170px, 220px) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: clamp(24px, 4vw, 56px);
   align-items: start;
 }
@@ -250,4 +250,51 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .solution-page__nav a { transition: none; }
+}
+
+
+/* Typographie harmonisée pour le contenu détaillé des étapes */
+.solution-page__copy p {
+  margin: 0 0 10px;
+  color: var(--solution-muted);
+  font-size: clamp(10px, .85vw, 11px);
+  line-height: 1.6;
+}
+.solution-page__steps {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--solution-muted);
+  font-size: clamp(10px, .85vw, 11px);
+  line-height: 1.6;
+}
+.solution-page__steps li {
+  position: relative;
+  padding-left: 14px;
+  font: inherit;
+}
+.solution-page__steps li::before {
+  content: "";
+  position: absolute;
+  top: .67em;
+  left: 1px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #8b9483;
+}
+.solution-page__steps strong {
+  color: var(--solution-ink);
+  font-size: inherit;
+  font-weight: 600;
+}
+@media (max-width: 760px) {
+  .solution-page__copy p,
+  .solution-page__steps {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+  .solution-page__steps { gap: 8px; }
 }
