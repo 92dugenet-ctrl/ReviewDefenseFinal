@@ -1,7 +1,0 @@
-/* STRUCTURE ONLY — 03 */
-.solution-comprendre__inner { max-width: 1120px; margin: 0 auto; padding: 190px 32px; }
-.solution-comprendre__header { max-width: 620px; margin-bottom: 120px; }
-.solution-comprendre__story { min-height: 700px; display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
-.placeholder--review { min-height: 260px; }
-.story-layers { display: grid; gap: 22px; }
-.placeholder--layer { min-height: 110px; }
