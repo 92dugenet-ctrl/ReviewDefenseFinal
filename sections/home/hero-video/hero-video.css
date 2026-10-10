@@ -1,7 +1,10 @@
-/* HOME HERO — empty full-viewport banner, ready for a future video asset. */
+/* HOME HERO — full-viewport banner, ready for a future video asset. */
 #home-hero.rd-home-hero-placeholder {
   position: relative;
   isolation: isolate;
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
   width: 100vw;
   max-width: none;
   min-height: 100vh;
@@ -9,15 +12,68 @@
   height: 100vh;
   height: 100svh;
   margin-inline: calc(50% - 50vw);
-  padding: 0;
+  padding: clamp(24px, 5vw, 80px);
   overflow: hidden;
+  color: #f7f9fc;
   background: #101827;
 }
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-placeholder__surface {
   position: absolute;
+  z-index: -1;
   inset: 0;
-  background: #101827;
+  background:
+    radial-gradient(ellipse at 50% 44%, rgba(71, 104, 153, .22), transparent 54%),
+    linear-gradient(135deg, #101827 0%, #131f32 52%, #0b1220 100%);
+}
+
+.rd-home-hero-copy {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.rd-home-hero-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(12px, 2.3vh, 26px);
+  margin: 0;
+  font-size: clamp(2.35rem, 6.2vw, 6.3rem);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -.055em;
+  text-wrap: balance;
+}
+
+.rd-home-hero-line {
+  display: block;
+  max-width: 100%;
+}
+
+.rd-home-hero-line--fixed:first-child {
+  color: #f7f9fc;
+}
+
+.rd-home-hero-line--changing {
+  min-height: 1.08em;
+  color: #a9c7ff;
+}
+
+.rd-home-hero-line--changing [data-hero-phrase] {
+  display: inline-block;
+  animation: rd-hero-phrase-in 650ms cubic-bezier(.2, .75, .25, 1) both;
+}
+
+.rd-home-hero-line--fixed:last-child {
+  color: rgba(247, 249, 252, .9);
+}
+
+@keyframes rd-hero-phrase-in {
+  from { opacity: 0; transform: translateY(12px); filter: blur(5px); }
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
 }
 
 /* Keep the placeholder edge-to-edge on mobile as well. */
@@ -29,6 +85,18 @@
     height: 100vh;
     height: 100svh;
     margin-inline: calc(50% - 50vw);
-    padding: 0;
+    padding: 24px;
+  }
+
+  .rd-home-hero-title {
+    gap: 18px;
+    font-size: clamp(2.2rem, 9vw, 4.5rem);
+    letter-spacing: -.045em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-home-hero-line--changing [data-hero-phrase] {
+    animation: none;
   }
 }
