@@ -74,13 +74,16 @@
 .solution-page__main {
   min-width: 0;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
 }
 .solution-page__features {
   display: grid;
   gap: 14px;
   width: 100%;
   max-width: 860px;
+  align-self: flex-end;
 }
 .solution-page__feature {
   display: grid;
@@ -199,6 +202,9 @@
 }
 .solution-page__proof {
   display: grid;
+  width: 100%;
+  max-width: 860px;
+  align-self: flex-end;
   grid-template-columns: 1fr 1fr;
   align-items: end;
   gap: 18px 28px;
