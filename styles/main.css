@@ -1062,3 +1062,196 @@ main.rd-home #home-decision .rd-decision-status p { color: var(--rd-ink-soft); }
 @media(max-width:520px) {
   .solution-reference-layout .solution-reference-features { padding-top: 88px; }
 }
+
+
+/* Solutions page — persistent left navigation with content arranged on the right. */
+.solution-reference-shell {
+  width: min(100% - 64px, 1320px);
+  margin: 0 auto;
+  padding: clamp(112px, 12vw, 148px) 0 48px;
+  display: grid;
+  grid-template-columns: minmax(210px, 250px) minmax(0, 1fr);
+  gap: clamp(34px, 5vw, 82px);
+  align-items: start;
+}
+.solution-reference-sidebar {
+  position: sticky;
+  top: 118px;
+  align-self: start;
+  padding: 8px 0 24px;
+}
+.solution-reference-sidebar__eyebrow {
+  margin: 0 0 22px;
+  color: #8a8e84;
+  font-size: 10px;
+  letter-spacing: .13em;
+  font-weight: 600;
+}
+.solution-reference-sidebar h1 {
+  margin: 0 0 13px;
+  color: #292d28;
+  font-size: clamp(28px, 3vw, 39px);
+  line-height: 1.05;
+  letter-spacing: -.045em;
+  font-weight: 500;
+}
+.solution-reference-sidebar__intro {
+  max-width: 225px;
+  margin: 0 0 34px;
+  color: #777c74;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.solution-reference-nav { display: grid; gap: 5px; }
+.solution-reference-nav a {
+  display: grid;
+  grid-template-columns: 25px minmax(0,1fr);
+  align-items: baseline;
+  gap: 8px;
+  padding: 11px 10px;
+  border-radius: 8px;
+  color: #6f746b;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.35;
+  transition: color .22s ease, background .22s ease, transform .22s ease;
+}
+.solution-reference-nav a span {
+  color: #a0a499;
+  font-size: 9px;
+  font-variant-numeric: tabular-nums;
+}
+.solution-reference-nav a:hover,
+.solution-reference-nav a:focus-visible {
+  color: #292d28;
+  background: #e9eae4;
+  transform: translateX(3px);
+  outline: none;
+}
+.solution-reference-sidebar__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  padding: 11px 0;
+  border-bottom: 1px solid #c7c9c0;
+  color: #30342e;
+  text-decoration: none;
+  font-size: 11px;
+}
+.solution-reference-sidebar__cta span { font-size: 15px; }
+.solution-reference-main { min-width: 0; }
+.solution-reference-main .solution-reference-features {
+  width: 100%;
+  padding-top: 0;
+  margin: 0;
+  gap: 15px;
+}
+.solution-reference-main .solution-reference-feature {
+  grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr);
+  gap: clamp(14px, 2vw, 26px);
+  padding: 16px;
+  align-items: stretch;
+}
+.solution-reference-main .solution-reference-description { padding: 8px 0; }
+.solution-reference-main .solution-reference-description h2 { font-size: clamp(14px, 1.35vw, 18px); line-height: 1.35; }
+.solution-reference-main .solution-reference-description p { font-size: 11px; line-height: 1.7; }
+.solution-reference-main .solution-reference-art { min-height: 190px; }
+.solution-reference-main .solution-reference-proof {
+  width: 100%;
+  padding: clamp(58px, 7vw, 86px) 0 24px;
+  gap: 18px 28px;
+}
+.solution-reference-main .solution-reference-proof__heading h2 { font-size: clamp(25px, 2.6vw, 34px); }
+@media (max-width: 900px) {
+  .solution-reference-shell { width: calc(100% - 40px); grid-template-columns: 185px minmax(0,1fr); gap: 24px; }
+  .solution-reference-main .solution-reference-feature { grid-template-columns: 1fr; gap: 12px; }
+  .solution-reference-main .solution-reference-art { min-height: 170px; }
+}
+@media (max-width: 640px) {
+  .solution-reference-shell { width: calc(100% - 28px); padding-top: 100px; display: block; }
+  .solution-reference-sidebar { position: static; padding: 0 0 22px; }
+  .solution-reference-sidebar__eyebrow { margin-bottom: 10px; }
+  .solution-reference-sidebar h1 { font-size: 31px; }
+  .solution-reference-sidebar__intro { max-width: 360px; margin-bottom: 16px; }
+  .solution-reference-nav { grid-template-columns: repeat(2, minmax(0,1fr)); gap: 5px; }
+  .solution-reference-nav a { padding: 9px 7px; background: #e9eae4; font-size: 10px; }
+  .solution-reference-sidebar__cta { margin-top: 12px; }
+  .solution-reference-main .solution-reference-feature { grid-template-columns: minmax(0, .9fr) minmax(0,1.1fr); gap: 10px; padding: 10px; }
+  .solution-reference-main .solution-reference-description h2 { font-size: 11px; }
+  .solution-reference-main .solution-reference-description p { font-size: 9px; }
+  .solution-reference-main .solution-reference-art { min-height: 145px; padding: 6px; }
+  .solution-reference-main .solution-reference-proof { grid-template-columns: 1fr; }
+}
+@media (max-width: 390px) {
+  .solution-reference-main .solution-reference-feature { grid-template-columns: 1fr; }
+  .solution-reference-main .solution-reference-art { min-height: 160px; }
+}
+
+
+/* Match the reference screenshot: wide, low-profile cards with copy left and artwork right. */
+.solution-reference-main .solution-reference-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: clamp(10px, 1.5vw, 18px);
+  align-items: stretch;
+  aspect-ratio: 1.95 / 1;
+  min-height: 0;
+  padding: clamp(9px, 1.25vw, 14px);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.solution-reference-main .solution-reference-description {
+  min-width: 0;
+  padding: 5px 0;
+  align-self: start;
+}
+.solution-reference-main .solution-reference-description h2 {
+  font-size: clamp(11px, 1.05vw, 14px);
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+.solution-reference-main .solution-reference-description p {
+  font-size: clamp(8px, .78vw, 10px);
+  line-height: 1.5;
+}
+.solution-reference-main .solution-reference-art {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: clamp(7px, 1vw, 12px);
+  border-radius: 7px;
+}
+.solution-reference-main .solution-reference-art .ref-ui {
+  width: 100%;
+  max-width: none;
+  padding: clamp(7px, .9vw, 11px);
+}
+.solution-reference-main .solution-reference-features { gap: 12px; }
+@media (max-width: 900px) {
+  .solution-reference-main .solution-reference-feature {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    aspect-ratio: 1.8 / 1;
+    gap: 9px;
+    padding: 9px;
+  }
+  .solution-reference-main .solution-reference-art { min-height: 0; }
+}
+@media (max-width: 640px) {
+  .solution-reference-main .solution-reference-feature {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    aspect-ratio: 1.8 / 1;
+    gap: 8px;
+    padding: 8px;
+  }
+  .solution-reference-main .solution-reference-description h2 { font-size: 10px; }
+  .solution-reference-main .solution-reference-description p { font-size: 8px; line-height: 1.45; }
+  .solution-reference-main .solution-reference-art { min-height: 0; padding: 5px; }
+  .solution-reference-main .solution-reference-art .ref-ui { padding: 6px; }
+}
+@media (max-width: 390px) {
+  .solution-reference-main .solution-reference-feature {
+    grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+    aspect-ratio: 1.65 / 1;
+  }
+}
