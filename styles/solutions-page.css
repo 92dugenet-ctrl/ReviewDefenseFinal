@@ -144,3 +144,67 @@ body.sol-page .sol-section {
   .sol-section-two .sol-work-grid > .sol-reveal:first-child,
   .sol-section-two .sol-insight { transition-delay: 0ms; }
 }
+
+
+/* Composition correction — clearer hierarchy and larger product UI. */
+.sol-page { background: #222421; }
+.sol-shell { width: min(1320px, calc(100% - 88px)); }
+.sol-section { min-height: 0; padding: clamp(72px, 8vw, 112px) clamp(28px, 4vw, 58px); }
+.sol-hero { min-height: min(800px, calc(100svh - 76px)); }
+.sol-hero-grid { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); gap: clamp(38px, 5vw, 82px); }
+.sol-title { font-size: clamp(42px, 4.1vw, 62px); line-height: 1.04; letter-spacing: -.045em; max-width: 610px; }
+.sol-copy { font-size: 15px; max-width: 460px; }
+.sol-scene { min-height: 500px; }
+.sol-scene .sol-console { width: min(560px, 100%); }
+.sol-review { font-size: 11px; padding: 10px 13px; }
+.sol-review b { font-size: 12px; }
+.sol-section-two { min-height: 0; padding-top: clamp(72px, 7vw, 100px); padding-bottom: clamp(80px, 9vw, 120px); }
+.sol-work-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: clamp(36px, 5vw, 78px); align-items: center; }
+.sol-section-heading { max-width: 520px; margin-bottom: 30px; }
+.sol-section-heading .sol-title { font-size: clamp(34px, 3.2vw, 46px); line-height: 1.08; }
+.sol-section-heading .sol-copy { font-size: 14px; max-width: 500px; }
+.sol-dashboard { padding: clamp(16px, 2vw, 24px); border-radius: 10px; }
+.sol-tabs { gap: 7px; margin-bottom: 20px; }
+.sol-tab { font-size: 10px; padding: 8px 10px; }
+.sol-dash-top { font-size: 11px; margin-bottom: 16px; }
+.sol-table { font-size: 12px; }
+.sol-table td { padding: 13px 6px; }
+.sol-table td:first-child { width: 56px; }
+.sol-total { margin-top: 18px; padding-top: 18px; }
+.sol-total small { font-size: 10px; }
+.sol-total strong { font-size: 32px; }
+.sol-total span { font-size: 11px; }
+.sol-insight { min-height: 460px; }
+.sol-insight .sol-console { width: min(500px, 100%); }
+.sol-float { font-size: 11px; padding: 12px 15px; }
+.sol-section + .sol-section { border-top: 1px solid var(--sol-line); }
+.sol-hero-grid > .sol-reveal:first-child { max-width: 570px; }
+@media (min-width: 761px) {
+ .sol-hero-grid > div:first-child { padding-block: 28px; }
+ .sol-section-two .sol-work-grid > div:first-child { min-width: 0; }
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+ .sol-shell { width: calc(100% - 36px); }
+ .sol-section { padding-inline: 24px; }
+ .sol-hero-grid,.sol-work-grid { gap: 26px; }
+ .sol-title { font-size: clamp(38px, 4.5vw, 52px); }
+ .sol-scene { min-height: 380px; }
+ .sol-table { font-size: 10px; }
+ .sol-table td { padding: 9px 3px; }
+}
+@media (max-width: 760px) {
+ .sol-shell { width: calc(100% - 20px); }
+ .sol-section { padding: 56px 14px; }
+ .sol-hero { min-height: 0; }
+ .sol-hero-grid,.sol-work-grid { grid-template-columns: minmax(0,1fr); gap: 26px; }
+ .sol-title { font-size: clamp(39px, 10vw, 56px); }
+ .sol-scene { min-height: 320px; }
+ .sol-section-two { padding-top: 58px; padding-bottom: 68px; }
+ .sol-section-heading .sol-title { font-size: clamp(32px, 8vw, 42px); }
+ .sol-table { font-size: 10px; }
+ .sol-table td { padding: 9px 3px; }
+ .sol-insight { min-height: 320px; }
+}
+@media (prefers-reduced-motion: reduce) {
+ .sol-review,.sol-float { animation: none; }
+}
