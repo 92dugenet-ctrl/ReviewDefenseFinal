@@ -1,6 +1,6 @@
 /* Solutions — immersive dark product showcase */
 :root{--sol-bg:#242524;--sol-panel:#2d2f2c;--sol-line:rgba(255,255,255,.1);--sol-muted:#b7b9b2;--sol-lime:#d4ff8a;--sol-white:#f6f7f2}
-.sol-page{background:var(--sol-bg);color:var(--sol-white);font-family:inherit;overflow:hidden}
+.sol-page{background:var(--sol-bg);color:var(--sol-white);font-family:inherit;overflow-x:clip;overflow-y:auto}
 .sol-shell{width:min(1180px,calc(100% - 64px));margin-inline:auto}
 .sol-section{position:relative;min-height:680px;display:flex;align-items:center;border-inline:1px solid var(--sol-line);padding:84px 26px}
 .sol-hero-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:50px;align-items:center;width:100%}
