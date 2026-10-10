@@ -70,7 +70,7 @@
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing [data-hero-phrase] {
   display: inline-block;
-  color: #a9c7ff;
+  color: #f7f9fc;
   animation: rd-hero-phrase-in 650ms cubic-bezier(.2, .75, .25, 1) both;
 }
 
