@@ -1,5 +1,5 @@
 /* Solutions page — editorial cards with deliberate one-step navigation. */
-.rd-solution-reference{--sr-ink:#202a35;--sr-muted:#858b90;--sr-line:#e8e9e4;--sr-panel:#eeefe9;--sr-blue:#cbdcf2;color:var(--sr-ink);background:#fafaf8;overflow:clip}
+.rd-solution-reference{--sr-ink:#202a35;--sr-muted:#858b90;--sr-line:#e8e9e4;--sr-panel:#eeefe9;--sr-blue:#cbdcf2;color:var(--sr-ink);background:#fff;overflow:clip}
 .rd-solution-reference *{box-sizing:border-box}
 .rd-solution-reference .sr-intro{width:min(1240px,calc(100% - 64px));margin:0 auto;padding:calc(var(--rd-header-height, 76px) + 170px) 0 84px;display:grid;grid-template-columns:minmax(150px,.55fr) minmax(0,2fr);gap:6vw;align-items:start}
 .sr-sidebar{position:sticky;top:112px;padding-top:4px}
