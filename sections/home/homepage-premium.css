@@ -1148,3 +1148,60 @@ main.rd-home-premium .rd-home-commitments {
     min-height: 42px;
   }
 }
+
+
+/* GLOBAL SITE TEXT PALETTE — 2026-10-10
+   Use the same typography colors as the public product pages.
+   Text colors only: backgrounds, borders, card layout and illustrations remain unchanged. */
+main.rd-home-premium {
+  color: var(--rd-ink);
+}
+main.rd-home-premium .rd-home-about p,
+main.rd-home-premium .rd-home-section-heading h2,
+main.rd-home-premium .rd-home-step h3,
+main.rd-home-premium .rd-home-feature-content h3,
+main.rd-home-premium .rd-home-commitments__heading h2,
+main.rd-home-premium .rd-home-value-card h3,
+main.rd-home-premium .rd-home-closing p {
+  color: var(--rd-ink);
+}
+main.rd-home-premium .rd-home-about-label,
+main.rd-home-premium .rd-home-eyebrow,
+main.rd-home-premium .rd-home-section-heading p,
+main.rd-home-premium .rd-home-step p,
+main.rd-home-premium .rd-home-feature-content p,
+main.rd-home-premium .rd-home-commitments__heading > p,
+main.rd-home-premium .rd-home-value-card p,
+main.rd-home-premium .rd-home-closing a {
+  color: var(--rd-ink-soft);
+}
+main.rd-home-premium .rd-home-step__number {
+  color: var(--rd-muted);
+}
+main.rd-home-premium .rd-home-mini-window-bar span,
+main.rd-home-premium .rd-home-reply-draft > span,
+main.rd-home-premium .rd-home-draft-footer {
+  color: var(--rd-muted);
+}
+main.rd-home-premium .rd-home-review-quote p {
+  color: var(--rd-ink);
+}
+main.rd-home-premium .rd-home-reply-draft p {
+  color: var(--rd-ink-soft);
+}
+main.rd-home-premium .rd-home-feature-button,
+main.rd-home-premium .rd-home-feature-card--light .rd-home-feature-button,
+main.rd-home-premium .rd-home-feature-card--dark .rd-home-feature-button,
+main.rd-home-premium .rd-home-closing a {
+  color: var(--rd-ink);
+}
+main.rd-home-premium .rd-home-feature-card--dark .rd-home-feature-button {
+  color: #ffffff;
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-title,
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line,
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing,
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing [data-hero-phrase],
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line--fixed:last-child {
+  color: var(--rd-ink) !important;
+}
