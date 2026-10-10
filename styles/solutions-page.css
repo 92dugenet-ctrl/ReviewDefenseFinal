@@ -58,3 +58,28 @@
 .sol-reveal.is-visible{opacity:1;transform:translateY(0)}
 @media(prefers-reduced-motion:reduce){.sol-reveal{opacity:1;transform:none;transition:none}.sol-console,.sol-cta{transition:none}}
 @media(max-width:760px){.sol-shell{width:calc(100% - 28px)}.sol-section{min-height:auto;padding:68px 16px}.sol-hero-grid,.sol-work-grid{grid-template-columns:1fr;gap:30px}.sol-title{font-size:clamp(42px,12vw,62px)}.sol-scene{min-height:340px}.sol-console{width:min(390px,100%)}.sol-section-two{padding-top:62px;padding-bottom:70px}.sol-work-grid{gap:28px}.sol-insight{min-height:330px}.sol-dashboard{padding:12px}.sol-final{padding:60px 16px}.sol-review{font-size:8px;padding:6px 7px}}
+
+/* Explicit page-level scrolling: keep both content sections reachable. */
+html:has(body.sol-page) {
+  height: auto !important;
+  min-height: 100% !important;
+  overflow-x: clip !important;
+  overflow-y: scroll !important;
+}
+body.sol-page {
+  display: block !important;
+  height: auto !important;
+  min-height: 100vh !important;
+  max-height: none !important;
+  overflow-x: clip !important;
+  overflow-y: visible !important;
+}
+body.sol-page > .sol-shell {
+  display: block !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+}
+body.sol-page .sol-section {
+  flex: none;
+}
