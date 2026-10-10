@@ -8,35 +8,35 @@
   // data/articles.json = registre éditorial ; content/articles/html = contenu ;
   // assets/articles = illustrations. Le site conserve son gabarit et sa mosaïque.
   const topics = [
-    ["avis-fictifs","Avis fictifs et suspects","Identifier les signaux qui méritent un examen."],
-    ["avis-negatifs","Avis négatifs","Distinguer insatisfaction réelle et situation à examiner."],
-    ["repondre","Répondre aux avis","Construire une réponse adaptée au contexte."],
-    ["signaler","Signaler un avis","Préparer une action lorsque les éléments le justifient."],
-    ["score-suspicion","Comprendre le score de suspicion","Lire un niveau de suspicion sans le confondre avec une preuve."],
-    ["google-reviews","Google Reviews","Comprendre les règles et les situations courantes."],
-    ["reputation","Réputation et tendances","Suivre les évolutions importantes dans le temps."],
-    ["crise","Gestion de crise réputationnelle","Structurer les décisions lorsque plusieurs avis arrivent."],
-    ["preuves","Preuves et documentation","Conserver les éléments utiles et leur contexte."],
-    ["multi-etablissements","Gestion multi-établissements","Comparer et suivre plusieurs établissements."],
-    ["regles","Règles, limites et bonnes pratiques","Comprendre ce qui peut être fait et ce qui doit être vérifié."],
-    ["cas-concrets","Cas concrets","Voir comment une situation peut conduire à plusieurs actions."],
-    ["methodes","Méthodes d’analyse","Comprendre les méthodes, signaux et explications du système."]
+    ["avis-fictifs","Avis fictifs","Repérez les signaux d’un avis potentiellement fictif."],
+    ["avis-negatifs","Avis négatifs","Analysez les critiques et choisissez la bonne réponse."],
+    ["repondre","Répondre aux avis","Rédigez des réponses utiles, claires et professionnelles."],
+    ["google-reviews","Google Reviews","Comprenez les règles, signalements et recours Google."],
+    ["score-suspicion","Score de suspicion","Évaluez les signaux sans confondre suspicion et preuve."],
+    ["signaler","Signalement","Préparez un signalement documenté et pertinent."],
+    ["reputation","E-réputation","Suivez et protégez la réputation de votre entreprise."],
+    ["ia","IA et avis","Explorez les usages, limites et contrôles de l’intelligence artificielle."],
+    ["crise","Crise réputationnelle","Organisez votre réponse face à une vague d’avis."],
+    ["preuves","Preuves et dossiers","Conservez les éléments utiles de façon claire et chronologique."],
+    ["multi-etablissements","Multi-établissements","Pilotez les avis et la réputation de plusieurs sites."],
+    ["regles","Règles et limites","Maîtrisez les bonnes pratiques et les limites juridiques."],
+    ["cas-concrets","Cas concrets","Découvrez des situations pratiques et les décisions possibles."]
   ].map(([id,title,description]) => ({id,title,description,count:0}));
 
   const categoryToTopic = {
     "Avis_fictifs":"avis-fictifs",
     "Avis_n_gatifs":"avis-negatifs",
     "R_pondre":"repondre",
-    "Signaler":"signaler",
-    "Score_de_suspicion":"score-suspicion",
     "Google_Reviews":"google-reviews",
+    "Score_de_suspicion":"score-suspicion",
+    "Signaler":"signaler",
     "R_putation":"reputation",
+    "IA_et_avis":"ia",
     "Crise_r_putationnelle":"crise",
     "Preuves_dossiers":"preuves",
     "Multi-_tablissements":"multi-etablissements",
     "R_gles_limites":"regles",
-    "Cas_concrets":"cas-concrets",
-    "IA_et_avis":"methodes"
+    "Cas_concrets":"cas-concrets"
   };
   const types = {
     "Guide pratique":"Guide",
@@ -64,7 +64,9 @@
     if (!root) return;
     const query = document.querySelector("[data-resource-search]")?.value.trim().toLocaleLowerCase("fr") || "";
     const visible = topics.filter(topic => !query || `${topic.title} ${topic.description}`.toLocaleLowerCase("fr").includes(query));
-    root.innerHTML = visible.map(topic => `<a class="resource-topic" href="theme.html?theme=${encodeURIComponent(topic.id)}"><img class="rd-mosaic-visual" src="../../assets/mosaic/${topic.id === "methodes" ? "ia" : topic.id}.svg" alt="" aria-hidden="true"><span class="resources-eyebrow">${topic.count} ressources</span><h3>${escapeHtml(topic.title)}</h3><p>${escapeHtml(topic.description)}</p></a>`).join("");
+    root.innerHTML = visible.map((topic, index) => `<a class="resource-topic rd-motion-item" href="theme.html?theme=${encodeURIComponent(topic.id)}" aria-label="Explorer la catégorie ${escapeHtml(topic.title)}, ${topic.count} articles"><img class="rd-mosaic-visual" src="../../assets/mosaic/${topic.id}.svg" alt="" aria-hidden="true" loading="lazy"><span class="resource-topic__panel"><span class="resource-topic__number">${String(topics.indexOf(topic)+1).padStart(2,"0")}</span><h3>${escapeHtml(topic.title)}</h3><span class="resource-topic__meta">${topic.count} articles</span><p class="resource-topic__description">${escapeHtml(topic.description)}</p></span><span class="resource-topic__arrow" aria-hidden="true">→</span></a>`).join("");
+    const empty = document.querySelector("[data-resource-empty]");
+    if (empty) empty.hidden = visible.length > 0;
   };
 
   const renderContent = filter => {
