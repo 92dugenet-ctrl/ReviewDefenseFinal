@@ -125,3 +125,50 @@ body.tarifs-page *{box-sizing:border-box}
 @media(prefers-reduced-motion:reduce){
  .rd-tarifs *, .rd-tarifs *:before, .rd-tarifs *:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
 }
+
+
+/* Horizontal price cards: illustration on the left, details and price on the right. */
+.rd-tarifs .tarifs-section{padding-block:clamp(48px,6vw,78px)}
+.rd-tarifs .tarifs-section-head{margin-bottom:26px}
+.rd-tarifs .tarifs-audit{background:#f7f8fa}
+.rd-tarifs .tarifs-rail{overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scroll-snap-type:x mandatory;padding:4px 2px 16px}
+.rd-tarifs .tarifs-rail__track{grid-auto-columns: minmax(390px, 48vw);gap:16px;width:max-content;min-width:100%}
+.rd-tarifs .tarif-card--horizontal,
+.rd-tarifs .pack-card,
+.rd-tarifs .subscription-card{display:grid;grid-template-columns:minmax(120px, .78fr) minmax(0,1.22fr);align-items:stretch;gap:20px;width:100%;min-height:210px;padding:18px;border-radius:4px;scroll-snap-align:start}
+.rd-tarifs .tarif-card--horizontal .tarif-card__art,
+.rd-tarifs .pack-card .pack-mosaic,
+.rd-tarifs .subscription-card .subscription-mark{grid-column:1;grid-row:1 / span 4;align-self:stretch;min-height:170px;height:100%;margin:0;padding:14px}
+.rd-tarifs .tarif-card__body{display:flex;flex-direction:column;min-width:0;grid-column:2;grid-row:1 / span 4}
+.rd-tarifs .tarif-card__body h3{margin:12px 0 8px;font-size:18px}
+.rd-tarifs .tarif-card__body p{margin-bottom:8px}
+.rd-tarifs .tarif-card__body>strong{margin-top:auto;padding-top:12px;font-size:27px}
+.rd-tarifs .tarif-card--horizontal .tarif-card__index{display:block}
+.rd-tarifs .pack-card .pack-kicker{grid-column:2;margin:0!important;align-self:end}
+.rd-tarifs .pack-card h3{grid-column:2;margin:0}
+.rd-tarifs .pack-card>p:not(.pack-kicker){grid-column:2;min-height:0;margin:0}
+.rd-tarifs .pack-card>strong{grid-column:2;margin-top:0;padding-top:6px;font-size:27px}
+.rd-tarifs .subscription-card .pack-kicker{grid-column:2;margin:0!important;align-self:end}
+.rd-tarifs .subscription-card h3{grid-column:2;margin:0}
+.rd-tarifs .subscription-card>p:not(.pack-kicker){grid-column:2;margin:0}
+.rd-tarifs .subscription-card>strong{grid-column:2;margin-top:0;padding-top:6px;font-size:27px}
+.rd-tarifs .tarifs-rail--packs .tarifs-rail__track,
+.rd-tarifs .tarifs-rail--subscriptions .tarifs-rail__track{grid-auto-columns:minmax(390px,48vw)}
+.rd-tarifs .protection-grid{display:contents}
+.rd-tarifs .tarifs-rail--subscriptions .tarifs-rail__track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(390px,48vw);width:max-content;min-width:100%}
+.rd-tarifs .tarifs-rail--subscriptions .subscription-card{width:100%;min-height:210px}
+@media(max-width:650px){
+ .rd-tarifs .tarifs-rail__track,
+ .rd-tarifs .tarifs-rail--packs .tarifs-rail__track,
+ .rd-tarifs .tarifs-rail--subscriptions .tarifs-rail__track{grid-auto-columns:minmax(310px,86vw)}
+ .rd-tarifs .tarif-card--horizontal,
+ .rd-tarifs .pack-card,
+ .rd-tarifs .subscription-card{grid-template-columns:minmax(95px,.7fr) minmax(0,1.3fr);gap:13px;min-height:190px;padding:13px}
+ .rd-tarifs .tarif-card--horizontal .tarif-card__art,
+ .rd-tarifs .pack-card .pack-mosaic,
+ .rd-tarifs .subscription-card .subscription-mark{min-height:150px}
+ .rd-tarifs .tarif-card__body h3{font-size:16px}
+ .rd-tarifs .tarif-card__body>strong,
+ .rd-tarifs .pack-card>strong,
+ .rd-tarifs .subscription-card>strong{font-size:23px}
+}
