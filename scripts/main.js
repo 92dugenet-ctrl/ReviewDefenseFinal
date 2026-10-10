@@ -15,7 +15,7 @@
   };
 
   const loadText = async (url) => {
-    const response = await fetch(sitePath(url), { credentials: "same-origin" });
+    const response = await fetch(sitePath(url), { credentials: "same-origin", cache: "no-store" });
     if (!response.ok) throw new Error(`ReviewDefense: ${response.status} ${url}`);
     return response.text();
   };
@@ -40,8 +40,8 @@
 
   const init = async () => {
     try {
-      const headerMounted = await mount("[data-global-header]", "/components/header/header.html");
-      const footerMounted = await mount("[data-global-footer]", "/components/footer/footer.html");
+      const headerMounted = await mount("[data-global-header]", "/components/header/header.html?v=liquid-glass-20261010");
+      const footerMounted = await mount("[data-global-footer]", "/components/footer/footer.html?v=global-20261010");
       if (headerMounted) await loadScript("/components/header/header.js");
       if (footerMounted) await loadScript("/components/footer/footer.js");
     } catch (error) {
