@@ -1,10 +1,157 @@
 <!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Méthode — ReviewDefense</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f3eee8">
+<title>Méthode — ReviewDefense</title>
+<meta name="description" content="La méthode ReviewDefense : comprendre les avis, examiner les signaux, préparer des réponses adaptées et choisir les actions utiles sans perdre le contrôle.">
+<link rel="stylesheet" href="/ReviewDefenseFinal/styles/main.css">
+<link rel="stylesheet" href="/ReviewDefenseFinal/components/header/header.css">
+<link rel="stylesheet" href="/ReviewDefenseFinal/components/footer/footer.css">
+<style>
+:root{--m-paper:#f3eee8;--m-ink:#252322;--m-muted:#77716d;--m-line:rgba(49,42,38,.10);--m-blue:#547ba9;--m-plum:#321b35;--m-night:#151f40}
+body.method-page{margin:0;background:var(--m-paper);color:var(--m-ink);font-family:Inter,Arial,sans-serif}
+.method-page *{box-sizing:border-box}
+.method-page main{min-height:0}
+.method-page .method-hero{min-height:690px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:100px 24px 0;background:linear-gradient(180deg,#41668f 0%,#7d8da2 33%,#c6b7a5 67%,#f3eee8 100%)}
+.method-page .method-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 90%,rgba(255,255,255,.42),transparent 42%);pointer-events:none}
+.method-page .hero-copy{position:relative;z-index:2;max-width:800px;color:#fff}
+.method-page .hero-copy h1{font-size:clamp(36px,5.2vw,66px);font-weight:400;letter-spacing:-.055em;line-height:1.02;margin:0 auto 18px;max-width:740px}
+.method-page .hero-copy p{max-width:600px;margin:0 auto;color:rgba(255,255,255,.85);font-size:14px;line-height:1.65}
+.method-page .method-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:27px;padding:12px 22px;background:#1d1d1d;color:#fff;text-decoration:none;font-size:12px;transition:transform .2s ease,background .2s ease}
+.method-page .method-cta:hover{transform:translateY(-2px);background:#343434}
+.method-page .hero-sculpture{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);width:min(570px,78vw);height:330px;z-index:1}
+.method-page .manifesto{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--m-line);border-top:1px solid var(--m-line)}
+.method-page .manifesto-title,.method-page .manifesto-copy{padding:clamp(36px,6vw,78px) clamp(26px,5.7vw,76px)}
+.method-page .manifesto-title{border-right:1px solid var(--m-line)}
+.method-page .manifesto-title h2{font-size:clamp(30px,3.4vw,46px);font-weight:400;letter-spacing:-.045em;line-height:1.08;margin:0}
+.method-page .manifesto-copy p{font-size:14px;line-height:1.7;color:var(--m-muted);margin:0 0 13px}
+.method-page .manifesto-copy strong{color:#35312e;font-weight:600}
+.method-page .text-link{display:inline-flex;margin-top:8px;padding:11px 17px;border:1px solid var(--m-line);color:var(--m-ink);text-decoration:none;font-size:12px;transition:background .2s ease}
+.method-page .text-link:hover{background:#fff}
+.method-page .method-steps{display:grid;grid-template-columns:1fr 1fr}
+.method-page .method-step{display:grid;grid-template-columns:minmax(100px,.55fr) 1.45fr;min-height:440px;border-bottom:1px solid var(--m-line)}
+.method-page .step-copy{padding:48px clamp(24px,4vw,58px) 48px 0;display:grid;grid-template-columns:minmax(90px,.55fr) 1.45fr;gap:20px;align-content:start}
+.method-page .step-index{display:grid;gap:13px;align-content:start;font-family:Georgia,serif;font-size:11px;color:#77706a}
+.method-page .step-index span{display:flex;align-items:center;gap:10px;white-space:nowrap}
+.method-page .step-index b{display:inline-grid;place-items:center;width:29px;height:22px;font-weight:400}
+.method-page .step-index .active b{background:#242322;color:#fff}
+.method-page .step-text h2{font-size:clamp(23px,2.4vw,34px);font-weight:400;letter-spacing:-.045em;line-height:1.08;margin:0 0 12px}
+.method-page .step-text p,.method-page .step-text li{font-size:13px;line-height:1.6;color:var(--m-muted)}
+.method-page .step-text p{margin:0 0 10px}
+.method-page .step-text ul{padding-left:15px;margin:10px 0 0}
+.method-page .step-text li{padding:2px 0}
+.method-page .step-visual{position:relative;overflow:hidden;min-height:440px;display:grid;place-items:center}
+.method-page .step-visual svg{width:100%;height:100%;min-height:440px;display:block}
+.method-page .visual-problem{background:#382322}
+.method-page .visual-solution{background:#321b3a}
+.method-page .visual-impact{background:#151f40}
+.method-page .chat-demo{width:min(440px,82%);color:#e6eaf4;font-size:13px;line-height:1.45}
+.method-page .chat-file{display:flex;gap:10px;align-items:center;margin-left:auto;width:max-content;max-width:100%;padding:10px 13px;border:1px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(255,255,255,.035)}
+.method-page .file-icon{background:#ed454b;border-radius:6px;padding:8px;color:white;font-weight:700}
+.method-page .chat-bubble{width:max-content;max-width:90%;margin:14px 0 26px auto;padding:10px 15px;border-radius:24px;background:#293958;color:#dce6f5}
+.method-page .chat-answer{display:flex;gap:14px;align-items:flex-start;margin:28px 0}
+.method-page .chat-answer .spark{font-size:22px;color:#dbe6ff}
+.method-page .chat-reply{margin:24px 0 0 auto}
+.method-page .method-end{padding:70px 24px;text-align:center;border-bottom:1px solid var(--m-line)}
+.method-page .method-end h2{font-size:clamp(28px,4vw,46px);font-weight:400;letter-spacing:-.05em;margin:0 auto 14px}
+.method-page .method-end p{max-width:620px;margin:0 auto;color:var(--m-muted);font-size:14px;line-height:1.7}
+.method-page .method-end .method-cta{background:#242322}
+@media(max-width:800px){
+ .method-page .method-hero{min-height:600px;padding-top:86px}
+ .method-page .hero-copy h1{font-size:clamp(37px,9vw,56px)}
+ .method-page .hero-sculpture{height:275px;width:100vw}
+ .method-page .manifesto{grid-template-columns:1fr}
+ .method-page .manifesto-title{border-right:0;border-bottom:1px solid var(--m-line);padding-bottom:25px}
+ .method-page .manifesto-copy{padding-top:28px}
+ .method-page .method-steps{grid-template-columns:1fr}
+ .method-page .method-step{grid-template-columns:1fr;min-height:0}
+ .method-page .step-copy{grid-template-columns:80px 1fr;padding:32px 22px;gap:12px}
+ .method-page .step-visual,.method-page .step-visual svg{min-height:340px}
+}
+@media(prefers-reduced-motion:reduce){.method-page *{scroll-behavior:auto!important;transition:none!important}}
+</style>
 </head>
-<body>
+<body class="method-page">
+<div data-global-header></div>
+<main>
+<section class="method-hero" aria-labelledby="method-title">
+  <div class="hero-copy">
+    <h1 id="method-title">La méthode ReviewDefense pour reprendre la maîtrise de vos avis.</h1>
+    <p>ReviewDefense vous aide à comprendre les retours clients, à repérer les avis qui méritent une vérification, à préparer des réponses professionnelles et à choisir la suite adaptée — avec une décision qui reste la vôtre.</p>
+    <a class="method-cta" href="/ReviewDefenseFinal/pages/solution.html">Découvrir les solutions <span aria-hidden="true"> ↗</span></a>
+  </div>
+  <svg class="hero-sculpture" viewBox="0 0 600 360" role="img" aria-label="Sculpture abstraite en strates minérales évoquant l'analyse et la clarté">
+    <defs><linearGradient id="stone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#faf8f3"/><stop offset=".28" stop-color="#b9b1a9"/><stop offset=".48" stop-color="#71645e"/><stop offset=".7" stop-color="#e8e0d6"/><stop offset="1" stop-color="#fff"/></linearGradient><linearGradient id="stoneSide" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cfc7be"/><stop offset="1" stop-color="#8e8178" stop-opacity="0"/></linearGradient><filter id="stoneShadow"><feGaussianBlur stdDeviation="10"/></filter></defs>
+    <ellipse cx="300" cy="322" rx="185" ry="21" fill="#5d554e" opacity=".18" filter="url(#stoneShadow)"/>
+    <path d="M105 95 Q128 47 184 58 Q233 19 282 44 Q331 13 375 48 Q428 31 464 72 Q495 97 482 141 L467 205 Q453 239 418 254 L407 348 L195 348 L186 259 Q145 242 129 202 L107 151 Q94 124 105 95Z" fill="url(#stone)" />
+    <path d="M107 101 Q163 125 218 99 T326 93 T483 101 L477 139 Q412 158 354 141 T231 151 T119 143Z" fill="#dcd4cb" opacity=".8"/>
+    <path d="M115 124 Q190 160 250 126 T367 125 T478 132" fill="none" stroke="#81736a" stroke-width="4" opacity=".85"/>
+    <path d="M119 144 Q182 175 246 151 T365 149 T475 150" fill="none" stroke="#f8f2e9" stroke-width="6" opacity=".9"/>
+    <path d="M130 167 Q191 199 251 174 T365 175 T464 170" fill="none" stroke="#88776b" stroke-width="3" opacity=".9"/>
+    <path d="M145 190 Q207 220 263 201 T368 198 T451 194" fill="none" stroke="#e6ded5" stroke-width="5"/>
+    <path d="M170 225 Q224 247 280 231 T377 227 T431 218" fill="none" stroke="#9c8c80" stroke-width="3" opacity=".8"/>
+    <path d="M190 260 Q244 279 299 267 T402 259" fill="none" stroke="#f4eee7" stroke-width="5"/>
+    <path d="M195 275 Q265 302 408 272 L407 350 L195 350Z" fill="url(#stoneSide)" opacity=".8"/>
+    <path d="M108 104 Q129 68 179 70 Q225 31 280 51 Q337 22 373 56 Q430 38 463 78" fill="none" stroke="#fff" stroke-width="5" opacity=".8"/>
+    <rect x="0" y="310" width="600" height="50" fill="url(#stoneSide)" opacity=".55"/>
+  </svg>
+</section>
+<section class="manifesto" id="manifeste">
+  <div class="manifesto-title"><h2>Notre manifeste</h2></div>
+  <div class="manifesto-copy">
+    <p>Les avis en ligne influencent la confiance, la réputation et le choix des clients. Ils méritent une réponse attentive : ni réaction précipitée, ni conclusion tirée d’un simple indicateur.</p>
+    <p>Pourtant, lorsque les avis s’accumulent, il devient difficile de distinguer une réclamation à traiter, une critique à laquelle répondre et un contenu qui pourrait justifier un signalement.</p>
+    <p><strong>ReviewDefense structure cette démarche : comprendre le contexte, expliquer les signaux, proposer une action pertinente et laisser chaque décision sous le contrôle de l’établissement.</strong></p>
+    <a class="text-link" href="/ReviewDefenseFinal/pages/comment-ca-marche.html">Découvrir notre démarche ↗</a>
+  </div>
+</section>
+<section class="method-steps" aria-label="Les trois principes de la méthode ReviewDefense">
+  <article class="method-step" id="probleme">
+    <div class="step-copy"><nav class="step-index" aria-label="Étapes"><span class="active"><b>01</b> PROBLÈME</span><span><b>02</b> MÉTHODE</span><span><b>03</b> IMPACT</span></nav>
+      <div class="step-text"><h2>Les avis s’accumulent. La visibilité se brouille.</h2><p>Chaque retour client mérite d’être compris, mais le volume et la diversité des situations compliquent le suivi quotidien.</p><ul><li>Les avis importants se perdent parmi les retours ordinaires.</li><li>Les réponses risquent d’être tardives ou trop génériques.</li><li>Les signalements demandent des motifs et des éléments vérifiables.</li></ul></div>
+    </div>
+    <div class="step-visual visual-problem" aria-label="Illustration de dossiers d'avis dispersés">
+      <svg viewBox="0 0 620 600" role="img" aria-label="Cartes d'avis dispersées sur un fond bordeaux">
+      <defs><linearGradient id="doc1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9d6d68"/><stop offset="1" stop-color="#573735"/></linearGradient></defs>
+      <g fill="url(#doc1)" stroke="#c38b83" stroke-opacity=".25">
+      <g transform="translate(115 140) rotate(9)"><rect width="82" height="112" rx="3"/><path d="M13 22h48M13 31h55M13 40h49M13 49h54M13 58h40M13 67h50M13 76h45" stroke="#d9b4ac" stroke-opacity=".5"/></g>
+      <g transform="translate(330 270) rotate(-24)"><rect width="105" height="135" rx="3"/><path d="M16 28h69M16 39h73M16 50h67M16 61h69M16 72h70M16 83h58M16 94h68M16 105h45" stroke="#d9b4ac" stroke-opacity=".6"/><circle cx="21" cy="15" r="5" fill="#d9b4ac"/></g>
+      <g transform="translate(450 100) rotate(15)"><rect width="95" height="132" rx="3"/><path d="M15 30h65M15 41h65M15 52h65M15 63h61M15 74h64M15 85h56M15 96h65" stroke="#d9b4ac" stroke-opacity=".6"/><circle cx="22" cy="15" r="5" fill="#d9b4ac"/></g>
+      <g transform="translate(105 390) rotate(12)"><rect width="100" height="142" rx="3"/><path d="M14 30h72M14 41h72M14 52h66M14 63h72M14 74h70M14 85h70M14 96h58M14 107h68" stroke="#d9b4ac" stroke-opacity=".6"/></g>
+      <g transform="translate(395 465) rotate(-5)"><rect width="48" height="70" rx="3"/><path d="M8 18h31M8 26h31M8 34h31M8 42h27" stroke="#d9b4ac" stroke-opacity=".6"/></g>
+      </g><g fill="#d5a9a0" opacity=".45"><circle cx="260" cy="145" r="3"/><circle cx="510" cy="390" r="5"/><circle cx="285" cy="500" r="2"/><circle cx="80" cy="300" r="4"/></g>
+      </svg>
+    </div>
+  </article>
+  <article class="method-step" id="methode">
+    <div class="step-copy"><nav class="step-index" aria-label="Étapes"><span><b>01</b> PROBLÈME</span><span class="active"><b>02</b> MÉTHODE</span><span><b>03</b> IMPACT</span></nav>
+      <div class="step-text"><h2>Nous transformons les avis en décisions éclairées.</h2><p>ReviewDefense organise l’examen des avis et aide à choisir une suite cohérente avec le contexte — sans transformer un soupçon en certitude.</p><ul><li>Lecture structurée du contenu et du contexte disponible.</li><li>Signaux expliqués, avec leurs limites et les points à vérifier.</li><li>Réponses adaptées et pistes d’action soumises à votre validation.</li></ul></div>
+    </div>
+    <div class="step-visual visual-solution" aria-label="Illustration des liens entre les informations et les avis">
+      <svg viewBox="0 0 620 600" role="img" aria-label="Documents reliés par un réseau de points lumineux">
+      <g fill="none" stroke="#d6b4ec" stroke-width="1.2" stroke-dasharray="3 5" opacity=".65">
+      <path d="M45 125 Q120 80 175 165 T305 120 T450 65 T600 140"/><path d="M30 310 Q110 200 195 280 T355 320 T520 240 T620 300"/><path d="M60 470 Q135 390 225 465 T385 440 T560 490"/><path d="M95 70 Q140 210 75 360 T150 540"/><path d="M270 60 Q330 175 260 285 T310 500"/><path d="M470 100 Q405 220 510 340 T460 560"/><path d="M165 165 Q280 170 355 320 T560 490"/><path d="M75 360 Q180 320 195 280 T450 65"/></g>
+      <g fill="#d9b9f1"><circle cx="45" cy="125" r="7"/><circle cx="175" cy="165" r="7"/><circle cx="305" cy="120" r="7"/><circle cx="450" cy="65" r="7"/><circle cx="600" cy="140" r="7"/><circle cx="30" cy="310" r="7"/><circle cx="195" cy="280" r="7"/><circle cx="355" cy="320" r="7"/><circle cx="520" cy="240" r="7"/><circle cx="60" cy="470" r="7"/><circle cx="225" cy="465" r="7"/><circle cx="385" cy="440" r="7"/><circle cx="560" cy="490" r="7"/><circle cx="95" cy="70" r="7"/><circle cx="150" cy="540" r="7"/><circle cx="270" cy="60" r="7"/><circle cx="310" cy="500" r="7"/><circle cx="470" cy="100" r="7"/><circle cx="460" cy="560" r="7"/></g>
+      <g fill="#68457a" stroke="#b88bd1" stroke-opacity=".55"><path d="M65 205h95l18 18v115H65Z"/><path d="M178 223h-18v-18Z" fill="#9a6eb0"/><path d="M355 115h90l18 18v118H355Z"/><path d="M463 133h-18v-18Z" fill="#9a6eb0"/><path d="M180 380h95l18 18v120H180Z"/><path d="M293 398h-18v-18Z" fill="#9a6eb0"/><path d="M480 360h90l18 18v105h-108Z"/><path d="M588 378h-18v-18Z" fill="#9a6eb0"/></g>
+      <g stroke="#d9bce8" stroke-opacity=".65"><path d="M80 245h66M80 258h66M80 271h66M80 284h58M370 157h58M370 170h58M370 183h58M370 196h58M195 423h63M195 436h63M195 449h63M495 399h63M495 412h63M495 425h63"/></g>
+      <g fill="#e6d3f2"><path d="M84 222l8-9 8 9z"/><circle cx="386" cy="139" r="5"/><circle cx="209" cy="403" r="5"/><path d="M507 384l7-8 7 8z"/></g>
+      </svg>
+    </div>
+  </article>
+  <article class="method-step" id="impact">
+    <div class="step-copy"><nav class="step-index" aria-label="Étapes"><span><b>01</b> PROBLÈME</span><span><b>02</b> MÉTHODE</span><span class="active"><b>03</b> IMPACT</span></nav>
+      <div class="step-text"><h2>Plus de clarté pour vous. Plus de cohérence pour vos clients.</h2><p>Une méthode commune permet de mieux prioriser les avis, de répondre avec professionnalisme et de suivre chaque dossier jusqu’à la décision.</p><ul><li>Vous gardez la main sur chaque réponse et chaque action.</li><li>Les situations sensibles sont mieux identifiées et documentées.</li><li>Les demandes de retrait restent motivées et soumises aux règles de la plateforme.</li></ul></div>
+    </div>
+    <div class="step-visual visual-impact" aria-label="Illustration d'une réponse préparée et validée">
+      <div class="chat-demo"><div class="chat-file"><span class="file-icon">▤</span><span><strong>Dossier_avis.pdf</strong><br><small>Éléments à vérifier</small></span></div><div class="chat-bubble">Comment répondre à cet avis ?</div><div class="chat-answer"><span class="spark">✳</span><div>Voici une proposition qui tient compte du contenu et des informations disponibles.<br><br>Les faits à confirmer sont indiqués avant toute publication.</div></div><div class="chat-bubble chat-reply">Je relis et je valide.</div></div>
+    </div>
+  </article>
+</section>
+<section class="method-end"><h2>Votre réputation mérite une méthode, pas une réaction à chaud.</h2><p>Comprenez les avis, choisissez une réponse appropriée et examinez les options disponibles avec une approche claire, explicable et maîtrisée.</p><a class="method-cta" href="/ReviewDefenseFinal/pages/solution.html">Explorer ReviewDefense ↗</a></section>
+</main>
+<div data-global-footer></div>
+<script src="/ReviewDefenseFinal/scripts/main.js"></script>
 </body>
 </html>
