@@ -34,7 +34,7 @@ body.method-page{margin:0;background:#fff;color:var(--m-ink);font-family:"Inter"
 .method-page .text-link:hover{background:#fff}
 .method-page .method-steps{display:flex;flex-direction:column;width:100%}
 .method-page .method-step{display:grid;grid-template-columns:1fr 1fr;width:100%;min-height:clamp(480px,62vw,560px);border-bottom:1px solid var(--m-line)}
-.method-page .step-copy{padding:48px clamp(26px,5.6vw,58px);display:flex;align-items:flex-start;justify-content:center;min-width:0}.method-page .step-text{width:100%;max-width:480px;margin:0 auto;text-align:center}
+.method-page .step-copy{padding:48px clamp(26px,5.6vw,58px);display:flex;align-items:flex-start;justify-content:center;min-width:0}.method-page .step-text{width:100%;max-width:480px;margin:0 auto;text-align:left}
 .method-page .step-index{display:grid;gap:13px;align-content:start;font-family:Georgia,serif;font-size:11px;color:#77706a}
 .method-page .step-index span{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .method-page .step-index b{display:inline-grid;place-items:center;width:29px;height:22px;font-weight:400}
@@ -42,7 +42,7 @@ body.method-page{margin:0;background:#fff;color:var(--m-ink);font-family:"Inter"
 .method-page .step-text h2{font-size:clamp(23px,2.4vw,34px);font-weight:650;letter-spacing:-.045em;line-height:1.08;margin:0 0 12px}
 .method-page .step-text p,.method-page .step-text li{font-size:13px;line-height:1.6;color:var(--m-muted)}
 .method-page .step-text p{margin:0 0 10px}
-.method-page .step-text ul{padding-left:0;margin:10px auto 0;list-style-position:inside;text-align:left;max-width:440px}
+.method-page .step-text ul{padding-left:18px;margin:12px 0 0;list-style-position:outside;text-align:left;max-width:440px}
 .method-page .step-text li{padding:2px 0}
 .method-page .step-visual{position:relative;overflow:hidden;min-height:clamp(480px,62vw,560px);display:grid;place-items:center;width:100%;min-width:0}
 .method-page .step-visual svg{width:100%;height:100%;min-height:clamp(480px,62vw,560px);display:block}
@@ -69,7 +69,7 @@ body.method-page{margin:0;background:#fff;color:var(--m-ink);font-family:"Inter"
  .method-page .manifesto-copy{padding-top:28px}
  .method-page .method-steps{grid-template-columns:1fr}
  .method-page .method-step{grid-template-columns:1fr;min-height:0}
- .method-page .step-copy{padding:32px 22px;align-items:flex-start}.method-page .step-text{max-width:none;text-align:center}.method-page .step-text ul{max-width:440px;margin-left:auto;margin-right:auto}
+ .method-page .step-copy{padding:32px 22px;align-items:flex-start}.method-page .step-text{max-width:none;text-align:left}.method-page .step-text ul{max-width:440px;margin-left:0;margin-right:auto}
  .method-page .step-visual,.method-page .step-visual svg{min-height:340px;height:340px}
 }
 @media(prefers-reduced-motion:reduce){.method-page *{scroll-behavior:auto!important;transition:none!important}}
@@ -112,7 +112,7 @@ body.method-page{margin:0;background:#fff;color:var(--m-ink);font-family:"Inter"
 <section class="method-steps" aria-label="Les trois principes de la méthode ReviewDefense">
   <article class="method-step" id="probleme">
     <div class="step-copy">
-      <div class="step-text"><h2>Les avis s’accumulent. La visibilité se brouille.</h2><p>Chaque retour client mérite d’être compris, mais le volume et la diversité des situations compliquent le suivi quotidien.</p><ul><li>Les avis importants se perdent parmi les retours ordinaires.</li><li>Les réponses risquent d’être tardives ou trop génériques.</li><li>Les signalements demandent des motifs et des éléments vérifiables.</li></ul></div>
+      <div class="step-text"><h2>Les avis s’accumulent. La visibilité se brouille.</h2><p>Quand plusieurs avis arrivent sur différentes plateformes, il devient difficile de garder une vue d’ensemble. Un commentaire négatif peut passer inaperçu, une demande légitime rester sans réponse et une situation urgente être traitée trop tard.</p><p>Avant d’agir, il faut comprendre ce que chaque avis raconte, ce qui peut être vérifié et quelle réponse sera la plus utile pour l’établissement comme pour ses futurs clients.</p><ul><li><strong>Prioriser les retours :</strong> repérer les avis qui nécessitent une réponse rapide ou un examen plus attentif.</li><li><strong>Éviter les réponses standardisées :</strong> tenir compte du contenu, du contexte et de l’expérience décrite par le client.</li><li><strong>Documenter les situations douteuses :</strong> réunir les éléments concrets utiles avant d’envisager un signalement.</li></ul></div>
     </div>
     <div class="step-visual visual-problem" aria-label="Illustration de dossiers d'avis dispersés">
       <svg viewBox="0 0 620 600" role="img" aria-label="Cartes d'avis dispersées sur un fond bordeaux">
@@ -129,7 +129,7 @@ body.method-page{margin:0;background:#fff;color:var(--m-ink);font-family:"Inter"
   </article>
   <article class="method-step" id="methode">
     <div class="step-copy">
-      <div class="step-text"><h2>Nous transformons les avis en décisions éclairées.</h2><p>ReviewDefense organise l’examen des avis et aide à choisir une suite cohérente avec le contexte — sans transformer un soupçon en certitude.</p><ul><li>Lecture structurée du contenu et du contexte disponible.</li><li>Signaux expliqués, avec leurs limites et les points à vérifier.</li><li>Réponses adaptées et pistes d’action soumises à votre validation.</li></ul></div>
+      <div class="step-text"><h2>Nous transformons les avis en décisions éclairées.</h2><p>ReviewDefense vous aide à traiter chaque avis selon sa nature plutôt qu’à appliquer une réponse unique à toutes les situations. L’analyse rassemble les informations disponibles, met en évidence les éléments à examiner et propose une marche à suivre adaptée.</p><p>Un score ou un signal constitue un point de départ pour vérifier un avis, pas une preuve automatique de fraude. Le contexte et les limites de l’analyse restent essentiels avant toute décision.</p><ul><li><strong>Analyser le contenu :</strong> identifier le sujet de l’avis, les faits mentionnés, le ton employé et les informations qui méritent d’être vérifiées.</li><li><strong>Expliquer les signaux :</strong> comprendre pourquoi un avis attire l’attention et quelles vérifications peuvent confirmer ou nuancer cette première lecture.</li><li><strong>Préparer la bonne réponse :</strong> proposer un texte professionnel et spécifique à la situation, ou une piste de signalement lorsque des éléments concrets le justifient.</li></ul></div>
     </div>
     <div class="step-visual visual-solution" aria-label="Illustration des liens entre les informations et les avis">
       <svg viewBox="0 0 620 600" role="img" aria-label="Documents reliés par un réseau de points lumineux">
@@ -144,7 +144,7 @@ body.method-page{margin:0;background:#fff;color:var(--m-ink);font-family:"Inter"
   </article>
   <article class="method-step" id="impact">
     <div class="step-copy">
-      <div class="step-text"><h2>Plus de clarté pour vous. Plus de cohérence pour vos clients.</h2><p>Une méthode commune permet de mieux prioriser les avis, de répondre avec professionnalisme et de suivre chaque dossier jusqu’à la décision.</p><ul><li>Vous gardez la main sur chaque réponse et chaque action.</li><li>Les situations sensibles sont mieux identifiées et documentées.</li><li>Les demandes de retrait restent motivées et soumises aux règles de la plateforme.</li></ul></div>
+      <div class="step-text"><h2>Plus de clarté pour vous. Plus de cohérence pour vos clients.</h2><p>En regroupant l’analyse, la préparation des réponses et le suivi des actions, ReviewDefense vous aide à passer d’une gestion au coup par coup à une méthode plus régulière. Vous savez pourquoi un avis est traité en priorité, quelle action est envisagée et quels éléments restent à contrôler.</p><p>L’objectif n’est pas de faire disparaître toutes les critiques : un retour négatif peut être légitime et devenir une occasion d’améliorer le service. Il s’agit de répondre avec justesse aux expériences réelles et de faire examiner les contenus potentiellement abusifs sur la base d’éléments précis.</p><ul><li><strong>Vous gardez le contrôle :</strong> les réponses et les actions proposées sont soumises à votre validation avant leur mise en œuvre.</li><li><strong>Vous suivez les dossiers :</strong> les raisons de l’analyse, les vérifications utiles et les suites envisagées sont plus faciles à retrouver.</li><li><strong>Vous agissez de façon responsable :</strong> les demandes de retrait doivent être justifiées et restent soumises aux règles et à la décision de la plateforme concernée.</li></ul></div>
     </div>
     <div class="step-visual visual-impact" aria-label="Illustration vectorielle d'une réponse analysée et validée">
       <svg viewBox="0 0 620 600" role="img" aria-label="Documents reliés, proposition de réponse et validation humaine">
