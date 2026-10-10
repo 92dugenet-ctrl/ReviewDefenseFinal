@@ -1454,9 +1454,6 @@ main.rd-home-premium > #home-commitments .rd-home-closing {
 .rd-home-premium .rd-home-feature-card:hover .rd-home-knowledge-art {
   transform: scale(1.035) rotate(-1deg);
 }
-.rd-home-premium .rd-home-value-card {
-  transform: translateY(0);
-}
 .rd-home-premium .rd-home-value-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 14px 34px rgba(20, 32, 51, .075);
@@ -1515,8 +1512,13 @@ main.rd-home-premium > #home-commitments .rd-home-closing {
     box-shadow: none;
   }
   .rd-home-premium .rd-home-feature-card:hover .rd-home-reply-window,
-  .rd-home-premium .rd-home-feature-card:hover .rd-home-knowledge-art,
-  .rd-home-premium .rd-home-value-card:hover .rd-home-doodle {
+  .rd-home-premium .rd-home-feature-card:hover .rd-home-knowledge-art {
+    transform: none;
+  }
+  .rd-home-premium .rd-home-value-card:hover .rd-home-doodle:not(.rd-home-doodle--compact) {
+    transform: translateY(-50%);
+  }
+  .rd-home-premium .rd-home-value-card:hover .rd-home-doodle--compact {
     transform: none;
   }
 }
