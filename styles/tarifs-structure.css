@@ -172,3 +172,14 @@ body.tarifs-page *{box-sizing:border-box}
  .rd-tarifs .pack-card>strong,
  .rd-tarifs .subscription-card>strong{font-size:23px}
 }
+
+/* Keep every à-la-carte price and its description in the right-hand panel. */
+.rd-tarifs .tarif-card--horizontal>.tarif-card__art{grid-column:1;grid-row:1 / span 4;align-self:stretch;height:auto;min-height:170px;margin:0}
+.rd-tarifs .tarif-card--horizontal>.tarif-card__index,
+.rd-tarifs .tarif-card--horizontal>h3,
+.rd-tarifs .tarif-card--horizontal>p,
+.rd-tarifs .tarif-card--horizontal>strong{grid-column:2}
+.rd-tarifs .tarif-card--horizontal>.tarif-card__index{grid-row:1}
+.rd-tarifs .tarif-card--horizontal>h3{grid-row:2;margin:2px 0 0}
+.rd-tarifs .tarif-card--horizontal>p{grid-row:3;margin:0}
+.rd-tarifs .tarif-card--horizontal>strong{grid-row:4;align-self:end;margin-top:0;padding-top:8px}
