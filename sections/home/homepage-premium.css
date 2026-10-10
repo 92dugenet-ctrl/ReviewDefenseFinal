@@ -677,3 +677,16 @@ main.rd-home-premium .rd-home-commitments {
 .rd-home-premium .rd-home-value-card {
   background-color: #ffffff;
 }
+
+
+/* Guard against stale hero markup: only the three headline lines are visible over the media. */
+#home-hero .rd-home-hero-kicker,
+#home-hero .rd-home-hero-description,
+#home-hero .rd-home-hero-actions,
+#home-hero .rd-home-hero-note,
+#home-hero .rd-home-hero-scroll {
+  display: none !important;
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-copy {
+  padding-block: 0;
+}
