@@ -145,3 +145,8 @@
 @supports not ((backdrop-filter: blur(1px))) {
   .rd-header { background: rgba(245,248,255,.94) !important; }
 }
+
+
+/* Navigation épurée : suppression des chevrons des menus déroulants */
+.rd-nav-chevron { display: none !important; }
+.rd-nav-trigger { gap: 0 !important; }
