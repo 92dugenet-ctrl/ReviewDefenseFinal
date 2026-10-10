@@ -19,9 +19,10 @@
 .sr-card-copy{padding:18px 14px;align-self:start}
 .sr-card-copy h2{margin:0 0 14px;font-size:clamp(21px,2vw,29px);line-height:1.16;letter-spacing:-.035em;font-weight:550}
 .sr-card-copy p{margin:0 0 11px;color:#7c837e;font-size:14px;line-height:1.6;max-width:340px}
-.sr-card-copy ul{max-width:350px;margin:0 0 12px;padding-left:18px;color:#7c837e;font-size:13px;line-height:1.5}
-.sr-card-copy li{padding-left:2px;margin:0 0 7px}
-.sr-card-copy li::marker{color:#7c9a8a}
+.sr-card-copy ul{max-width:350px;margin:0 0 12px;padding:0;list-style:none;color:#7c837e;font-family:inherit;font-size:14px;line-height:1.6}
+.sr-card-copy li{position:relative;padding:0 0 0 17px;margin:0 0 7px;font:inherit}
+.sr-card-copy li::before{content:"";position:absolute;left:0;top:.68em;width:5px;height:5px;border-radius:50%;background:#7c9a8a}
+.sr-card-copy li::marker{content:""}
 .sr-card-copy strong{color:#424c46;font-weight:600}
 .sr-card-copy p:last-child{margin-bottom:0}
 .sr-visual{min-width:0;min-height:58svh;display:grid;place-items:center;padding:26px;border-radius:7px;background:#dedfd7;overflow:hidden}
