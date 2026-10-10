@@ -573,28 +573,38 @@ body.sol-page .sol-table td { border-bottom-color: transparent !important; }
 body.sol-page .sol-total { border-top-color: transparent !important; }
 
 
-/* Hero banner: use the supplied four-profession Google Maps review artwork. */
+/* Hero banner: keep the supplied collage contained and proportionate. */
 .sol-page .sol-hero-art {
   min-height: 0;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   perspective: none;
   align-self: center;
-  overflow: visible;
+  overflow: hidden;
+  width: 100%;
 }
 .sol-page .sol-hero-image {
   display: block;
-  width: 100%;
+  width: auto;
   height: auto;
-  max-height: min(76svh, 760px);
+  max-width: 100%;
+  max-height: 440px;
   object-fit: contain;
   object-position: center;
-  border-radius: 24px;
-  filter: drop-shadow(0 24px 42px rgba(0,0,0,.22));
+  border-radius: 18px;
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,.18));
 }
 @media (max-width: 760px) {
-  .sol-page .sol-hero-art { width: 100%; }
-  .sol-page .sol-hero-image {
+  .sol-page .sol-hero-art {
+    width: 100%;
     max-height: none;
-    border-radius: 16px;
+    overflow: visible;
+  }
+  .sol-page .sol-hero-image {
+    width: auto;
+    max-width: 100%;
+    max-height: 420px;
+    border-radius: 14px;
   }
 }
