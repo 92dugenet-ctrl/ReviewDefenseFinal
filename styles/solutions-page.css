@@ -286,3 +286,33 @@ body.sol-page .sol-section {
   .sol-feature.sol-reverse .sol-work-grid > .sol-reveal:first-child,
   .sol-feature.sol-reverse .sol-work-grid > .sol-insight { order: initial; }
 }
+
+
+/* Hard placement rules for alternating columns (cache-busted in solution.html). */
+@media (min-width: 761px) {
+  .sol-feature.sol-reverse .sol-work-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+  .sol-feature.sol-reverse .sol-work-grid > .sol-reveal:first-child {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+  .sol-feature.sol-reverse .sol-work-grid > .sol-insight {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+  .sol-feature:not(.sol-reverse) .sol-work-grid > .sol-reveal:first-child {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+  .sol-feature:not(.sol-reverse) .sol-work-grid > .sol-insight {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+}
+@media (max-width: 760px) {
+  .sol-feature .sol-work-grid { display: grid !important; grid-template-columns: minmax(0,1fr) !important; }
+  .sol-feature .sol-work-grid > .sol-reveal:first-child,
+  .sol-feature .sol-work-grid > .sol-insight { grid-column: 1 !important; grid-row: auto !important; }
+}
