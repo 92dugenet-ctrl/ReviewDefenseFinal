@@ -1,7 +1,7 @@
 /* Solutions page — editorial cards with deliberate one-step navigation. */
 .rd-solution-reference{--sr-ink:#202a35;--sr-muted:#858b90;--sr-line:#e8e9e4;--sr-panel:#eeefe9;--sr-blue:#cbdcf2;color:var(--sr-ink);background:#fff;overflow:clip}
 .rd-solution-reference *{box-sizing:border-box}
-.rd-solution-reference .sr-intro{width:min(1240px,calc(100% - 64px));margin:0 auto;padding:calc(var(--rd-header-height, 76px) + 170px) 0 84px;display:grid;grid-template-columns:minmax(150px,.55fr) minmax(0,2fr);gap:6vw;align-items:start}
+.rd-solution-reference .sr-intro{width:min(1240px,calc(100% - 64px));margin:0 auto;padding:calc(var(--rd-header-height, 76px) + 110px) 0 84px;display:grid;grid-template-columns:minmax(150px,.55fr) minmax(0,2fr);gap:6vw;align-items:start}
 .sr-sidebar{position:sticky;top:112px;padding-top:4px}
 .sr-eyebrow{margin:0 0 18px;font-size:10px;font-weight:650;letter-spacing:.16em;text-transform:uppercase;color:#939994}
 .sr-sidebar h1{max-width:360px;margin:0;font-size:clamp(36px,4.4vw,62px);line-height:.98;letter-spacing:-.065em;font-weight:500}
@@ -14,8 +14,8 @@
 .sr-manifesto{margin:0 0 30px;padding:0 0 24px;border-bottom:1px solid var(--sr-line);font-size:clamp(24px,3vw,39px);line-height:1.08;letter-spacing:-.045em;font-weight:450;max-width:690px}
 .sr-logos{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:0 0 34px;color:#9b9f9a;font-size:10px;letter-spacing:.03em}
 .sr-logos strong{font-size:12px;color:#676e6b;font-weight:650;letter-spacing:.08em}
-.sr-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:32vh}
-.sr-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(180px,1fr);gap:18px;align-items:center;min-height:0;height:auto;padding:22px;border:1px solid #e9ece8;border-radius:8px;background:#f6f7f4;scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:92px}
+.sr-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:32vh;align-content:start}
+.sr-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(180px,1fr);gap:18px;align-items:center;min-height:0;height:auto;padding:22px;margin-block:0;border:1px solid #e9ece8;border-radius:8px;background:#f6f7f4;scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:92px}
 .sr-card-copy{padding:0 14px 18px;align-self:start;margin-top:-10px}
 .sr-card-copy h2{margin:0 0 14px;font-size:clamp(21px,2vw,29px);line-height:1.16;letter-spacing:-.035em;font-weight:550}
 .sr-card-copy p{margin:0 0 11px;color:#7c837e;font-size:14px;line-height:1.6;max-width:340px}
@@ -59,6 +59,6 @@
 .sr-proof-line{height:2px;background:linear-gradient(90deg,#f0d24a,#81b7a1,#93b5e7,#e8a9c5)}
 .sr-proof-note{margin-top:18px;color:#8d938e;font-size:12px}
 html:has(.rd-solution-reference){scroll-snap-type:y mandatory;scroll-behavior:smooth}
-@media(max-width:760px){.rd-solution-reference .sr-intro{width:calc(100% - 36px);padding:calc(var(--rd-header-height, 76px) + 120px) 0 60px;grid-template-columns:1fr;gap:22px}.sr-sidebar{position:static}.sr-nav{grid-template-columns:1fr 1fr;gap:10px 14px}.sr-nav a{font-size:11px}.sr-cards{gap:28vh}.sr-card{grid-template-columns:1fr;gap:14px;min-height:0;padding:14px;scroll-margin-top:80px}.sr-card-copy{padding:0 5px 8px;margin-top:-6px}.sr-card-copy h2{font-size:21px}.sr-card-copy p{font-size:12px}.sr-visual{min-height:0;padding:14px}.sr-ui{width:min(100%,320px)}.sr-bars{height:90px}}
+@media(max-width:760px){.rd-solution-reference .sr-intro{width:calc(100% - 36px);padding:calc(var(--rd-header-height, 76px) + 72px) 0 60px;grid-template-columns:1fr;gap:22px}.sr-sidebar{position:static}.sr-nav{grid-template-columns:1fr 1fr;gap:10px 14px}.sr-nav a{font-size:11px}.sr-cards{gap:28vh}.sr-card{grid-template-columns:1fr;gap:14px;min-height:0;padding:14px;scroll-margin-top:80px}.sr-card-copy{padding:0 5px 8px;margin-top:-6px}.sr-card-copy h2{font-size:21px}.sr-card-copy p{font-size:12px}.sr-visual{min-height:0;padding:14px}.sr-ui{width:min(100%,320px)}.sr-bars{height:90px}}
 @media(max-width:390px){.sr-card{grid-template-columns:1fr;gap:10px}.sr-visual{min-height:0}.sr-card-copy p{max-width:none}.sr-nav{grid-template-columns:1fr 1fr}}
 @media(prefers-reduced-motion:reduce){html:has(.rd-solution-reference){scroll-behavior:auto;scroll-snap-type:none}.sr-nav a{transition:none}}
