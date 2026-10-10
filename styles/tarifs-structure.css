@@ -263,3 +263,100 @@ body.tarifs-page *{box-sizing:border-box}
   .rd-tarifs .pack-card > .pack-mosaic,
   .rd-tarifs .subscription-card > .subscription-mark { min-height: 0; }
 }
+
+
+/* Corrected card composition: landscape rectangle, image above, text and price below. */
+.rd-tarifs .tarifs-rail__track,
+.rd-tarifs .tarifs-rail--packs .tarifs-rail__track,
+.rd-tarifs .tarifs-rail--subscriptions .tarifs-rail__track {
+  grid-auto-columns: minmax(300px, 340px);
+}
+.rd-tarifs .tarif-card--horizontal,
+.rd-tarifs .pack-card,
+.rd-tarifs .subscription-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 86px minmax(0, 1fr);
+  width: 100%;
+  height: 258px;
+  min-height: 258px;
+  max-height: 258px;
+  gap: 0;
+  padding: 14px;
+  overflow: hidden;
+}
+.rd-tarifs .tarif-card--horizontal > .tarif-card__art,
+.rd-tarifs .pack-card > .pack-mosaic,
+.rd-tarifs .subscription-card > .subscription-mark {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  height: 86px;
+  min-height: 0;
+  margin: 0 0 10px;
+  padding: 10px;
+  align-self: stretch;
+}
+.rd-tarifs .tarif-card--horizontal > .tarif-card__index,
+.rd-tarifs .tarif-card--horizontal > h3,
+.rd-tarifs .tarif-card--horizontal > p,
+.rd-tarifs .tarif-card--horizontal > strong,
+.rd-tarifs .pack-card > .pack-kicker,
+.rd-tarifs .pack-card > h3,
+.rd-tarifs .pack-card > p:not(.pack-kicker),
+.rd-tarifs .pack-card > strong,
+.rd-tarifs .subscription-card > .pack-kicker,
+.rd-tarifs .subscription-card > h3,
+.rd-tarifs .subscription-card > p:not(.pack-kicker),
+.rd-tarifs .subscription-card > strong {
+  grid-column: 1;
+}
+.rd-tarifs .tarif-card--horizontal > .tarif-card__art { margin-bottom: 10px; }
+.rd-tarifs .tarif-card--horizontal > .tarif-card__index { grid-row: 2; align-self: start; }
+.rd-tarifs .tarif-card--horizontal > h3 { grid-row: 2; align-self: start; margin: 17px 0 0; }
+.rd-tarifs .tarif-card--horizontal > p { grid-row: 2; align-self: start; margin: 43px 0 0; }
+.rd-tarifs .tarif-card--horizontal > strong { grid-row: 2; align-self: end; margin: 0; padding: 0; font-size: 25px; }
+.rd-tarifs .tarif-card__body {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto 1fr;
+  min-height: 0;
+  overflow: hidden;
+}
+.rd-tarifs .tarif-card__body .tarif-card__index { grid-column: 1 / -1; grid-row: 1; }
+.rd-tarifs .tarif-card__body h3 { grid-column: 1 / -1; grid-row: 2; margin: 4px 0; }
+.rd-tarifs .tarif-card__body p { grid-column: 1; grid-row: 3; margin: 0; font-size: 11px; }
+.rd-tarifs .tarif-card__body > strong { grid-column: 2; grid-row: 3; align-self: end; margin: 0; padding: 0 0 0 8px; font-size: 23px; white-space: nowrap; }
+.rd-tarifs .pack-card > .pack-kicker,
+.rd-tarifs .subscription-card > .pack-kicker { grid-row: 2; align-self: start; margin: 0 0 0 !important; }
+.rd-tarifs .pack-card > h3,
+.rd-tarifs .subscription-card > h3 { grid-row: 2; align-self: start; margin: 15px 0 0; }
+.rd-tarifs .pack-card > p:not(.pack-kicker),
+.rd-tarifs .subscription-card > p:not(.pack-kicker) { grid-row: 2; align-self: start; margin: 39px 0 0; min-height: 0; font-size: 11px; }
+.rd-tarifs .pack-card > strong,
+.rd-tarifs .subscription-card > strong { grid-row: 2; align-self: end; margin: 0; padding: 0; font-size: 24px; }
+@media (max-width: 650px) {
+  .rd-tarifs .tarifs-rail__track,
+  .rd-tarifs .tarifs-rail--packs .tarifs-rail__track,
+  .rd-tarifs .tarifs-rail--subscriptions .tarifs-rail__track {
+    grid-auto-columns: minmax(280px, 84vw);
+  }
+  .rd-tarifs .tarif-card--horizontal,
+  .rd-tarifs .pack-card,
+  .rd-tarifs .subscription-card {
+    height: 250px;
+    min-height: 250px;
+    max-height: 250px;
+    padding: 12px;
+  }
+  .rd-tarifs .tarif-card--horizontal > .tarif-card__art,
+  .rd-tarifs .pack-card > .pack-mosaic,
+  .rd-tarifs .subscription-card > .subscription-mark {
+    height: 78px;
+  }
+  .rd-tarifs .tarif-card__body > strong,
+  .rd-tarifs .pack-card > strong,
+  .rd-tarifs .subscription-card > strong { font-size: 21px; }
+}
