@@ -106,3 +106,131 @@
     animation: none;
   }
 }
+
+
+/* Premium homepage hero messaging and conversion path */
+#home-hero.rd-home-hero-placeholder {
+  background:
+    radial-gradient(ellipse at 50% 43%, rgba(67, 99, 155, .24), transparent 46%),
+    linear-gradient(135deg, #090f1d 0%, #111c30 52%, #080d18 100%);
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-copy {
+  width: min(100%, 900px);
+  padding-block: clamp(32px, 7vh, 76px);
+}
+#home-hero .rd-home-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: clamp(22px, 4vh, 36px);
+  color: #b9c9e3;
+  font-size: 9px;
+  font-weight: 650;
+  line-height: 1.4;
+  letter-spacing: .19em;
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-title {
+  font-size: clamp(1.35rem, 2.8vw, 2.2rem);
+  line-height: 1.08;
+  gap: clamp(7px, 1.3vh, 13px);
+  letter-spacing: -.04em;
+}
+#home-hero .rd-home-hero-description {
+  max-width: 690px;
+  margin: clamp(24px, 3.4vh, 34px) auto 0;
+  color: rgba(237, 243, 252, .82);
+  font-size: clamp(14px, 1.25vw, 17px);
+  line-height: 1.8;
+  font-weight: 400;
+  text-wrap: pretty;
+}
+#home-hero .rd-home-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: clamp(24px, 3.5vh, 34px);
+}
+#home-hero .rd-home-hero-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 19px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+#home-hero .rd-home-hero-button:hover { transform: translateY(-2px); }
+#home-hero .rd-home-hero-button--primary {
+  border-color: #fff;
+  background: #fff;
+  color: #101a2c;
+  box-shadow: 0 8px 30px rgba(0,0,0,.12);
+}
+#home-hero .rd-home-hero-button--primary:hover { background: #e8eef8; border-color: #e8eef8; }
+#home-hero .rd-home-hero-button--secondary {
+  border-color: rgba(208, 222, 245, .27);
+  background: rgba(255, 255, 255, .055);
+  color: #f3f6fc;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+#home-hero .rd-home-hero-button--secondary:hover { border-color: rgba(220, 232, 250, .6); background: rgba(255, 255, 255, .1); }
+#home-hero .rd-home-hero-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: clamp(24px, 4vh, 42px);
+  color: #9eacc2;
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+#home-hero .rd-home-hero-note i { width: 3px; height: 3px; border-radius: 50%; background: #6485b6; }
+#home-hero .rd-home-hero-scroll {
+  position: absolute;
+  bottom: 23px;
+  left: 50%;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-50%);
+  color: rgba(198, 211, 232, .62);
+  font-size: 8px;
+  font-weight: 650;
+  letter-spacing: .16em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+#home-hero .rd-home-hero-scroll:hover { color: #fff; }
+#home-hero .rd-home-hero-scroll span { display: inline-block; width: 1px; height: 17px; background: linear-gradient(#8ca7d4, transparent); }
+#home-hero .rd-home-hero-button:focus-visible,
+#home-hero .rd-home-hero-scroll:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+@media (max-width: 900px) {
+  #home-hero.rd-home-hero-placeholder { padding: 30px 24px 58px; }
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title { font-size: clamp(1.25rem, 4.2vw, 1.85rem); }
+  #home-hero .rd-home-hero-description { max-width: 600px; font-size: 14px; }
+  #home-hero .rd-home-hero-scroll { bottom: 16px; font-size: 7px; }
+}
+@media (max-width: 520px) {
+  #home-hero .rd-home-hero-kicker { margin-bottom: 24px; font-size: 8px; }
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title { gap: 9px; font-size: clamp(1.15rem, 5vw, 1.5rem); }
+  #home-hero .rd-home-hero-description { margin-top: 24px; font-size: 13px; line-height: 1.7; }
+  #home-hero .rd-home-hero-actions { flex-direction: column; gap: 9px; }
+  #home-hero .rd-home-hero-button { width: min(100%, 300px); }
+  #home-hero .rd-home-hero-note { margin-top: 22px; font-size: 8px; gap: 9px; }
+  #home-hero .rd-home-hero-scroll { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #home-hero .rd-home-hero-button { transition: none; }
+  #home-hero .rd-home-hero-button:hover { transform: none; }
+}
