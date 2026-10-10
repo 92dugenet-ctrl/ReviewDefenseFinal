@@ -651,3 +651,103 @@ body.sol-page .sol-section {
 
 /* Hide the six small blue eyebrow headings on the Solutions page. */
 body.sol-page .sol-eyebrow { display: none !important; }
+
+
+/* Motion polish — restrained entrances, staggered hierarchy and responsive micro-interactions. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Let the existing scroll observer reveal each section, then stagger its contents. */
+  body.sol-page .sol-hero-grid > .sol-reveal:first-child > * {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity .65s ease, transform .7s cubic-bezier(.2,.75,.25,1);
+  }
+  body.sol-page .sol-hero-grid > .sol-reveal:first-child.is-visible > * {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  body.sol-page .sol-hero-grid > .sol-reveal:first-child.is-visible > *:nth-child(1) { transition-delay: 40ms; }
+  body.sol-page .sol-hero-grid > .sol-reveal:first-child.is-visible > *:nth-child(2) { transition-delay: 140ms; }
+  body.sol-page .sol-hero-grid > .sol-reveal:first-child.is-visible > *:nth-child(3) { transition-delay: 240ms; }
+  body.sol-page .sol-hero-grid > .sol-reveal:first-child.is-visible > *:nth-child(4) { transition-delay: 340ms; }
+
+  body.sol-page .sol-hero-art .sol-hero-image {
+    opacity: 0;
+    transform: translateX(22px) scale(.985);
+    transition: opacity .9s ease, transform .95s cubic-bezier(.2,.75,.25,1);
+  }
+  body.sol-page .sol-hero-art.is-visible .sol-hero-image {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition-delay: 180ms;
+  }
+
+  /* Product cards enter with their section instead of animating immediately on page load. */
+  body.sol-page .sol-visual-card {
+    animation: none !important;
+    transition: transform .35s ease, box-shadow .35s ease;
+  }
+  body.sol-page .sol-reveal .sol-visual-card {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  body.sol-page .sol-reveal.is-visible .sol-visual-card {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity .65s ease 120ms, transform .7s cubic-bezier(.2,.75,.25,1) 120ms, box-shadow .35s ease;
+  }
+  body.sol-page .sol-reveal.is-visible .sol-visual-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 25px 65px rgba(28,43,65,.12);
+  }
+
+  /* Bars grow from the baseline when the analysis/results module scrolls into view. */
+  body.sol-page .sol-signal-bars b i {
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .8s cubic-bezier(.2,.75,.25,1);
+  }
+  body.sol-page .sol-reveal.is-visible .sol-signal-bars b i {
+    transform: scaleX(1);
+  }
+  body.sol-page .sol-signal-bars > div:nth-child(2) b i { transition-delay: 90ms; }
+  body.sol-page .sol-signal-bars > div:nth-child(3) b i { transition-delay: 180ms; }
+  body.sol-page .sol-signal-bars > div:nth-child(4) b i { transition-delay: 270ms; }
+
+  body.sol-page .sol-chart-bars b {
+    transform: scaleY(.05);
+    transform-origin: center bottom;
+    transition: transform .75s cubic-bezier(.2,.75,.25,1);
+  }
+  body.sol-page .sol-reveal.is-visible .sol-chart-bars b { transform: scaleY(1); }
+  body.sol-page .sol-chart-bars b:nth-child(2) { transition-delay: 70ms; }
+  body.sol-page .sol-chart-bars b:nth-child(3) { transition-delay: 140ms; }
+  body.sol-page .sol-chart-bars b:nth-child(4) { transition-delay: 210ms; }
+  body.sol-page .sol-chart-bars b:nth-child(5) { transition-delay: 280ms; }
+  body.sol-page .sol-chart-bars b:nth-child(6) { transition-delay: 350ms; }
+
+  body.sol-page .sol-feature-image {
+    transform: translateY(8px) scale(.99);
+    transition: opacity .75s ease, transform .8s cubic-bezier(.2,.75,.25,1), filter .6s ease;
+  }
+  body.sol-page .sol-insight-image.is-visible .sol-feature-image {
+    transform: translateY(0) scale(1);
+  }
+  body.sol-page .sol-insight-image:hover .sol-feature-image {
+    transform: translateY(-3px) scale(1.008);
+  }
+  body.sol-page .sol-cta:active { transform: translateY(0) scale(.985); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.sol-page .sol-hero-grid > .sol-reveal:first-child > *,
+  body.sol-page .sol-hero-art .sol-hero-image,
+  body.sol-page .sol-reveal .sol-visual-card,
+  body.sol-page .sol-signal-bars b i,
+  body.sol-page .sol-chart-bars b,
+  body.sol-page .sol-feature-image {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
