@@ -639,3 +639,11 @@ body.sol-page .sol-total { border-top-color: transparent !important; }
   .sol-page .sol-insight-image { overflow: visible; }
   .sol-page .sol-feature-image { max-height: 420px; border-radius: 14px; }
 }
+
+
+/* Remove the remaining vertical rails on both sides of the Solutions sections. */
+body.sol-page .sol-section {
+  border-left: 0 !important;
+  border-right: 0 !important;
+  border-inline: 0 !important;
+}
