@@ -3,13 +3,100 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Solutions — ReviewDefense</title>
+<meta name="theme-color" content="#242524">
+<title>Solutions — Review Defense</title>
 <link rel="stylesheet" href="../components/header/header.css">
 <link rel="stylesheet" href="../components/footer/footer.css">
+<link rel="stylesheet" href="../styles/solutions-page.css">
 </head>
-<body>
+<body class="sol-page">
 <div data-global-header></div>
+<main class="sol-shell">
+  <section class="sol-section sol-hero" aria-labelledby="sol-hero-title">
+    <div class="sol-hero-grid">
+      <div class="sol-reveal">
+        <p class="sol-eyebrow">Votre réputation, sous contrôle</p>
+        <h1 class="sol-title" id="sol-hero-title">Protégez votre réputation.<br>Reprenez la main.</h1>
+        <p class="sol-copy">Comprenez ce que vos avis disent de votre activité, repérez les situations à risque et transformez chaque signal en action claire. Sans perdre le fil, ni le contrôle.</p>
+        <a class="sol-cta" href="comment-ca-marche.html">Découvrir notre méthode <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="sol-scene sol-reveal" aria-label="Illustration de l'analyse et de la gestion des avis clients">
+        <div class="sol-orbit"></div>
+        <div class="sol-console" aria-hidden="true">
+          <div class="sol-floor"></div><div class="sol-wall sol-wall-left"></div><div class="sol-wall sol-wall-right"></div>
+          <i class="sol-light l1"></i><i class="sol-light l2"></i><i class="sol-light l3"></i>
+          <div class="sol-tower t1"></div><div class="sol-tower t2"></div><div class="sol-cloud"></div>
+        </div>
+        <div class="sol-review r1"><b>+ 18 %</b><span>avis positifs</span></div>
+        <div class="sol-review r2"><b>À traiter</b><span>avis signalé</span></div>
+        <div class="sol-review r3"><b>✓</b><span>Action préparée</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sol-section sol-section-two" aria-labelledby="sol-work-title">
+    <div class="sol-work-grid">
+      <div class="sol-reveal">
+        <div class="sol-section-heading">
+          <p class="sol-eyebrow">Une vision claire</p>
+          <h2 class="sol-title" id="sol-work-title">Chaque avis compte. Chaque action est maîtrisée.</h2>
+          <p class="sol-copy">Review Defense rassemble les signaux importants, vous aide à comprendre les situations et prépare les prochaines étapes. Vous gardez la décision, du premier constat au suivi.</p>
+        </div>
+        <div class="sol-dashboard" aria-label="Exemple de tableau de suivi des avis">
+          <div class="sol-tabs"><span class="sol-tab active">Tous les avis</span><span class="sol-tab">À analyser</span><span class="sol-tab">Prioritaires</span><span class="sol-tab">Résolus</span></div>
+          <div class="sol-dash-top"><span>TABLEAU DE SUIVI</span><span class="sol-toggle">● Vue d'ensemble</span></div>
+          <table class="sol-table">
+            <tbody>
+              <tr><td>AV-01</td><td>Avis détaillé à examiner</td><td>Analyse</td></tr>
+              <tr><td>AV-02</td><td>Signalement à documenter</td><td>Prioritaire</td></tr>
+              <tr><td>AV-03</td><td>Réponse à préparer</td><td>À valider</td></tr>
+              <tr><td>AV-04</td><td>Suivi d'une demande</td><td>En cours</td></tr>
+              <tr><td>AV-05</td><td>Action terminée</td><td>Résolu</td></tr>
+              <tr><td>AV-06</td><td>Nouvel avis à qualifier</td><td>Analyse</td></tr>
+            </tbody>
+          </table>
+          <div class="sol-total"><div><small>VOTRE PROCHAINE ÉTAPE</small><strong>Agir juste.</strong></div><span>Une situation claire.<br>Une action validée.</span></div>
+        </div>
+      </div>
+      <div class="sol-insight sol-reveal" aria-label="Illustration du parcours de traitement d'un avis">
+        <div class="sol-console" aria-hidden="true">
+          <div class="sol-floor"></div><div class="sol-wall sol-wall-left"></div><div class="sol-wall sol-wall-right"></div>
+          <i class="sol-light l1"></i><i class="sol-light l2"></i><i class="sol-light l3"></i>
+          <div class="sol-tower t1"></div><div class="sol-tower t2"></div><div class="sol-cloud"></div>
+        </div>
+        <div class="sol-float f1"><span class="sol-dot"></span> Avis analysé</div>
+        <div class="sol-float f2"><span class="sol-dot"></span> Action recommandée</div>
+        <div class="sol-float f3"><span class="sol-dot"></span> Validation conservée</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sol-final sol-reveal" aria-labelledby="sol-final-title">
+    <p class="sol-eyebrow">De la compréhension à l'action</p>
+    <h2 class="sol-title" id="sol-final-title">Moins de doute. Plus de maîtrise.</h2>
+    <p class="sol-copy">Donnez à vos équipes une méthode claire pour protéger et piloter votre réputation en ligne.</p>
+    <a class="sol-cta" href="comment-ca-marche.html">Voir comment ça marche <span aria-hidden="true">↗</span></a>
+  </section>
+</main>
 <div data-global-footer></div>
 <script src="../scripts/main.js"></script>
+<script>
+(function(){
+  const items = document.querySelectorAll('.sol-reveal');
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    items.forEach(item => item.classList.add('is-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+  items.forEach(item => observer.observe(item));
+})();
+</script>
 </body>
 </html>
