@@ -558,3 +558,16 @@ body.sol-page .sol-review b { color: var(--rd-ink, #0b1630) !important; }
 @media(max-width:760px){.sol-visual-card{padding:17px;border-radius:14px}.sol-metric-row{gap:6px}.sol-metric-row>div{padding:10px 7px}.sol-metric-row strong{font-size:25px}.sol-signal-bars>div{grid-template-columns:minmax(80px,1fr) minmax(55px,1fr) 28px;gap:7px}.sol-chart{height:155px}.sol-action-steps{gap:5px}.sol-action-steps>div{gap:5px}.sol-action-steps small{font-size:8px}.sol-timeline-item em{display:none}}
 @media(prefers-reduced-motion:no-preference){.sol-visual-card{animation:sol-card-enter .7s cubic-bezier(.2,.8,.2,1) both}.sol-visual-card:hover{transform:translateY(-3px);box-shadow:0 25px 65px rgba(28,43,65,.12);transition:transform .3s ease,box-shadow .3s ease}}
 @keyframes sol-card-enter{from{opacity:.65;translate:0 8px}to{opacity:1;translate:0 0}}
+
+
+/* Clean separation lines on the Solutions page */
+body.sol-page .sol-section + .sol-section { border-top: 0 !important; }
+body.sol-page .sol-feature { border-top: 0 !important; }
+body.sol-page .sol-final { border-inline: 0 !important; border-top: 0 !important; }
+body.sol-page .sol-visual-divider { display: none !important; }
+body.sol-page .sol-letter-brand { border-bottom: 0 !important; padding-bottom: 0; }
+body.sol-page .sol-metric-row > div,
+body.sol-page .sol-result-metrics > div { border-color: transparent !important; box-shadow: 0 6px 20px rgba(28,43,65,.045); }
+body.sol-page .sol-visual-note { border-color: transparent !important; }
+body.sol-page .sol-table td { border-bottom-color: transparent !important; }
+body.sol-page .sol-total { border-top-color: transparent !important; }
