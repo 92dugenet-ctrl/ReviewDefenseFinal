@@ -9,7 +9,7 @@
       ".rd-home > #home-questions > .rd-home-questions__heading",
       ".rd-home > #home-decision > .rd-decision-copy",
       "main > section > header",
-      ".rd-solution-editorial .solution-editorial-row",
+      ".rd-solution-editorial .solution-editorial-card",
       "main > section > .solution-introduction__copy",
       "main > section > .solution-introduction__visual",
       "main > section > .questions-layout > *",
