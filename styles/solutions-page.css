@@ -647,3 +647,7 @@ body.sol-page .sol-section {
   border-right: 0 !important;
   border-inline: 0 !important;
 }
+
+
+/* Hide the six small blue eyebrow headings on the Solutions page. */
+body.sol-page .sol-eyebrow { display: none !important; }
