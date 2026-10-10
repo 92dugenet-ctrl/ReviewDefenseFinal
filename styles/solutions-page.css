@@ -208,3 +208,49 @@ body.sol-page .sol-section {
 @media (prefers-reduced-motion: reduce) {
  .sol-review,.sol-float { animation: none; }
 }
+
+
+/* Layout requested: balanced split, with the illustration centered opposite the dashboard. */
+@media (min-width: 761px) {
+  .sol-section-two { padding-inline: clamp(24px, 3.5vw, 48px); }
+  .sol-work-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: clamp(28px, 4vw, 60px);
+    align-items: center;
+  }
+  .sol-work-grid > .sol-reveal:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+  }
+  .sol-work-grid .sol-section-heading {
+    max-width: 100%;
+    margin-bottom: 26px;
+  }
+  .sol-work-grid .sol-dashboard {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .sol-work-grid > .sol-insight {
+    width: 100%;
+    min-width: 0;
+    min-height: 500px;
+    display: grid;
+    place-items: center;
+    align-self: center;
+  }
+  .sol-work-grid > .sol-insight .sol-console {
+    width: min(100%, 480px);
+    margin-inline: auto;
+  }
+  .sol-work-grid > .sol-insight .sol-float.f1 { left: 2%; }
+  .sol-work-grid > .sol-insight .sol-float.f2 { right: 0; }
+  .sol-work-grid > .sol-insight .sol-float.f3 { left: 4%; }
+}
+@media (max-width: 1000px) and (min-width: 761px) {
+  .sol-work-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; }
+  .sol-work-grid > .sol-insight { min-height: 400px; }
+  .sol-work-grid > .sol-insight .sol-console { width: min(100%, 380px); }
+  .sol-work-grid .sol-table { font-size: 10px; }
+}
