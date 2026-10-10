@@ -1370,3 +1370,183 @@ main.rd-home-premium > #home-commitments .rd-home-closing {
     padding: 44px 20px 30px;
   }
 }
+
+
+/* HOMEPAGE MOTION FINISH — 2026-10-10
+   Soft editorial entrance, quiet stagger, and restrained hover response. */
+@keyframes rd-home-hero-rise {
+  0% { opacity: 0; transform: translate3d(0, 22px, 0); filter: blur(5px); }
+  72% { opacity: 1; filter: blur(0); }
+  100% { opacity: 1; transform: translate3d(0, 0, 0); filter: blur(0); }
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--fixed:first-child {
+  animation: rd-home-hero-rise 1050ms cubic-bezier(.2,.75,.25,1) 100ms both;
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--changing {
+  animation: rd-home-hero-rise 1100ms cubic-bezier(.2,.75,.25,1) 250ms both;
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--fixed:last-child {
+  animation: rd-home-hero-rise 1150ms cubic-bezier(.2,.75,.25,1) 400ms both;
+}
+
+/* Reveal states are driven by the shared IntersectionObserver in motion.js. */
+.rd-home-premium .rd-home-about.rd-motion-item,
+.rd-home-premium .rd-home-section-heading.rd-motion-item {
+  transition-duration: 760ms;
+}
+.rd-home-premium .rd-home-steps > .rd-motion-item,
+.rd-home-premium .rd-home-feature-grid > .rd-motion-item,
+.rd-home-premium .rd-home-values > .rd-motion-item {
+  transition-duration: 720ms;
+  transition-timing-function: cubic-bezier(.22,1,.36,1);
+}
+.rd-home-premium .rd-home-step,
+.rd-home-premium .rd-home-feature-card,
+.rd-home-premium .rd-home-value-card {
+  transition:
+    transform 420ms cubic-bezier(.22,1,.36,1),
+    box-shadow 420ms cubic-bezier(.22,1,.36,1),
+    border-color 320ms ease,
+    background-color 320ms ease;
+  will-change: transform;
+}
+.rd-home-premium .rd-home-step {
+  border-color: transparent;
+}
+.rd-home-premium .rd-home-step__number {
+  transition: color 320ms ease, transform 420ms cubic-bezier(.22,1,.36,1);
+}
+.rd-home-premium .rd-home-step:hover {
+  position: relative;
+  z-index: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(20, 32, 51, .075);
+}
+.rd-home-premium .rd-home-step:hover .rd-home-step__number {
+  color: var(--rd-primary);
+  transform: translateY(-2px);
+}
+.rd-home-premium .rd-home-feature-card {
+  transform-origin: center bottom;
+}
+.rd-home-premium .rd-home-feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 44px rgba(20, 32, 51, .095);
+  border-color: rgba(37, 99, 235, .20);
+}
+.rd-home-premium .rd-home-feature-visual {
+  transition: filter 450ms ease;
+}
+.rd-home-premium .rd-home-feature-card:hover .rd-home-feature-visual--reply {
+  filter: saturate(1.08) brightness(1.025);
+}
+.rd-home-premium .rd-home-reply-window {
+  transition: transform 600ms cubic-bezier(.22,1,.36,1), box-shadow 600ms ease;
+}
+.rd-home-premium .rd-home-feature-card:hover .rd-home-reply-window {
+  transform: rotate(0) translateY(-2px) scale(1.015);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, .20);
+}
+.rd-home-premium .rd-home-knowledge-art {
+  transform-origin: center;
+  transition: transform 700ms cubic-bezier(.22,1,.36,1);
+}
+.rd-home-premium .rd-home-feature-card:hover .rd-home-knowledge-art {
+  transform: scale(1.035) rotate(-1deg);
+}
+.rd-home-premium .rd-home-value-card {
+  transform: translateY(0);
+}
+.rd-home-premium .rd-home-value-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 34px rgba(20, 32, 51, .075);
+  border-color: rgba(37, 99, 235, .20);
+}
+.rd-home-premium .rd-home-doodle {
+  transition: stroke 360ms ease, transform 520ms cubic-bezier(.22,1,.36,1), opacity 360ms ease;
+}
+.rd-home-premium .rd-home-value-card:hover .rd-home-doodle {
+  stroke: var(--rd-primary);
+  opacity: 1;
+}
+.rd-home-premium .rd-home-value-card:hover .rd-home-doodle:not(.rd-home-doodle--compact) {
+  transform: translateY(calc(-50% - 3px)) scale(1.025);
+}
+.rd-home-premium .rd-home-value-card:hover .rd-home-doodle--compact {
+  transform: translateY(-2px) scale(1.035);
+}
+.rd-home-premium .rd-home-feature-button,
+.rd-home-premium .rd-home-closing a {
+  transition:
+    transform 260ms cubic-bezier(.22,1,.36,1),
+    box-shadow 260ms ease,
+    background-color 260ms ease,
+    border-color 260ms ease,
+    color 260ms ease;
+}
+.rd-home-premium .rd-home-feature-button:hover,
+.rd-home-premium .rd-home-closing a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(20, 32, 51, .09);
+}
+.rd-home-premium .rd-home-feature-button span,
+.rd-home-premium .rd-home-closing a span {
+  display: inline-block;
+  transition: transform 260ms cubic-bezier(.22,1,.36,1);
+}
+.rd-home-premium .rd-home-feature-button:hover span,
+.rd-home-premium .rd-home-closing a:hover span {
+  transform: translate(2px, -2px);
+}
+
+/* Do not let entrance transforms conflict with hover states. */
+.rd-home-premium .rd-home-steps > .rd-motion-item.is-visible:hover,
+.rd-home-premium .rd-home-feature-grid > .rd-motion-item.is-visible:hover,
+.rd-home-premium .rd-home-values > .rd-motion-item.is-visible:hover {
+  opacity: 1;
+}
+
+/* Touch devices get no hover lift; reduced-motion preferences bypass all choreography. */
+@media (hover: none) {
+  .rd-home-premium .rd-home-step:hover,
+  .rd-home-premium .rd-home-feature-card:hover,
+  .rd-home-premium .rd-home-value-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  .rd-home-premium .rd-home-feature-card:hover .rd-home-reply-window,
+  .rd-home-premium .rd-home-feature-card:hover .rd-home-knowledge-art,
+  .rd-home-premium .rd-home-value-card:hover .rd-home-doodle {
+    transform: none;
+  }
+}
+@media (max-width: 560px) {
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--fixed:first-child {
+    animation-delay: 80ms;
+  }
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--changing {
+    animation-delay: 200ms;
+  }
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--fixed:last-child {
+    animation-delay: 320ms;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--fixed:first-child,
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--changing,
+  #home-hero.rd-home-hero-placeholder .rd-home-hero-title > .rd-home-hero-line--fixed:last-child {
+    animation: none !important;
+  }
+  .rd-home-premium .rd-home-step,
+  .rd-home-premium .rd-home-feature-card,
+  .rd-home-premium .rd-home-value-card,
+  .rd-home-premium .rd-home-doodle,
+  .rd-home-premium .rd-home-reply-window,
+  .rd-home-premium .rd-home-knowledge-art,
+  .rd-home-premium .rd-home-feature-button,
+  .rd-home-premium .rd-home-closing a {
+    transition: none !important;
+    transform: none !important;
+    will-change: auto !important;
+  }
+}
