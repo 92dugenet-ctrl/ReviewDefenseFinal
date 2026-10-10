@@ -21,24 +21,20 @@
         <h2 id="audit-title">Audit de réputation</h2>
         <p>Un tarif adapté au volume d'avis à analyser. Le prix indiqué correspond à un audit.</p>
       </header>
-      <div class="tarifs-audit-layout">
-        <div class="tarifs-audit-intro">
-          <div class="audit-stack" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-          <p>Une vision d'ensemble pour mieux comprendre les retours, identifier les points à examiner et définir les priorités.</p>
-        </div>
-        <div class="tarifs-mosaic-table" role="table" aria-label="Tarifs des audits par volume d'avis">
-          <div class="mosaic-row mosaic-row--head" role="row"><span role="columnheader">Nombre d'avis</span><span role="columnheader">Prix par audit</span></div>
-          <div class="mosaic-row" role="row"><span role="cell">1 à 9 avis</span><strong role="cell">79 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">10 à 49 avis</span><strong role="cell">149 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">50 à 99 avis</span><strong role="cell">249 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">100 à 249 avis</span><strong role="cell">399 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">250 à 499 avis</span><strong role="cell">599 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">500 à 999 avis</span><strong role="cell">899 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">1 000 à 2 499 avis</span><strong role="cell">1 290 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">2 500 à 4 999 avis</span><strong role="cell">1 790 €</strong></div>
-          <div class="mosaic-row" role="row"><span role="cell">5 000 à 9 999 avis</span><strong role="cell">2 490 €</strong></div>
+      <div class="tarifs-rail tarifs-rail--audit" tabindex="0" aria-label="Tarifs des audits par volume d'avis. Faites défiler horizontalement.">
+        <div class="tarifs-rail__track">
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-analysis" aria-hidden="true"><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 01</span><h3>1 à 9 avis</h3><p>Analyse d'un petit volume d'avis.</p><strong>79 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-report" aria-hidden="true"><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 02</span><h3>10 à 49 avis</h3><p>Une première vue d'ensemble.</p><strong>149 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-dossier" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 03</span><h3>50 à 99 avis</h3><p>Analyse structurée du volume.</p><strong>249 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-followup" aria-hidden="true"><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 04</span><h3>100 à 249 avis</h3><p>Examen d'un volume intermédiaire.</p><strong>399 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-complete" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 05</span><h3>250 à 499 avis</h3><p>Analyse à plus grande échelle.</p><strong>599 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-analysis" aria-hidden="true"><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 06</span><h3>500 à 999 avis</h3><p>Analyse d'un volume important.</p><strong>899 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-report" aria-hidden="true"><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 07</span><h3>1 000 à 2 499 avis</h3><p>Analyse approfondie du volume.</p><strong>1 290 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-dossier" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 08</span><h3>2 500 à 4 999 avis</h3><p>Traitement d'un grand volume.</p><strong>1 790 € <small>/ audit</small></strong></div></article>
+          <article class="tarif-card tarif-card--horizontal audit-card"><div class="tarif-card__art art-complete" aria-hidden="true"><i></i><i></i><i></i><i></i></div><div class="tarif-card__body"><span class="tarif-card__index">AUDIT 09</span><h3>5 000 à 9 999 avis</h3><p>Analyse de très grand volume.</p><strong>2 490 € <small>/ audit</small></strong></div></article>
         </div>
       </div>
+      <p class="tarifs-scroll-hint"><span aria-hidden="true">← →</span> Faites défiler pour parcourir les tarifs d'audit</p>
     </div>
   </section>
 
@@ -51,11 +47,11 @@
       </header>
       <div class="tarifs-rail" tabindex="0" aria-label="Prestations individuelles. Faites défiler horizontalement pour parcourir les cartes.">
         <div class="tarifs-rail__track">
-          <article class="tarif-card"><span class="tarif-card__index">01</span><div class="tarif-card__art art-analysis" aria-hidden="true"><i></i><i></i><i></i></div><h3>Analyse de conformité</h3><p>Examiner la situation et les éléments disponibles.</p><strong>49 € <small>à partir de</small></strong></article>
-          <article class="tarif-card"><span class="tarif-card__index">02</span><div class="tarif-card__art art-report" aria-hidden="true"><i></i><i></i><i></i></div><h3>Préparation du signalement</h3><p>Structurer les éléments utiles à une demande.</p><strong>99 € <small>à partir de</small></strong></article>
-          <article class="tarif-card"><span class="tarif-card__index">03</span><div class="tarif-card__art art-dossier" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>Dossier renforcé</h3><p>Préparer un dossier plus approfondi.</p><strong>159 € <small>à partir de</small></strong></article>
-          <article class="tarif-card"><span class="tarif-card__index">04</span><div class="tarif-card__art art-followup" aria-hidden="true"><i></i><i></i><i></i></div><h3>Suivi du signalement</h3><p>Organiser le suivi des démarches engagées.</p><strong>219 € <small>à partir de</small></strong></article>
-          <article class="tarif-card tarif-card--featured"><span class="tarif-card__index">05</span><div class="tarif-card__art art-complete" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>Dossier complet</h3><p>Un accompagnement regroupé pour la situation.</p><strong>275 € <small>maximum</small></strong></article>
+          <article class="tarif-card tarif-card--horizontal"><span class="tarif-card__index">01</span><div class="tarif-card__art art-analysis" aria-hidden="true"><i></i><i></i><i></i></div><h3>Analyse de conformité</h3><p>Examiner la situation et les éléments disponibles.</p><strong>49 € <small>à partir de</small></strong></article>
+          <article class="tarif-card tarif-card--horizontal"><span class="tarif-card__index">02</span><div class="tarif-card__art art-report" aria-hidden="true"><i></i><i></i><i></i></div><h3>Préparation du signalement</h3><p>Structurer les éléments utiles à une demande.</p><strong>99 € <small>à partir de</small></strong></article>
+          <article class="tarif-card tarif-card--horizontal"><span class="tarif-card__index">03</span><div class="tarif-card__art art-dossier" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>Dossier renforcé</h3><p>Préparer un dossier plus approfondi.</p><strong>159 € <small>à partir de</small></strong></article>
+          <article class="tarif-card tarif-card--horizontal"><span class="tarif-card__index">04</span><div class="tarif-card__art art-followup" aria-hidden="true"><i></i><i></i><i></i></div><h3>Suivi du signalement</h3><p>Organiser le suivi des démarches engagées.</p><strong>219 € <small>à partir de</small></strong></article>
+          <article class="tarif-card tarif-card--horizontal tarif-card--featured"><span class="tarif-card__index">05</span><div class="tarif-card__art art-complete" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h3>Dossier complet</h3><p>Un accompagnement regroupé pour la situation.</p><strong>275 € <small>maximum</small></strong></article>
         </div>
       </div>
       <p class="tarifs-scroll-hint"><span aria-hidden="true">← →</span> Faites défiler pour découvrir toutes les prestations</p>
@@ -89,11 +85,12 @@
         <h2 id="protection-title">Protection continue</h2>
         <p>Choisissez le niveau de suivi qui convient à votre activité.</p>
       </header>
-      <div class="protection-grid">
+      <div class="tarifs-rail tarifs-rail--subscriptions" tabindex="0" aria-label="Abonnements de protection continue. Faites défiler horizontalement."><div class="tarifs-rail__track">
         <article class="protection-card subscription-card"><div class="subscription-mark" aria-hidden="true"><i></i></div><p class="pack-kicker">ESSENTIEL</p><h3>Essential</h3><p>Un socle de suivi continu.</p><strong>49 € <small>/ mois</small></strong></article>
         <article class="protection-card subscription-card protection-card--featured"><div class="subscription-mark subscription-mark--pro" aria-hidden="true"><i></i><i></i></div><p class="pack-kicker">SUIVI RENFORCÉ</p><h3>Professional</h3><p>Un accompagnement plus soutenu.</p><strong>89 € <small>/ mois</small></strong></article>
         <article class="protection-card subscription-card"><div class="subscription-mark subscription-mark--business" aria-hidden="true"><i></i><i></i><i></i></div><p class="pack-kicker">ACTIVITÉ ÉTENDUE</p><h3>Business</h3><p>Pour des besoins de suivi plus larges.</p><strong>159 € <small>/ mois</small></strong></article>
-      </div>
+      </div></div>
+      <p class="tarifs-scroll-hint"><span aria-hidden="true">← →</span> Faites défiler pour comparer les abonnements</p>
     </div>
   </section>
 
