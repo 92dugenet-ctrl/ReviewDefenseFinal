@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Découvrez comment ReviewDefense aide à comprendre les avis, examiner les signaux et préparer des actions adaptées.">
+  <meta name="description" content="Découvrez les outils ReviewDefense pour analyser les avis, comprendre les signaux, préparer une réponse et décider des actions à mener.">
   <title>Solutions — ReviewDefense</title>
   <link rel="stylesheet" href="/ReviewDefenseFinal/styles/main.css">
   <link rel="stylesheet" href="/ReviewDefenseFinal/components/header/header.css">
@@ -14,106 +14,94 @@
   <main class="rd-solution rd-solution-editorial">
     <section class="solution-editorial-intro" id="solution-introduction">
       <div class="solution-editorial-intro__copy">
-        <span class="eyebrow">LA SOLUTION REVIEWDEFENSE</span>
+        <p class="solution-editorial-eyebrow">LA SOLUTION REVIEWDEFENSE</p>
         <h1>Comprendre les avis. Décider. Agir.</h1>
-        <p>Une méthode claire pour examiner les avis, comprendre les signaux utiles et choisir les actions adaptées à votre réputation.</p>
+        <p>Des outils pour comprendre vos avis, préparer vos actions et garder la maîtrise de votre réputation.</p>
+      </div>
+      <div class="solution-editorial-capabilities" aria-label="Les quatre piliers de ReviewDefense">
+        <span>Analyse</span><span>Signaux</span><span>Réponses</span><span>Actions</span>
       </div>
     </section>
 
-    <section class="solution-editorial-list" aria-label="Les étapes de la solution">
-      <article class="solution-editorial-row">
-        <div class="solution-editorial-label">
-          <span>01</span>
-          <h2>Comprendre les avis</h2>
-        </div>
-        <div class="solution-editorial-panel">
+    <section class="solution-editorial-overview" aria-label="Les fonctionnalités ReviewDefense">
+      <nav class="solution-editorial-index" aria-label="Parcours de la solution">
+        <a href="#solution-analysis">Analyse des avis</a>
+        <a href="#solution-signals">Signaux de suspicion</a>
+        <a href="#solution-response">Réponses adaptées</a>
+        <a href="#solution-actions">Actions maîtrisées</a>
+      </nav>
+
+      <div class="solution-editorial-cards">
+        <article class="solution-editorial-card" id="solution-analysis">
           <div class="solution-editorial-copy">
-            <h3>Remettre chaque avis dans son contexte</h3>
-            <p>Retrouvez les informations utiles pour comprendre le contenu d’un avis et distinguer les faits, les impressions et les éléments qui demandent une vérification.</p>
+            <h2>Comprendre chaque avis</h2>
+            <p>Examinez le contenu, le ton et le contexte disponible pour mieux comprendre ce que l’avis exprime et ce qui mérite votre attention.</p>
           </div>
-          <div class="solution-editorial-visual visual-context" aria-label="Exemple d'avis et de son contexte">
+          <div class="solution-editorial-visual visual-context" aria-label="Illustration d'un avis examiné">
             <div class="ui-window">
-              <div class="ui-window-top"><span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-top-label">Lecture de l’avis</span></div>
+              <div class="ui-window-top"><span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-dot"></span><span class="ui-top-label">Analyse d’un avis</span></div>
               <div class="ui-review">
-                <div class="ui-avatar">C</div>
-                <div class="ui-review-text"><strong>Avis client</strong><span>« Le service était correct, mais ma commande est arrivée en retard. »</span></div>
+                <div class="ui-avatar">A</div>
+                <div class="ui-review-text"><strong>Avis à examiner</strong><span>« Expérience décevante, le service n’était pas à la hauteur. »</span></div>
               </div>
-              <div class="ui-meta-grid"><span>Contenu</span><strong>Examiné</strong><span>Contexte disponible</span><strong>À vérifier</strong></div>
+              <div class="ui-meta-grid"><span>Contenu</span><strong>À examiner</strong><span>Contexte</span><strong>À rapprocher</strong></div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="solution-editorial-row">
-        <div class="solution-editorial-label">
-          <span>02</span>
-          <h2>Examiner les signaux</h2>
-        </div>
-        <div class="solution-editorial-panel">
+        <article class="solution-editorial-card" id="solution-signals">
           <div class="solution-editorial-copy">
-            <h3>Voir ce qui mérite votre attention</h3>
-            <p>L’analyse met en évidence les éléments inhabituels et explique pourquoi ils peuvent justifier un examen complémentaire. Un signal reste un indice, pas une preuve à lui seul.</p>
+            <h2>Identifier les signaux utiles</h2>
+            <p>Repérez les éléments inhabituels et consultez les raisons qui peuvent justifier une vérification. Un score oriente l’analyse : il ne constitue pas, à lui seul, une preuve.</p>
           </div>
-          <div class="solution-editorial-visual visual-analysis" aria-label="Exemple d'analyse de signaux">
+          <div class="solution-editorial-visual visual-analysis" aria-label="Illustration d'une synthèse de signaux">
             <div class="ui-window ui-analysis-window">
-              <div class="ui-window-top"><span class="ui-top-label">Synthèse de l’analyse</span><span class="ui-status">Analyse disponible</span></div>
+              <div class="ui-window-top"><span class="ui-top-label">Synthèse de l’analyse</span><span class="ui-status">Exemple</span></div>
               <div class="ui-score-row"><div><span class="ui-muted">Niveau de suspicion</span><strong>À examiner</strong></div><div class="ui-score-ring"><span>!</span></div></div>
-              <div class="ui-signal"><span class="ui-signal-icon">↗</span><div><strong>Signal observé</strong><span>Élément à vérifier dans son contexte</span></div><span class="ui-signal-state">À vérifier</span></div>
-              <div class="ui-signal"><span class="ui-signal-icon">⌕</span><div><strong>Informations disponibles</strong><span>Les limites restent visibles</span></div><span class="ui-check">✓</span></div>
+              <div class="ui-signal"><span class="ui-signal-icon">↗</span><div><strong>Similarité possible</strong><span>Comparer avec les éléments disponibles</span></div><span class="ui-signal-state">Vérifier</span></div>
+              <div class="ui-signal"><span class="ui-signal-icon">⌕</span><div><strong>Contexte incomplet</strong><span>La conclusion reste nuancée</span></div><span class="ui-check">✓</span></div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="solution-editorial-row">
-        <div class="solution-editorial-label">
-          <span>03</span>
-          <h2>Préparer la bonne réponse</h2>
-        </div>
-        <div class="solution-editorial-panel">
+        <article class="solution-editorial-card" id="solution-response">
           <div class="solution-editorial-copy">
-            <h3>Répondre avec clarté et mesure</h3>
-            <p>Préparez une réponse professionnelle adaptée à la situation. Vous pouvez la relire, la modifier ou choisir de ne pas l’utiliser avant toute action.</p>
+            <h2>Préparer une réponse adaptée</h2>
+            <p>Construisez une réponse professionnelle cohérente avec la situation et votre ton. Relisez-la et modifiez-la avant de décider de l’utiliser.</p>
           </div>
-          <div class="solution-editorial-visual visual-response" aria-label="Exemple de réponse à un avis">
+          <div class="solution-editorial-visual visual-response" aria-label="Illustration d'une réponse proposée">
             <div class="ui-window">
               <div class="ui-window-top"><span class="ui-top-label">Réponse proposée</span><span class="ui-status">Brouillon</span></div>
               <div class="ui-response-label">Votre réponse</div>
-              <div class="ui-response-text">Bonjour, merci d’avoir partagé votre expérience. Nous sommes désolés d’apprendre que votre commande n’a pas répondu à vos attentes. Nous souhaitons comprendre ce qui s’est passé.</div>
-              <div class="ui-action-row"><span>À relire avant envoi</span><span class="ui-button">Modifier la réponse</span></div>
+              <div class="ui-response-text">Bonjour, merci de nous avoir partagé votre expérience. Nous sommes désolés qu’elle n’ait pas répondu à vos attentes. Nous souhaitons comprendre ce qui s’est passé.</div>
+              <div class="ui-action-row"><span>Validation humaine</span><span class="ui-button">Relire la réponse</span></div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
 
-      <article class="solution-editorial-row">
-        <div class="solution-editorial-label">
-          <span>04</span>
-          <h2>Garder la maîtrise</h2>
-        </div>
-        <div class="solution-editorial-panel">
+        <article class="solution-editorial-card" id="solution-actions">
           <div class="solution-editorial-copy">
-            <h3>Des recommandations, vous gardez la décision</h3>
-            <p>Organisez les prochaines étapes, conservez la trace de vos choix et décidez de la suite. ReviewDefense vous aide à préparer vos actions sans garantir le retrait d’un avis.</p>
+            <h2>Choisir la suite en connaissance de cause</h2>
+            <p>Décidez s’il convient de répondre, d’approfondir l’examen ou d’étudier un signalement. ReviewDefense vous aide à préparer vos démarches, sans promettre le retrait d’un avis.</p>
           </div>
-          <div class="solution-editorial-visual visual-control" aria-label="Exemple de validation d'une action">
+          <div class="solution-editorial-visual visual-control" aria-label="Illustration des choix d'action">
             <div class="ui-window">
-              <div class="ui-window-top"><span class="ui-top-label">Prochaine étape</span><span class="ui-status">Votre décision</span></div>
-              <div class="ui-task"><span class="ui-task-check">✓</span><div><strong>Examiner les éléments</strong><span>Consulter le détail de l’analyse</span></div></div>
-              <div class="ui-task"><span class="ui-task-check">2</span><div><strong>Choisir une action</strong><span>Répondre, approfondir ou classer</span></div></div>
-              <div class="ui-control-actions"><span>Modifier</span><span>Valider le choix</span></div>
+              <div class="ui-window-top"><span class="ui-top-label">Actions possibles</span><span class="ui-status">Votre décision</span></div>
+              <div class="ui-task"><span class="ui-task-check">1</span><div><strong>Répondre</strong><span>Préparer une réponse adaptée</span></div></div>
+              <div class="ui-task"><span class="ui-task-check">2</span><div><strong>Approfondir</strong><span>Vérifier les éléments disponibles</span></div></div>
+              <div class="ui-task"><span class="ui-task-check">3</span><div><strong>Étudier un signalement</strong><span>Selon les règles de la plateforme</span></div></div>
             </div>
           </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </section>
 
     <section id="solution-conclusion" class="solution-editorial-conclusion">
       <div class="conclusion-content">
-        <span class="eyebrow">À VOUS DE DÉCIDER</span>
-        <h2>Une meilleure lecture des avis commence par une analyse claire.</h2>
-        <p>Comprenez les éléments disponibles, examinez les signaux et choisissez la suite en connaissance de cause.</p>
-        <a class="rd-button rd-button--primary" href="/ReviewDefenseFinal/pages/analyse.html">Analyser un avis</a>
+        <span class="solution-editorial-eyebrow">REVIEWDEFENSE</span>
+        <h2>Des avis mieux compris. Des décisions plus éclairées.</h2>
+        <p>Commencez par examiner un avis, comprendre les signaux disponibles et choisir la suite qui vous convient.</p>
+        <a class="rd-button rd-button--primary" href="/ReviewDefenseFinal/pages/analyse.html">Découvrir l’analyse</a>
       </div>
     </section>
   </main>
