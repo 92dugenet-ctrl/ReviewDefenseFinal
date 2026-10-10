@@ -5,24 +5,46 @@
       <img src="/components/header/logo/logo.svg" alt="ReviewDefense" class="rd-header__logo">
     </a>
     <nav class="rd-header__nav" aria-label="Navigation principale">
-      <a class="rd-header__link" href="/pages/solution.html">Produit</a>
+      <div class="rd-nav-group" data-dropdown>
+        <button class="rd-header__link rd-nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Produit <span class="rd-nav-chevron" aria-hidden="true"></span></button>
+        <div class="rd-nav-dropdown">
+          <a href="/pages/solution.html">La solution</a>
+          <a href="/pages/comment-ca-marche.html">Comment ça marche</a>
+        </div>
+      </div>
       <a class="rd-header__link" href="/pages/comment-ca-marche.html">Solutions</a>
-      <a class="rd-header__link" href="/pages/intelligence.html">Méthode</a>
+      <div class="rd-nav-group" data-dropdown>
+        <button class="rd-header__link rd-nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Méthode <span class="rd-nav-chevron" aria-hidden="true"></span></button>
+        <div class="rd-nav-dropdown">
+          <a href="/pages/intelligence.html">Méthode d’analyse</a>
+          <a href="/pages/securite.html">Sécurité</a>
+          <a href="/pages/faq.html">Questions fréquentes</a>
+        </div>
+      </div>
       <a class="rd-header__link" href="/pages/tarifs.html">Tarifs</a>
-      <a class="rd-header__link" href="/pages/ressources/index.html">Ressources</a>
+      <div class="rd-nav-group" data-dropdown>
+        <button class="rd-header__link rd-nav-trigger" type="button" aria-expanded="false" aria-haspopup="true">Ressources <span class="rd-nav-chevron" aria-hidden="true"></span></button>
+        <div class="rd-nav-dropdown">
+          <a href="/pages/ressources/index.html">Toutes les ressources</a>
+          <a href="/pages/ressources/guides.html">Guides pratiques</a>
+          <a href="/pages/faq.html">Questions fréquentes</a>
+        </div>
+      </div>
     </nav>
-    <button class="rd-header__mobile-toggle" type="button" aria-label="Ouvrir le menu"
-            aria-expanded="false" data-mobile-toggle>
+    <button class="rd-header__mobile-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false" data-mobile-toggle>
       <span></span><span></span>
     </button>
   </div>
   <div class="rd-header__mobile-panel" data-mobile-panel aria-hidden="true">
     <nav aria-label="Navigation mobile">
-      <a href="/pages/solution.html">Produit</a>
-      <a href="/pages/comment-ca-marche.html">Solutions</a>
-      <a href="/pages/intelligence.html">Méthode</a>
+      <a href="/pages/solution.html">Produit — La solution</a>
+      <a href="/pages/comment-ca-marche.html">Solutions — Comment ça marche</a>
+      <a href="/pages/intelligence.html">Méthode d’analyse</a>
+      <a href="/pages/securite.html">Sécurité</a>
       <a href="/pages/tarifs.html">Tarifs</a>
-      <a href="/pages/ressources/index.html">Ressources</a>
+      <a href="/pages/ressources/index.html">Toutes les ressources</a>
+      <a href="/pages/ressources/guides.html">Guides pratiques</a>
+      <a href="/pages/faq.html">Questions fréquentes</a>
     </nav>
   </div>
 </header>
