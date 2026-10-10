@@ -5,14 +5,19 @@
   inset: 0 0 auto;
   z-index: 1000;
   width: 100%;
-  background: transparent;
-  transition: background-color 220ms ease, backdrop-filter 220ms ease, box-shadow 220ms ease;
+  background: rgba(255, 255, 255, .56);
+  -webkit-backdrop-filter: blur(18px) saturate(135%);
+  backdrop-filter: blur(18px) saturate(135%);
+  border-bottom: 1px solid rgba(255, 255, 255, .42);
+  box-shadow: 0 4px 24px rgba(20, 30, 55, .035);
+  transition: background-color 220ms ease, backdrop-filter 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
 }
 .rd-header.is-scrolled {
-  background: rgba(255,255,255,.78);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-  box-shadow: 0 1px 0 rgba(11,22,48,.08);
+  background: rgba(255, 255, 255, .76);
+  -webkit-backdrop-filter: blur(22px) saturate(145%);
+  backdrop-filter: blur(22px) saturate(145%);
+  border-bottom-color: rgba(11, 22, 48, .07);
+  box-shadow: 0 6px 28px rgba(20, 30, 55, .055);
 }
 .rd-header__inner {
   width: min(1280px, calc(100% - 48px));
