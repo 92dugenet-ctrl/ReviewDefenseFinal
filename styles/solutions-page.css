@@ -275,3 +275,14 @@ body.sol-page .sol-section {
  .sol-feature .sol-work-grid { grid-template-columns:minmax(0,1fr); }
  .sol-feature .sol-insight { min-height:320px; }
 }
+
+
+/* Alternate the split-screen layout on every other feature section. */
+@media (min-width: 761px) {
+  .sol-feature.sol-reverse .sol-work-grid > .sol-reveal:first-child { order: 2; }
+  .sol-feature.sol-reverse .sol-work-grid > .sol-insight { order: 1; }
+}
+@media (max-width: 760px) {
+  .sol-feature.sol-reverse .sol-work-grid > .sol-reveal:first-child,
+  .sol-feature.sol-reverse .sol-work-grid > .sol-insight { order: initial; }
+}
