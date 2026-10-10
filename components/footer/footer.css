@@ -18,12 +18,12 @@
 }
 .rd-footer__brand { display:inline-flex; text-decoration:none; }
 .rd-footer__logo { width:156px; height:auto; }
-.rd-footer__statement { max-width:520px; align-self:center; }
+.rd-footer__statement { max-width:none; min-width:0; align-self:center; }
 .rd-footer__statement h2 {
-  margin:0 0 8px; font-size:clamp(28px,3vw,40px); line-height:1.04;
-  letter-spacing:-.04em; font-weight:650; color:var(--rd-navy-deep);
+  margin:0 0 8px; font-size:clamp(24px,2.6vw,36px); line-height:1.08;
+  letter-spacing:-.04em; font-weight:650; color:var(--rd-navy-deep); white-space:nowrap;
 }
-.rd-footer__statement p { max-width:420px; margin:0; color:var(--rd-text-soft); font-size:14px; line-height:1.5; }
+.rd-footer__statement p { max-width:none; margin:0; color:var(--rd-text-soft); font-size:14px; line-height:1.5; white-space:nowrap; }
 .rd-footer__cta {
   align-self:center; display:inline-flex; align-items:center; justify-content:space-between; gap:28px;
   min-width:235px; padding:16px 20px; border-radius:999px; background:var(--rd-navy);
@@ -59,9 +59,9 @@
   .rd-footer__inner { width:min(100% - 32px,1280px); padding:30px 0 20px; }
   .rd-footer__intro { display:flex; flex-direction:column; align-items:flex-start; gap:18px; padding-bottom:24px; }
   .rd-footer__logo { width:144px; }
-  .rd-footer__statement { margin-top:0; }
-  .rd-footer__statement h2 { font-size:clamp(28px,7vw,36px); }
-  .rd-footer__statement p { font-size:14px; }
+  .rd-footer__statement { width:100%; margin-top:0; }
+  .rd-footer__statement h2 { font-size:clamp(17px,4.9vw,28px); letter-spacing:-.045em; }
+  .rd-footer__statement p { font-size:12px; white-space:normal; }
   .rd-footer__cta { width:100%; box-sizing:border-box; }
   .rd-footer__nav { display:flex; flex-direction:column; gap:0; padding:0; }
   .rd-footer__group { border-bottom:1px solid var(--rd-line); }
@@ -79,6 +79,8 @@
   .rd-footer__nav { gap:22px; }
   .rd-footer__intro { column-gap:32px; }
   .rd-footer__logo { width:138px; }
+  .rd-footer__statement h2 { font-size:clamp(23px,2.45vw,28px); }
+  .rd-footer__statement p { font-size:12px; }
   .rd-footer__bottom { grid-template-columns:1fr auto; }
   .rd-footer__social { grid-column:2; }
 }
