@@ -64,7 +64,15 @@
     if (!root) return;
     const query = document.querySelector("[data-resource-search]")?.value.trim().toLocaleLowerCase("fr") || "";
     const visible = topics.filter(topic => !query || `${topic.title} ${topic.description}`.toLocaleLowerCase("fr").includes(query));
-    root.innerHTML = visible.map((topic, index) => `<a class="resource-topic rd-motion-item" href="theme.html?theme=${encodeURIComponent(topic.id)}" aria-label="Explorer la catégorie ${escapeHtml(topic.title)}, ${topic.count} articles"><img class="rd-mosaic-visual" src="../../assets/mosaic/${topic.id}.svg" alt="" aria-hidden="true" loading="lazy"><span class="resource-topic__panel"><span class="resource-topic__number">${String(topics.indexOf(topic)+1).padStart(2,"0")}</span><h3>${escapeHtml(topic.title)}</h3><span class="resource-topic__meta">${topic.count} articles</span><p class="resource-topic__description">${escapeHtml(topic.description)}</p></span><span class="resource-topic__arrow" aria-hidden="true">→</span></a>`).join("");
+    root.innerHTML = visible.map(topic => {
+      const index = topics.indexOf(topic);
+      const symbol = ["◉","!","↗","G","∑","✓","◎","✳","!","▤","▦","§","↳"][index];
+      return `<a class="resource-topic rd-motion-item" href="theme.html?theme=${encodeURIComponent(topic.id)}" aria-label="Explorer la catégorie ${escapeHtml(topic.title)}, ${topic.count} articles">
+        <span class="resource-topic__visual" aria-hidden="true"><span class="resource-topic__visual-mark">${symbol}</span></span>
+        <span class="resource-topic__panel"><span class="resource-topic__number">${String(index + 1).padStart(2, "0")} / 13</span><h3>${escapeHtml(topic.title)}</h3><span class="resource-topic__meta">${topic.count} articles</span><p class="resource-topic__description">${escapeHtml(topic.description)}</p></span>
+        <span class="resource-topic__arrow" aria-hidden="true">↗</span>
+      </a>`;
+    }).join("");
     const empty = document.querySelector("[data-resource-empty]");
     if (empty) empty.hidden = visible.length > 0;
   };
