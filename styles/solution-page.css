@@ -72,13 +72,13 @@
   text-decoration: none;
 }
 .solution-page__main { min-width: 0; }
-.solution-page__features { display: grid; gap: 12px; }
+.solution-page__features { display: grid; gap: 12px; width: 60%; max-width: 720px; }
 .solution-page__feature {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
   gap: clamp(10px, 1.5vw, 18px);
   align-items: stretch;
-  aspect-ratio: 2.05 / 1;
+  aspect-ratio: 1 / 1;
   min-height: 170px;
   padding: clamp(9px, 1.25vw, 14px);
   overflow: hidden;
