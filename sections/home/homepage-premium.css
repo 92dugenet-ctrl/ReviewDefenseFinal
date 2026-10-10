@@ -3,7 +3,7 @@
 main.rd-home-premium {
   color: #282720;
   background: #f7f4ef;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
 }
 main.rd-home-premium > section {
   width: 100%;
@@ -47,7 +47,7 @@ main.rd-home-premium > section {
   max-width: 675px;
   margin: 0 auto;
   color: #37342e;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: inherit;
   font-size: clamp(17px, 1.75vw, 20px);
   font-weight: 400;
   line-height: 1.26;
@@ -69,7 +69,7 @@ main.rd-home-premium > section {
 .rd-home-premium .rd-home-section-heading h2 {
   margin: 0 auto 8px;
   color: #292821;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
   font-size: clamp(25px, 2.8vw, 33px);
   font-weight: 650;
   line-height: 1.14;
@@ -122,7 +122,7 @@ main.rd-home-premium > section {
 }
 .rd-home-premium .rd-home-step__number {
   color: #c7c7c7;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
   font-size: 20px;
   font-weight: 300;
   line-height: 1;
@@ -131,7 +131,7 @@ main.rd-home-premium > section {
 .rd-home-premium .rd-home-step h3 {
   margin: 0 0 6px;
   color: #292929;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
   font-size: 11px;
   font-weight: 650;
   letter-spacing: -.01em;
@@ -141,7 +141,7 @@ main.rd-home-premium > section {
   max-width: 230px;
   margin: 0;
   color: #747474;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
   font-size: 9px;
   line-height: 1.48;
 }
@@ -223,7 +223,7 @@ main.rd-home-premium > section {
 .rd-home-premium .rd-home-review-quote p {
   margin: 4px 0 0;
   color: #33312b;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: inherit;
   font-size: 11px;
   line-height: 1.35;
 }
@@ -262,7 +262,7 @@ main.rd-home-premium > section {
 }
 .rd-home-premium .rd-home-feature-content h3 {
   margin: 0 0 5px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: inherit;
   font-size: 13px;
   font-weight: 650;
   letter-spacing: -.025em;
@@ -320,7 +320,7 @@ main.rd-home-premium > section {
   max-width: 425px;
   margin: 0;
   color: #292821;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: inherit;
   font-size: clamp(30px, 3.3vw, 41px);
   font-weight: 400;
   letter-spacing: -.035em;
@@ -358,7 +358,7 @@ main.rd-home-premium > section {
   z-index: 1;
   margin: 0;
   color: #302d27;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: inherit;
   font-size: 17px;
   font-weight: 400;
   line-height: 1.25;
@@ -414,7 +414,7 @@ main.rd-home-premium > section {
 .rd-home-premium .rd-home-value-card--compact h3 {
   margin: auto 0 6px;
   color: #302d27;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: inherit;
   font-size: 17px;
   font-weight: 400;
   line-height: 1.2;
@@ -437,7 +437,7 @@ main.rd-home-premium > section {
 .rd-home-premium .rd-home-closing p {
   margin: 0;
   color: #716b61;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: inherit;
   font-size: clamp(16px, 1.8vw, 22px);
   line-height: 1.35;
 }
