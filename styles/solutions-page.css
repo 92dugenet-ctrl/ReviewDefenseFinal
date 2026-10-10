@@ -254,3 +254,24 @@ body.sol-page .sol-section {
   .sol-work-grid > .sol-insight .sol-console { width: min(100%, 380px); }
   .sol-work-grid .sol-table { font-size: 10px; }
 }
+
+
+/* Six-part solution narrative: repeat the approved split-screen module consistently. */
+.sol-feature { border-top: 1px solid var(--sol-line); }
+.sol-feature .sol-work-grid { grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: center; }
+.sol-feature .sol-section-heading { max-width: 100%; }
+.sol-feature .sol-dashboard { width: 100%; box-sizing: border-box; }
+.sol-feature .sol-insight { min-height: 460px; }
+.sol-feature-analyze .sol-tower.t1 { background: linear-gradient(90deg,#a9d9ff,#4685b5); border-color:#c6e6ff; }
+.sol-feature-analyze .sol-tower.t1:before { background:repeating-linear-gradient(0deg,#23435b 0 5px,#b9e2ff 5px 7px); }
+.sol-feature-analyze .sol-tower.t2 { background:linear-gradient(90deg,#b5d4f0,#597eaa); border-color:#d8eaff; }
+.sol-feature-action .sol-cloud { background:linear-gradient(90deg,#e7a04b,#a85b25); }
+.sol-feature-control .sol-tower.t1 { background:linear-gradient(90deg,#d4d8d0,#7e887a); border-color:#eef2e9; }
+.sol-feature-control .sol-tower.t1:before { background:repeating-linear-gradient(0deg,#3a4438 0 5px,#dce7d5 5px 7px); }
+.sol-feature-results .sol-tower.t1 { background:linear-gradient(90deg,#d4ff8a,#72a83d); }
+.sol-feature-results .sol-tower.t2 { background:linear-gradient(90deg,#e7e9e2,#8b9a80); }
+.sol-feature-results .sol-cloud { background:linear-gradient(90deg,#a6d8a7,#4b8c68); border-color:#c4efc3; }
+@media (max-width:760px) {
+ .sol-feature .sol-work-grid { grid-template-columns:minmax(0,1fr); }
+ .sol-feature .sol-insight { min-height:320px; }
+}
