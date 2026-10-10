@@ -30,9 +30,9 @@ body.method-page{margin:0;background:var(--m-paper);color:var(--m-ink);font-fami
 .method-page .manifesto-copy strong{color:#35312e;font-weight:600}
 .method-page .text-link{display:inline-flex;margin-top:8px;padding:11px 17px;border:1px solid var(--m-line);color:var(--m-ink);text-decoration:none;font-size:12px;transition:background .2s ease}
 .method-page .text-link:hover{background:#fff}
-.method-page .method-steps{display:grid;grid-template-columns:1fr 1fr}
-.method-page .method-step{display:grid;grid-template-columns:minmax(100px,.55fr) 1.45fr;min-height:440px;border-bottom:1px solid var(--m-line)}
-.method-page .step-copy{padding:48px clamp(24px,4vw,58px) 48px 0;display:grid;grid-template-columns:minmax(90px,.55fr) 1.45fr;gap:20px;align-content:start}
+.method-page .method-steps{display:flex;flex-direction:column;width:100%}
+.method-page .method-step{display:grid;grid-template-columns:1fr 1fr;width:100%;min-height:510px;border-bottom:1px solid var(--m-line)}
+.method-page .step-copy{padding:48px clamp(24px,4vw,58px);display:grid;grid-template-columns:minmax(90px,.55fr) 1.45fr;gap:20px;align-content:start;min-width:0}
 .method-page .step-index{display:grid;gap:13px;align-content:start;font-family:Georgia,serif;font-size:11px;color:#77706a}
 .method-page .step-index span{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .method-page .step-index b{display:inline-grid;place-items:center;width:29px;height:22px;font-weight:400}
@@ -42,8 +42,8 @@ body.method-page{margin:0;background:var(--m-paper);color:var(--m-ink);font-fami
 .method-page .step-text p{margin:0 0 10px}
 .method-page .step-text ul{padding-left:15px;margin:10px 0 0}
 .method-page .step-text li{padding:2px 0}
-.method-page .step-visual{position:relative;overflow:hidden;min-height:440px;display:grid;place-items:center}
-.method-page .step-visual svg{width:100%;height:100%;min-height:440px;display:block}
+.method-page .step-visual{position:relative;overflow:hidden;min-height:510px;display:grid;place-items:center;width:100%;min-width:0}
+.method-page .step-visual svg{width:100%;height:100%;min-height:510px;display:block}
 .method-page .visual-problem{background:#382322}
 .method-page .visual-solution{background:#321b3a}
 .method-page .visual-impact{background:#151f40}
@@ -68,7 +68,7 @@ body.method-page{margin:0;background:var(--m-paper);color:var(--m-ink);font-fami
  .method-page .method-steps{grid-template-columns:1fr}
  .method-page .method-step{grid-template-columns:1fr;min-height:0}
  .method-page .step-copy{grid-template-columns:80px 1fr;padding:32px 22px;gap:12px}
- .method-page .step-visual,.method-page .step-visual svg{min-height:340px}
+ .method-page .step-visual,.method-page .step-visual svg{min-height:340px;height:340px}
 }
 @media(prefers-reduced-motion:reduce){.method-page *{scroll-behavior:auto!important;transition:none!important}}
 </style>
