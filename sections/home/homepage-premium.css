@@ -500,3 +500,158 @@ main.rd-home-premium > section {
 @media (prefers-reduced-motion: reduce) {
   .rd-home-premium .rd-home-feature-card { transition: none; }
 }
+
+/* White, product-led canvas across the homepage — Meta / Google / Apple-inspired */
+body:has(main.rd-home-premium) {
+  background: #ffffff;
+}
+main.rd-home-premium {
+  background: #ffffff;
+  color: #16181d;
+}
+main.rd-home-premium > section,
+.rd-home-premium .rd-home-about,
+.rd-home-premium .rd-home-method,
+.rd-home-premium .rd-home-commitments {
+  background-color: #ffffff;
+}
+.rd-home-premium .rd-home-about-label {
+  background: #f5f6f7;
+  color: #646970;
+}
+.rd-home-premium .rd-home-about p,
+.rd-home-premium .rd-home-commitments__heading h2,
+.rd-home-premium .rd-home-value-card h3,
+.rd-home-premium .rd-home-feature-content h3 {
+  color: #191b20;
+}
+.rd-home-premium .rd-home-section-heading h2 {
+  color: #15171b;
+}
+.rd-home-premium .rd-home-section-heading p,
+.rd-home-premium .rd-home-step p,
+.rd-home-premium .rd-home-feature-content p,
+.rd-home-premium .rd-home-commitments__heading > p,
+.rd-home-premium .rd-home-value-card p {
+  color: #676c75;
+}
+.rd-home-premium .rd-home-steps,
+.rd-home-premium .rd-home-step,
+.rd-home-premium .rd-home-feature-card,
+.rd-home-premium .rd-home-value-card {
+  background: #ffffff;
+}
+.rd-home-premium .rd-home-steps {
+  border-color: #e8eaed;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, .025);
+}
+.rd-home-premium .rd-home-step + .rd-home-step {
+  border-left-color: #eceef0;
+}
+.rd-home-premium .rd-home-feature-card {
+  border-color: #e7e9ed;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, .025);
+}
+.rd-home-premium .rd-home-feature-visual--analysis {
+  background: #f8f9fb;
+}
+.rd-home-premium .rd-home-feature-card--light .rd-home-feature-content,
+.rd-home-premium .rd-home-feature-card--dark .rd-home-feature-content {
+  background: #ffffff;
+  color: #191b20;
+}
+.rd-home-premium .rd-home-feature-card--dark .rd-home-feature-content h3,
+.rd-home-premium .rd-home-feature-card--dark .rd-home-feature-content p {
+  color: #191b20;
+}
+.rd-home-premium .rd-home-feature-card--dark .rd-home-feature-button {
+  border-color: #17191e;
+  background: #17191e;
+  color: #ffffff;
+}
+.rd-home-premium .rd-home-feature-card--light .rd-home-feature-button {
+  border-color: #dfe2e6;
+  background: #ffffff;
+  color: #191b20;
+}
+.rd-home-premium .rd-home-value-card {
+  border: 1px solid #eceef1;
+}
+.rd-home-premium .rd-home-closing {
+  border-top-color: #e8eaed;
+}
+.rd-home-premium .rd-home-closing p {
+  color: #5f646d;
+}
+.rd-home-premium .rd-home-closing a {
+  border-color: #dfe2e6;
+  background: #ffffff;
+  color: #191b20;
+}
+.rd-home-premium .rd-home-closing a:hover {
+  background: #f7f8fa;
+}
+
+/* The video hero remains full-screen, but its placeholder canvas follows the white system. */
+#home-hero.rd-home-hero-placeholder {
+  background: #ffffff !important;
+  color: #16181d !important;
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-placeholder__surface {
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(225, 232, 242, .50), transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%) !important;
+}
+#home-hero.rd-home-hero-placeholder .rd-home-hero-title,
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line,
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing,
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing [data-hero-phrase],
+#home-hero.rd-home-hero-placeholder .rd-home-hero-line--fixed:last-child {
+  color: #111827 !important;
+}
+#home-hero .rd-home-hero-kicker {
+  color: #656d7a !important;
+}
+#home-hero .rd-home-hero-description {
+  color: #5c6471 !important;
+}
+#home-hero .rd-home-hero-note {
+  color: #6d7582 !important;
+}
+#home-hero .rd-home-hero-note i {
+  background: #aeb8c7 !important;
+}
+#home-hero .rd-home-hero-scroll {
+  color: #818894 !important;
+}
+#home-hero .rd-home-hero-scroll span {
+  background: linear-gradient(#aeb8c7, transparent) !important;
+}
+#home-hero .rd-home-hero-button--primary {
+  border-color: #151922 !important;
+  background: #151922 !important;
+  color: #ffffff !important;
+  box-shadow: none !important;
+}
+#home-hero .rd-home-hero-button--primary:hover {
+  background: #303743 !important;
+  border-color: #303743 !important;
+}
+#home-hero .rd-home-hero-button--secondary {
+  border-color: #dfe3e8 !important;
+  background: rgba(255,255,255,.72) !important;
+  color: #252a33 !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+#home-hero .rd-home-hero-button--secondary:hover {
+  border-color: #c7ccd4 !important;
+  background: #f8f9fb !important;
+}
+#home-hero .rd-home-hero-button:focus-visible,
+#home-hero .rd-home-hero-scroll:focus-visible {
+  outline-color: #151922 !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  #home-hero .rd-home-hero-button { transition: none; }
+}
