@@ -252,7 +252,13 @@
 }
 
 
-/* Typographie et présentation des listes à puces */
+/* Typographie harmonisée pour le contenu détaillé des étapes */
+.solution-page__copy p {
+  margin: 0 0 10px;
+  color: var(--solution-muted);
+  font-size: clamp(10px, .85vw, 11px);
+  line-height: 1.6;
+}
 .solution-page__steps {
   display: grid;
   gap: 7px;
@@ -284,9 +290,10 @@
   font-weight: 600;
 }
 @media (max-width: 760px) {
+  .solution-page__copy p,
   .solution-page__steps {
     font-size: 11px;
     line-height: 1.65;
-    gap: 8px;
   }
+  .solution-page__steps { gap: 8px; }
 }
