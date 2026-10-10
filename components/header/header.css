@@ -150,3 +150,66 @@
 /* Navigation épurée : suppression des chevrons des menus déroulants */
 .rd-nav-chevron { display: none !important; }
 .rd-nav-trigger { gap: 0 !important; }
+
+
+/* Unified Liquid Glass: subtle at the top, fades while scrolling, returns on hover */
+.rd-header {
+  --rd-glass-base: rgba(246, 249, 255, .34);
+  background: linear-gradient(115deg, rgba(255,255,255,.48), var(--rd-glass-base) 38%, rgba(231,239,255,.24)) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(185%) contrast(108%) !important;
+  backdrop-filter: blur(30px) saturate(185%) contrast(108%) !important;
+  border-bottom: 1px solid rgba(255,255,255,.48) !important;
+  transition: background 360ms ease, backdrop-filter 360ms ease, box-shadow 360ms ease, border-color 360ms ease;
+}
+.rd-header::before {
+  background:
+    radial-gradient(ellipse at 16% -45%, rgba(255,255,255,.86), transparent 58%),
+    linear-gradient(105deg, rgba(255,255,255,.24), transparent 36%, rgba(255,255,255,.12) 72%, rgba(255,255,255,.30)) !important;
+  transition: opacity 360ms ease;
+  opacity: .82;
+}
+.rd-header.is-scrolled {
+  background: linear-gradient(115deg, rgba(248,250,255,.075), rgba(235,242,255,.035) 48%, rgba(255,255,255,.055)) !important;
+  -webkit-backdrop-filter: blur(28px) saturate(165%) contrast(105%) !important;
+  backdrop-filter: blur(28px) saturate(165%) contrast(105%) !important;
+  border-bottom-color: rgba(255,255,255,.12) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,.08) inset, 0 6px 24px rgba(28,42,70,.025) !important;
+}
+.rd-header.is-scrolled::before { opacity: .12; }
+.rd-header.is-scrolled .rd-header__inner {
+  opacity: .16;
+  transition: opacity 360ms ease;
+}
+.rd-header.is-scrolled:hover,
+.rd-header.is-scrolled:focus-within {
+  background: linear-gradient(115deg, rgba(255,255,255,.88), rgba(242,247,255,.78) 48%, rgba(231,239,255,.72)) !important;
+  -webkit-backdrop-filter: blur(32px) saturate(190%) contrast(108%) !important;
+  backdrop-filter: blur(32px) saturate(190%) contrast(108%) !important;
+  border-bottom-color: rgba(255,255,255,.76) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,.65) inset, 0 10px 34px rgba(28,42,70,.10) !important;
+}
+.rd-header.is-scrolled:hover::before,
+.rd-header.is-scrolled:focus-within::before { opacity: .9; }
+.rd-header.is-scrolled:hover .rd-header__inner,
+.rd-header.is-scrolled:focus-within .rd-header__inner { opacity: 1; }
+.rd-header .rd-nav-dropdown {
+  background: rgba(245,249,255,.76) !important;
+  -webkit-backdrop-filter: blur(30px) saturate(180%) !important;
+  backdrop-filter: blur(30px) saturate(180%) !important;
+  border-color: rgba(255,255,255,.64) !important;
+  box-shadow: 0 16px 42px rgba(20,30,55,.12), 0 1px 0 rgba(255,255,255,.7) inset !important;
+}
+@media (hover: none) {
+  /* Keep the navigation legible on touch screens where hover is unavailable. */
+  .rd-header.is-scrolled {
+    background: linear-gradient(115deg, rgba(255,255,255,.70), rgba(242,247,255,.60) 48%, rgba(231,239,255,.54)) !important;
+    -webkit-backdrop-filter: blur(28px) saturate(180%) !important;
+    backdrop-filter: blur(28px) saturate(180%) !important;
+    border-bottom-color: rgba(255,255,255,.60) !important;
+  }
+  .rd-header.is-scrolled::before { opacity: .72; }
+  .rd-header.is-scrolled .rd-header__inner { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .rd-header, .rd-header::before, .rd-header__inner { transition: none !important; }
+}
