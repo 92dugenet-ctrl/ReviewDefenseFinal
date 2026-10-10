@@ -362,3 +362,62 @@ body.sol-page .sol-floor { opacity: .7; }
 @media (prefers-color-scheme: dark) {
   html:has(body.sol-page), body.sol-page { background:#fff !important; color:#202938 !important; }
 }
+
+
+/* Match the typography and text palette used throughout Review Defense. */
+body.sol-page {
+  font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  color: var(--rd-ink, #0b1630) !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body.sol-page .sol-title {
+  font-family: inherit !important;
+  color: var(--rd-ink, #0b1630) !important;
+  font-weight: 600 !important;
+  letter-spacing: -.04em !important;
+  line-height: 1.04 !important;
+}
+body.sol-page .sol-copy {
+  font-family: inherit !important;
+  color: var(--rd-ink-soft, #536078) !important;
+  font-weight: 400;
+  line-height: 1.65;
+}
+body.sol-page .sol-eyebrow {
+  font-family: inherit !important;
+  color: var(--rd-primary, #2563eb) !important;
+  font-weight: 600 !important;
+  letter-spacing: .12em !important;
+  line-height: 1.4;
+}
+body.sol-page .sol-dashboard,
+body.sol-page .sol-dashboard table,
+body.sol-page .sol-dashboard .sol-tab,
+body.sol-page .sol-dash-top,
+body.sol-page .sol-toggle,
+body.sol-page .sol-total,
+body.sol-page .sol-review,
+body.sol-page .sol-float,
+body.sol-page .sol-cta {
+  font-family: inherit !important;
+}
+body.sol-page .sol-table { color: var(--rd-ink-soft, #536078) !important; }
+body.sol-page .sol-table td { color: inherit; }
+body.sol-page .sol-dash-top { color: var(--rd-muted, #718096) !important; }
+body.sol-page .sol-tabs .sol-tab { color: var(--rd-ink-soft, #536078) !important; }
+body.sol-page .sol-tabs .sol-tab.active {
+  background: var(--rd-primary-soft, #eaf2ff) !important;
+  color: var(--rd-primary, #2563eb) !important;
+}
+body.sol-page .sol-toggle {
+  color: var(--rd-success, #16856a) !important;
+  background: var(--rd-success-soft, #e8f6f1) !important;
+}
+body.sol-page .sol-total small,
+body.sol-page .sol-total span,
+body.sol-page .sol-review span { color: var(--rd-muted, #718096) !important; }
+body.sol-page .sol-total strong { color: var(--rd-primary, #2563eb) !important; }
+body.sol-page .sol-cta { background: var(--rd-primary, #2563eb) !important; color: #fff !important; }
+body.sol-page .sol-cta:hover { background: var(--rd-primary-hover, #172b52) !important; }
+body.sol-page .sol-review b { color: var(--rd-ink, #0b1630) !important; }
