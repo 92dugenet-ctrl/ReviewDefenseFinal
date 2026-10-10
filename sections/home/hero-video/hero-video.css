@@ -14,7 +14,7 @@
   margin-inline: calc(50% - 50vw);
   padding: clamp(24px, 5vw, 80px);
   overflow: hidden;
-  color: #f7f9fc;
+  color: #fff !important;
   background: #101827;
 }
 
@@ -31,9 +31,9 @@
 #home-hero.rd-home-hero-placeholder .rd-home-hero-copy {
   position: relative;
   z-index: 1;
-  display: block;
-  visibility: visible;
-  opacity: 1;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
   width: min(100%, 1320px);
   margin: 0 auto;
   text-align: center;
@@ -48,7 +48,7 @@
   width: 100%;
   max-width: none;
   margin: 0;
-  color: #f7f9fc;
+  color: #fff !important;
   font-size: clamp(2.35rem, 6.2vw, 6.3rem);
   font-weight: 600;
   line-height: 1.04;
@@ -60,22 +60,22 @@
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line {
   display: block;
   max-width: 100%;
-  color: #f7f9fc;
+  color: #fff !important;
 }
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing {
   min-height: 1.08em;
-  color: #f7f9fc;
+  color: #fff !important;
 }
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--changing [data-hero-phrase] {
   display: inline-block;
-  color: #f7f9fc;
+  color: #fff !important;
   animation: rd-hero-phrase-in 650ms cubic-bezier(.2, .75, .25, 1) both;
 }
 
 #home-hero.rd-home-hero-placeholder .rd-home-hero-line--fixed:last-child {
-  color: #f7f9fc;
+  color: #fff !important;
 }
 
 @keyframes rd-hero-phrase-in {
