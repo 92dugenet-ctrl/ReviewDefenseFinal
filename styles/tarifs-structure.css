@@ -360,3 +360,13 @@ body.tarifs-page *{box-sizing:border-box}
   .rd-tarifs .pack-card > strong,
   .rd-tarifs .subscription-card > strong { font-size: 21px; }
 }
+
+
+/* Pricing page: clean white background throughout. */
+html:has(body.tarifs-page),
+body.tarifs-page,
+body.tarifs-page .rd-tarifs,
+body.tarifs-page .tarifs-section,
+body.tarifs-page .tarifs-shell {
+  background: #fff !important;
+}
