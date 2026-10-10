@@ -1053,3 +1053,12 @@ main.rd-home #home-decision .rd-decision-status p { color: var(--rd-ink-soft); }
  .solution-reference-proof__heading h2 { font-size:28px; }
 }
 @media(prefers-reduced-motion:reduce) { .solution-reference-feature { transition:none; } }
+
+/* Solution reference layout: keep content clear of the fixed glass header. */
+.solution-reference-layout .solution-reference-features { padding-top: clamp(100px, 12vw, 142px); }
+@media(max-width:760px) {
+  .solution-reference-layout .solution-reference-features { padding-top: 100px; }
+}
+@media(max-width:520px) {
+  .solution-reference-layout .solution-reference-features { padding-top: 88px; }
+}
