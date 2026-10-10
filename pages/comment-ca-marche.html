@@ -2,11 +2,11 @@
 <meta name="description" content="Comprendre les avis, examiner les signaux, préparer une réponse et choisir une action avec ReviewDefense."><link rel="stylesheet" href="/ReviewDefenseFinal/styles/main.css"><link rel="stylesheet" href="/ReviewDefenseFinal/components/header/header.css"><link rel="stylesheet" href="/ReviewDefenseFinal/components/footer/footer.css"><link rel="stylesheet" href="/ReviewDefenseFinal/styles/solution-reference.css?v=white-home-typography-20261010"></head><body><div data-global-header></div><main class="rd-solution-reference">
 <section class="sr-manifeste sr-manifeste--hero" aria-labelledby="sr-manifeste-title">
 <style>
-.sr-manifeste{width:min(1120px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:0;border-top:1px solid rgba(11,22,48,.12);border-bottom:1px solid rgba(11,22,48,.12);color:#0b1630;align-items:stretch}.sr-manifeste--hero{min-height:0;margin-top:clamp(44px,7vw,88px);margin-bottom:12px}.sr-manifeste--hero>div:first-child{padding:clamp(36px,5.5vw,72px) clamp(26px,4vw,56px);border-right:1px solid rgba(11,22,48,.12);display:flex;align-items:flex-start}.sr-manifeste-copy{padding:clamp(36px,5.5vw,72px) clamp(26px,4vw,56px)}
+.sr-manifeste{width:min(1120px,88%);margin:0 auto;padding:0;display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.2fr);gap:0;border-bottom:1px solid rgba(11,22,48,.12);color:#0b1630;align-items:stretch}.sr-manifeste--hero{min-height:0;margin-top:0;margin-bottom:0}.sr-manifeste--hero>div:first-child{padding:clamp(36px,5.5vw,72px) clamp(26px,4vw,56px);border-right:1px solid rgba(11,22,48,.12);display:flex;align-items:flex-start}.sr-manifeste-copy{padding:clamp(36px,5.5vw,72px) clamp(26px,4vw,56px)}
 .sr-manifeste h2{margin:0;font-size:clamp(30px,3.4vw,46px);font-weight:650;letter-spacing:-.045em;line-height:1.08}
 .sr-manifeste-copy p{margin:0 0 14px;color:#536078;font-size:14px;line-height:1.75}
 .sr-manifeste-copy strong{color:#0b1630;font-weight:600}
-@media(max-width:700px){.sr-manifeste{grid-template-columns:1fr;width:calc(100% - 36px);margin:24px auto 16px;gap:0;min-height:0}.sr-manifeste--hero>div:first-child{padding:28px 22px 20px;border-right:0;border-bottom:1px solid rgba(11,22,48,.12)}.sr-manifeste-copy{padding:22px}}
+@media(max-width:700px){.sr-manifeste{grid-template-columns:1fr;width:calc(100% - 36px);margin:0 auto;gap:0;min-height:0}.sr-manifeste--hero>div:first-child{padding:28px 22px 20px;border-right:0;border-bottom:1px solid rgba(11,22,48,.12)}.sr-manifeste-copy{padding:22px}}
 </style>
 <div><h2 id="sr-manifeste-title">Notre manifeste</h2></div>
 <div class="sr-manifeste-copy">
@@ -56,10 +56,14 @@
   // Always open this page at the manifesto, not at a previously restored scroll position.
   if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   const startAtManifesto = () => {
-    if (!location.hash) window.scrollTo({top: 0, left: 0, behavior: 'auto'});
+    if (!location.hash) {
+      window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+      requestAnimationFrame(() => window.scrollTo({top: 0, left: 0, behavior: 'instant'}));
+    }
   };
   if (document.readyState === 'complete') startAtManifesto();
   else window.addEventListener('load', startAtManifesto, {once: true});
+  window.addEventListener('pageshow', startAtManifesto);
 
   // The scroll animation sequence begins with the manifesto, then continues through the steps.
   const scenes = [manifesto, ...cards];
