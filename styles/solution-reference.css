@@ -67,3 +67,67 @@ html:has(.rd-solution-reference){scroll-snap-type:y mandatory;scroll-behavior:sm
 html:has(.rd-solution-reference) [data-global-footer]{scroll-snap-align:start;scroll-snap-stop:normal;scroll-margin-top:0}
 html:has(.rd-solution-reference) .rd-footer{scroll-snap-align:start;scroll-snap-stop:normal}
 html:has(.rd-solution-reference) .rd-solution-reference{overflow:visible}
+
+
+/* Comment ça marche — alignement visuel sur la page d’accueil : fond et cartes entièrement blancs. */
+html:has(.rd-solution-reference),
+html:has(.rd-solution-reference) body,
+html:has(.rd-solution-reference) main.rd-solution-reference,
+html:has(.rd-solution-reference) .sr-intro,
+html:has(.rd-solution-reference) .sr-card,
+html:has(.rd-solution-reference) .sr-visual,
+html:has(.rd-solution-reference) .sr-visual--blue,
+html:has(.rd-solution-reference) .sr-chart,
+html:has(.rd-solution-reference) .sr-ui,
+html:has(.rd-solution-reference) .sr-person,
+html:has(.rd-solution-reference) .sr-file,
+html:has(.rd-solution-reference) .sr-report,
+html:has(.rd-solution-reference) .sr-integration,
+html:has(.rd-solution-reference) .sr-permissions {
+  background: #fff !important;
+}
+html:has(.rd-solution-reference) body,
+html:has(.rd-solution-reference) .rd-solution-reference,
+html:has(.rd-solution-reference) .rd-solution-reference * {
+  font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+html:has(.rd-solution-reference) .sr-card {
+  border-color: #e3e9f2;
+  box-shadow: 0 12px 34px rgba(21,43,82,.045);
+}
+html:has(.rd-solution-reference) .sr-visual {
+  border: 1px solid #e3e9f2;
+  border-radius: 18px;
+}
+html:has(.rd-solution-reference) .sr-card-copy h2 {
+  color: #101a2e;
+  font-weight: 550;
+  letter-spacing: -.05em;
+}
+html:has(.rd-solution-reference) .sr-card-copy p,
+html:has(.rd-solution-reference) .sr-card-copy li {
+  color: #637087;
+  line-height: 1.8;
+}
+html:has(.rd-solution-reference) .sr-ui,
+html:has(.rd-solution-reference) .sr-chart {
+  border-color: #e3e9f2;
+  box-shadow: 0 8px 22px rgba(21,43,82,.04);
+}
+html:has(.rd-solution-reference) .sr-report button {
+  background: #fff;
+  color: #101a2e;
+  border: 1px solid #dce4f0;
+}
+html:has(.rd-solution-reference) .sr-file-icon {
+  background: #fff;
+  border: 1px solid #dce4f0;
+}
+html:has(.rd-solution-reference) .sr-integration-mark {
+  background: #fff;
+  color: #2e63bb;
+  border: 1px solid #dce4f0;
+}
+html:has(.rd-solution-reference) .sr-bars i:nth-child(5) {
+  background: #dce4f0;
+}
