@@ -571,3 +571,30 @@ body.sol-page .sol-result-metrics > div { border-color: transparent !important; 
 body.sol-page .sol-visual-note { border-color: transparent !important; }
 body.sol-page .sol-table td { border-bottom-color: transparent !important; }
 body.sol-page .sol-total { border-top-color: transparent !important; }
+
+
+/* Hero banner: use the supplied four-profession Google Maps review artwork. */
+.sol-page .sol-hero-art {
+  min-height: 0;
+  display: block;
+  perspective: none;
+  align-self: center;
+  overflow: visible;
+}
+.sol-page .sol-hero-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: min(76svh, 760px);
+  object-fit: contain;
+  object-position: center;
+  border-radius: 24px;
+  filter: drop-shadow(0 24px 42px rgba(0,0,0,.22));
+}
+@media (max-width: 760px) {
+  .sol-page .sol-hero-art { width: 100%; }
+  .sol-page .sol-hero-image {
+    max-height: none;
+    border-radius: 16px;
+  }
+}
