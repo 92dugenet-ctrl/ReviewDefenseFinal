@@ -15,7 +15,7 @@
 .sr-logos{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:0 0 34px;color:#9b9f9a;font-size:10px;letter-spacing:.03em}
 .sr-logos strong{font-size:12px;color:#676e6b;font-weight:650;letter-spacing:.08em}
 .sr-cards{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
-.sr-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(180px,1fr);gap:18px;align-items:stretch;min-height:calc(100svh - 110px);padding:22px;border:1px solid #f0f0eb;border-radius:8px;background:#f1f2ed;scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:92px}
+.sr-card{display:grid;grid-template-columns:minmax(0,.9fr) minmax(180px,1fr);gap:18px;align-items:stretch;min-height:calc(100svh - 110px);padding:22px;border:1px solid #e9ece8;border-radius:8px;background:#f6f7f4;scroll-snap-align:start;scroll-snap-stop:always;scroll-margin-top:92px}
 .sr-card-copy{padding:0 14px 18px;align-self:start;margin-top:-10px}
 .sr-card-copy h2{margin:0 0 14px;font-size:clamp(21px,2vw,29px);line-height:1.16;letter-spacing:-.035em;font-weight:550}
 .sr-card-copy p{margin:0 0 11px;color:#7c837e;font-size:14px;line-height:1.6;max-width:340px}
