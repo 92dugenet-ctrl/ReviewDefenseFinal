@@ -1,29 +1,29 @@
 
 /* Pricing page redesign inspired by restrained, editorial three-column pricing tables. */
-body.tarifs-page{background:#f7f6ef;color:#22221f}
-.rd-tarifs{background:#f7f6ef!important;color:#22221f!important;font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body.tarifs-page{background:#fff;color:#22221f}
+.rd-tarifs{background:#fff!important;color:var(--rd-ink,#22221f)!important;font-family:"Inter",ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .rd-tarifs .rd-price-shell{width:min(1180px,calc(100% - 48px));margin:0 auto}
-.rd-tarifs .rd-price-intro{padding:76px 0 35px;background:#f7f6ef}
+.rd-tarifs .rd-price-intro{padding:76px 0 35px;background:#fff}
 .rd-tarifs .rd-price-eyebrow{margin:0 0 15px;color:#73736b;font-size:10px;font-weight:650;letter-spacing:.14em;text-transform:uppercase}
-.rd-tarifs .rd-price-intro h1{max-width:780px;margin:0 0 18px;font-size:clamp(40px,6vw,68px);font-weight:500;line-height:1.02;letter-spacing:-.065em}
+.rd-tarifs .rd-price-intro h1{max-width:780px;margin:0 0 18px;font-size:clamp(40px,6vw,68px);font-weight:600;line-height:1.02;letter-spacing:-.04em}
 .rd-tarifs .rd-price-lead{max-width:600px;margin:0;color:#696960;font-size:15px;line-height:1.7}
 .rd-tarifs .rd-price-nav{display:flex;flex-wrap:wrap;gap:9px;margin-top:30px}
 .rd-tarifs .rd-price-nav a{padding:10px 15px;border:1px solid #d9d8ce;border-radius:30px;color:#34342f;text-decoration:none;font-size:11px;transition:background .2s,color .2s}
 .rd-tarifs .rd-price-nav a:hover{background:#22221f;color:#fff}
 .rd-tarifs .rd-price-category{padding:42px 0 58px;background:#f7f6ef;scroll-margin-top:90px}
-.rd-tarifs .rd-price-category--soft{background:#efeee6}
+.rd-tarifs .rd-price-category--soft{background:#fff}
 .rd-tarifs .rd-price-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:25px}
-.rd-tarifs .rd-price-heading h2{margin:0;font-size:clamp(30px,4vw,43px);font-weight:500;letter-spacing:-.055em;line-height:1.05}
+.rd-tarifs .rd-price-heading h2{margin:0;font-size:clamp(30px,4vw,43px);font-weight:600;letter-spacing:-.03em;line-height:1.08}
 .rd-tarifs .rd-price-heading>p{max-width:390px;margin:0;color:#6d6d64;font-size:12px;line-height:1.7}
 .rd-tarifs .rd-price-grid{display:grid;gap:10px}
 .rd-tarifs .rd-price-grid--3{grid-template-columns:repeat(3,minmax(0,1fr))}
 .rd-tarifs .rd-price-grid--5{grid-template-columns:repeat(5,minmax(0,1fr))}
-.rd-tarifs .rd-price-card{display:flex;flex-direction:column;min-width:0;min-height:270px;padding:21px 20px 19px;border:1px solid #e2e0d6;border-radius:3px;background:rgba(255,255,255,.46);transition:transform .2s,border-color .2s,background .2s}
+.rd-tarifs .rd-price-card{display:flex;flex-direction:column;min-width:0;min-height:270px;padding:21px 20px 19px;border:1px solid #e7e7e7;border-radius:4px;background:#fff;transition:transform .2s,border-color .2s,background .2s}
 .rd-tarifs .rd-price-card:hover{transform:translateY(-3px);border-color:#bcbab0;background:#fff}
 .rd-tarifs .rd-price-label{margin:0 0 20px;color:#77776e;font-size:10px;font-weight:550}
-.rd-tarifs .rd-price-card h3{min-height:44px;margin:0 0 9px;color:#242420;font-size:19px;font-weight:500;letter-spacing:-.045em;line-height:1.18}
+.rd-tarifs .rd-price-card h3{min-height:44px;margin:0 0 9px;color:#242420;font-size:19px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
 .rd-tarifs .rd-price-desc{min-height:52px;margin:0;color:#74746b;font-size:11px;line-height:1.6}
-.rd-tarifs .rd-price-amount{margin:auto 0 0;padding-top:25px;color:#22221f;font-size:clamp(26px,2.4vw,35px);font-weight:500;letter-spacing:-.065em;line-height:1.1;font-variant-numeric:tabular-nums;white-space:normal}
+.rd-tarifs .rd-price-amount{margin:auto 0 0;padding-top:25px;color:#22221f;font-size:clamp(26px,2.4vw,35px);font-weight:600;letter-spacing:-.04em;line-height:1.1;font-variant-numeric:tabular-nums;white-space:normal}
 .rd-tarifs .rd-price-amount small{font-size:11px;font-weight:450;letter-spacing:0;color:#73736b}
 .rd-tarifs .rd-price-note{margin:8px 0 0;color:#85857c;font-size:9px;line-height:1.4}
 .rd-tarifs .rd-price-card--featured{border-color:#242420;background:#fff}
