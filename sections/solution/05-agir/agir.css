@@ -1,8 +1,0 @@
-/* STRUCTURE ONLY — 05 */
-.solution-agir__inner { max-width: 1120px; margin: 0 auto; padding: 190px 32px; }
-.solution-agir__header { max-width: 600px; margin-bottom: 110px; }
-.solution-agir__flow { display: flex; align-items: center; justify-content: center; }
-.flow-node { width: 190px; height: 150px; }
-.flow-line { width: 90px; height: 1px; background: #ccc; }
-.solution-agir__choices { max-width: 760px; margin: 100px auto 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.choice { min-height: 90px; border: 0; }
