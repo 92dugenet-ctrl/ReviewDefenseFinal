@@ -12,7 +12,7 @@
   margin-inline: auto;
   padding: clamp(112px, 12vw, 144px) 0 48px;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
   gap: clamp(24px, 4vw, 56px);
   align-items: start;
 }
@@ -79,7 +79,7 @@
 .solution-page__features {
   display: grid;
   gap: 12px;
-  width: 66.666%;
+  width: 60%;
   max-width: 720px;
 }
 .solution-page__feature {
