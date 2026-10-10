@@ -421,3 +421,59 @@ body.sol-page .sol-total strong { color: var(--rd-primary, #2563eb) !important; 
 body.sol-page .sol-cta { background: var(--rd-primary, #2563eb) !important; color: #fff !important; }
 body.sol-page .sol-cta:hover { background: var(--rd-primary-hover, #172b52) !important; }
 body.sol-page .sol-review b { color: var(--rd-ink, #0b1630) !important; }
+
+
+/* Purpose-built visual language for each solution section. */
+.sol-feature .sol-insight { isolation:isolate; overflow:hidden; border-radius:28px; }
+.sol-feature .sol-insight:before,
+.sol-feature .sol-insight:after { content:""; position:absolute; pointer-events:none; z-index:3; }
+.sol-feature .sol-insight .sol-console { transition:transform .6s ease, filter .6s ease; }
+.sol-feature .sol-insight:hover .sol-console { transform:translateY(-5px) rotateX(3deg) rotateY(-4deg); }
+
+/* 02 — Centralised review workflow: keep the layered review-console metaphor. */
+.sol-feature-track .sol-insight { background:radial-gradient(ellipse at 50% 45%,rgba(37,99,235,.11),transparent 64%); }
+
+/* 03 — Analysis: transform the repeated panels into a data-signal chart. */
+.sol-feature-analyze .sol-insight { background:radial-gradient(ellipse at 50% 55%,rgba(37,99,235,.13),transparent 65%); }
+.sol-feature-analyze .sol-insight .sol-floor { background:linear-gradient(145deg,#f2f6ff,#e1eaff); border-color:#c6d6f5; }
+.sol-feature-analyze .sol-insight .sol-wall { background:linear-gradient(135deg,#f8fbff,#dce8ff); border-color:#b9cef4; }
+.sol-feature-analyze .sol-insight .sol-tower { box-shadow:0 12px 25px rgba(37,99,235,.13); }
+.sol-feature-analyze .sol-insight .sol-tower.t1 { left:25%; width:16%; height:27%; bottom:24%; background:linear-gradient(90deg,#93b7ff,#2563eb); border-color:#7ba4fa; }
+.sol-feature-analyze .sol-insight .sol-tower.t2 { left:45%; width:16%; height:42%; bottom:24%; background:linear-gradient(90deg,#9ee7d3,#159b81); border-color:#7dd9c1; }
+.sol-feature-analyze .sol-insight .sol-cloud { left:65%; width:16%; height:54%; bottom:24%; background:linear-gradient(90deg,#d3b8ff,#8662d9); border-color:#c1a5ff; }
+
+/* 04 — Action: documents and a clearly staged validation workflow. */
+.sol-feature-action .sol-insight { background:radial-gradient(ellipse at 52% 48%,rgba(22,133,106,.13),transparent 65%); }
+.sol-feature-action .sol-insight .sol-console { transform:none; filter:none; }
+.sol-feature-action .sol-insight .sol-floor { inset:17% 13% 13%; clip-path:none; transform:rotate(-5deg); border-radius:18px; background:#edf8f3; border:1px solid #b7e2d1; }
+.sol-feature-action .sol-insight .sol-wall { top:20%; height:51%; width:43%; opacity:1; clip-path:none; transform:none; border-radius:16px; box-shadow:0 18px 35px rgba(18,90,73,.12); }
+.sol-feature-action .sol-insight .sol-wall-left { left:16%; background:linear-gradient(145deg,#fff,#e7f7f1); }
+.sol-feature-action .sol-insight .sol-wall-right { right:13%; top:27%; background:linear-gradient(145deg,#dff5ec,#c3e8da); }
+.sol-feature-action .sol-insight .sol-light { top:34%; height:6px; width:23%; background:#159b81; box-shadow:none; }
+.sol-feature-action .sol-insight .sol-tower { bottom:27%; height:28%; width:20%; border-radius:8px; background:repeating-linear-gradient(0deg,#fff 0 9px,#a9d9ca 9px 11px); border:1px solid #83c9b4; box-shadow:0 8px 18px rgba(18,90,73,.1); }
+.sol-feature-action .sol-insight .sol-tower.t1 { left:30%; }
+.sol-feature-action .sol-insight .sol-tower.t2 { left:52%; background:repeating-linear-gradient(0deg,#fff 0 9px,#b9c9e9 9px 11px); border-color:#9aafd8; }
+.sol-feature-action .sol-insight .sol-cloud { display:none; }
+
+/* 05 — Control: visible audit trail and connected checkpoints. */
+.sol-feature-control .sol-insight { background:radial-gradient(ellipse at 50% 50%,rgba(99,113,138,.12),transparent 66%); }
+.sol-feature-control .sol-insight .sol-floor { inset:23% 8% 20%; clip-path:none; transform:none; border-radius:22px; background:#f2f5f9; border:1px solid #d8e0ea; }
+.sol-feature-control .sol-insight .sol-wall { display:none; }
+.sol-feature-control .sol-insight .sol-light { top:49%; height:4px; width:57%; left:22%; right:auto; transform:none; background:#9aa9bd; box-shadow:none; }
+.sol-feature-control .sol-insight .sol-tower { bottom:35%; width:13%; height:25%; border-radius:50%; background:#fff; border:3px solid #2563eb; box-shadow:0 0 0 8px rgba(37,99,235,.09); }
+.sol-feature-control .sol-insight .sol-tower.t1 { left:20%; }
+.sol-feature-control .sol-insight .sol-tower.t2 { left:44%; border-color:#159b81; box-shadow:0 0 0 8px rgba(21,155,129,.09); }
+.sol-feature-control .sol-insight .sol-cloud { left:68%; bottom:35%; width:13%; height:25%; border-radius:50%; background:#fff; border:3px solid #159b81; box-shadow:0 0 0 8px rgba(21,155,129,.09); }
+
+/* 06 — Progress: a clean upward-trending performance chart. */
+.sol-feature-results .sol-insight { background:radial-gradient(ellipse at 50% 55%,rgba(37,99,235,.1),transparent 66%); }
+.sol-feature-results .sol-insight .sol-floor { background:linear-gradient(145deg,#f8fbff,#e8f0ff); border-color:#c9d8f2; }
+.sol-feature-results .sol-insight .sol-wall { background:linear-gradient(135deg,#fff,#e6edfb); border-color:#c9d8f2; }
+.sol-feature-results .sol-insight .sol-tower { bottom:24%; width:12%; border-radius:9px 9px 2px 2px; background:linear-gradient(180deg,#8bb3ff,#2563eb); border:0; box-shadow:0 8px 20px rgba(37,99,235,.15); }
+.sol-feature-results .sol-insight .sol-tower.t1 { left:22%; height:23%; }
+.sol-feature-results .sol-insight .sol-tower.t2 { left:39%; height:36%; background:linear-gradient(180deg,#8de0c9,#159b81); }
+.sol-feature-results .sol-insight .sol-cloud { left:56%; bottom:24%; width:12%; height:48%; border:0; border-radius:9px 9px 2px 2px; background:linear-gradient(180deg,#c5b2ff,#8060d6); }
+.sol-feature-results .sol-insight:after { left:20%; right:19%; top:32%; height:28%; border-top:4px solid #159b81; border-right:4px solid transparent; transform:skewY(-19deg); opacity:.8; }
+@media (prefers-reduced-motion: reduce) {
+ .sol-feature .sol-insight .sol-console { transition:none; }
+}
