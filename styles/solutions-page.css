@@ -918,3 +918,46 @@ body.sol-page .sol-eyebrow { display: none !important; }
     animation: none !important;
   }
 }
+
+
+/* Typography alignment with the homepage — keep the Solutions layout and palette intact. */
+body.sol-page,
+body.sol-page button,
+body.sol-page input,
+body.sol-page textarea,
+body.sol-page select {
+  font-family: "Inter", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body.sol-page .sol-title {
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  letter-spacing: -.04em !important;
+  line-height: 1.02 !important;
+  font-synthesis: none;
+  text-wrap: balance;
+}
+body.sol-page .sol-copy {
+  font-family: inherit !important;
+  font-weight: 400 !important;
+  letter-spacing: -.015em;
+  line-height: 1.55;
+}
+body.sol-page .sol-eyebrow,
+body.sol-page .sol-visual-kicker,
+body.sol-page .sol-visual-label {
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  letter-spacing: .12em !important;
+}
+body.sol-page .sol-cta {
+  font-family: inherit !important;
+  font-weight: 600 !important;
+  letter-spacing: -.01em;
+}
+body.sol-page .sol-section-heading .sol-title {
+  line-height: 1.08 !important;
+  letter-spacing: -.04em !important;
+}
