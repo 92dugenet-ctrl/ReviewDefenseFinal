@@ -3,31 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f3eee8">
+<meta name="theme-color" content="#ffffff">
 <title>Méthode — ReviewDefense</title>
 <meta name="description" content="La méthode ReviewDefense : comprendre les avis, examiner les signaux, préparer des réponses adaptées et choisir les actions utiles sans perdre le contrôle.">
 <link rel="stylesheet" href="/ReviewDefenseFinal/styles/main.css">
 <link rel="stylesheet" href="/ReviewDefenseFinal/components/header/header.css">
 <link rel="stylesheet" href="/ReviewDefenseFinal/components/footer/footer.css">
 <style>
-:root{--m-paper:#f3eee8;--m-ink:#252322;--m-muted:#77716d;--m-line:rgba(49,42,38,.10);--m-blue:#547ba9;--m-plum:#321b35;--m-night:#151f40}
-body.method-page{margin:0;background:var(--m-paper);color:var(--m-ink);font-family:Inter,Arial,sans-serif}
+:root{--m-paper:#ffffff;--m-ink:#0b1630;--m-muted:#536078;--m-line:rgba(11,22,48,.12);--m-blue:#547ba9;--m-plum:#321b35;--m-night:#151f40}
+body.method-page{margin:0;background:#fff;color:var(--m-ink);font-family:"Inter",ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 .method-page *{box-sizing:border-box}
 .method-page main{min-height:0}
 .method-page main>section:not(.method-hero){width:75%;max-width:75%;margin-left:auto;margin-right:auto}
 .method-page .manifesto,.method-page .method-steps,.method-page .method-step{width:100%;max-width:100%;margin-left:0;margin-right:0}
-.method-page .method-hero{min-height:690px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:100px 24px 0;background:linear-gradient(180deg,#41668f 0%,#7d8da2 33%,#c6b7a5 67%,#f3eee8 100%)}
-.method-page .method-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 90%,rgba(255,255,255,.42),transparent 42%);pointer-events:none}
-.method-page .hero-copy{position:relative;z-index:2;max-width:800px;color:#fff}
-.method-page .hero-copy h1{font-size:clamp(36px,5.2vw,66px);font-weight:400;letter-spacing:-.055em;line-height:1.02;margin:0 auto 18px;max-width:740px}
-.method-page .hero-copy p{max-width:600px;margin:0 auto;color:rgba(255,255,255,.85);font-size:14px;line-height:1.65}
-.method-page .method-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:27px;padding:12px 22px;background:#1d1d1d;color:#fff;text-decoration:none;font-size:12px;transition:transform .2s ease,background .2s ease}
+.method-page .method-hero{min-height:690px;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center;text-align:center;padding:100px 24px 0;background:#fff}
+.method-page .method-hero:before{content:none}
+.method-page .hero-copy{position:relative;z-index:2;max-width:800px;color:#0b1630}
+.method-page .hero-copy h1{font-size:clamp(36px,5.2vw,66px);font-weight:650;letter-spacing:-.045em;line-height:1.02;margin:0 auto 18px;max-width:740px}
+.method-page .hero-copy p{max-width:600px;margin:0 auto;color:#536078;font-size:14px;line-height:1.65}
+.method-page .method-cta{display:inline-flex;align-items:center;justify-content:center;margin-top:27px;padding:12px 22px;background:#0b1630;color:#fff;text-decoration:none;font-size:12px;font-weight:600;transition:transform .2s ease,background .2s ease}
 .method-page .method-cta:hover{transform:translateY(-2px);background:#343434}
 .method-page .hero-sculpture{position:absolute;bottom:-18px;left:50%;transform:translateX(-50%);width:min(570px,78vw);height:330px;z-index:1}
 .method-page .manifesto{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--m-line);border-top:1px solid var(--m-line)}
 .method-page .manifesto-title,.method-page .manifesto-copy{padding:clamp(36px,6vw,78px) clamp(26px,5.7vw,76px)}
 .method-page .manifesto-title{border-right:1px solid var(--m-line)}
-.method-page .manifesto-title h2{font-size:clamp(30px,3.4vw,46px);font-weight:400;letter-spacing:-.045em;line-height:1.08;margin:0}
+.method-page .manifesto-title h2{font-size:clamp(30px,3.4vw,46px);font-weight:650;letter-spacing:-.045em;line-height:1.08;margin:0}
 .method-page .manifesto-copy p{font-size:14px;line-height:1.7;color:var(--m-muted);margin:0 0 13px}
 .method-page .manifesto-copy strong{color:#35312e;font-weight:600}
 .method-page .text-link{display:inline-flex;margin-top:8px;padding:11px 17px;border:1px solid var(--m-line);color:var(--m-ink);text-decoration:none;font-size:12px;transition:background .2s ease}
@@ -39,7 +39,7 @@ body.method-page{margin:0;background:var(--m-paper);color:var(--m-ink);font-fami
 .method-page .step-index span{display:flex;align-items:center;gap:10px;white-space:nowrap}
 .method-page .step-index b{display:inline-grid;place-items:center;width:29px;height:22px;font-weight:400}
 .method-page .step-index .active b{background:#242322;color:#fff}
-.method-page .step-text h2{font-size:clamp(23px,2.4vw,34px);font-weight:400;letter-spacing:-.045em;line-height:1.08;margin:0 0 12px}
+.method-page .step-text h2{font-size:clamp(23px,2.4vw,34px);font-weight:650;letter-spacing:-.045em;line-height:1.08;margin:0 0 12px}
 .method-page .step-text p,.method-page .step-text li{font-size:13px;line-height:1.6;color:var(--m-muted)}
 .method-page .step-text p{margin:0 0 10px}
 .method-page .step-text ul{padding-left:15px;margin:10px 0 0}
