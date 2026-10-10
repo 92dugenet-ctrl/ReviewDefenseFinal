@@ -48,3 +48,30 @@
     </nav>
   </div>
 </header>
+
+<style id="rd-liquid-glass-fallback">
+  .rd-header {
+    isolation: isolate !important;
+    background: linear-gradient(180deg,rgba(255,255,255,.72),rgba(255,255,255,.30) 32%,rgba(238,244,255,.22)) !important;
+    -webkit-backdrop-filter: blur(32px) saturate(190%) contrast(108%) !important;
+    backdrop-filter: blur(32px) saturate(190%) contrast(108%) !important;
+    border-bottom: 1px solid rgba(255,255,255,.66) !important;
+    box-shadow: 0 1px 0 rgba(255,255,255,.48) inset, 0 10px 34px rgba(28,42,70,.10) !important;
+  }
+  .rd-header::before {
+    content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+    background:radial-gradient(ellipse at 16% -45%,rgba(255,255,255,.95),transparent 58%),linear-gradient(105deg,rgba(255,255,255,.30),transparent 36%,rgba(255,255,255,.18) 72%,rgba(255,255,255,.38));
+  }
+  .rd-header::after {
+    content:""; position:absolute; left:3%; right:3%; top:0; height:1px; pointer-events:none;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.98) 20%,rgba(255,255,255,.78) 80%,transparent);
+  }
+  .rd-header__inner { position:relative; z-index:1; }
+  .rd-header.is-scrolled {
+    background:linear-gradient(180deg,rgba(255,255,255,.64),rgba(246,249,255,.36)) !important;
+    -webkit-backdrop-filter:blur(36px) saturate(195%) contrast(108%) !important;
+    backdrop-filter:blur(36px) saturate(195%) contrast(108%) !important;
+    border-bottom-color:rgba(255,255,255,.72) !important;
+    box-shadow:0 1px 0 rgba(255,255,255,.62) inset,0 12px 38px rgba(28,42,70,.12) !important;
+  }
+</style>
