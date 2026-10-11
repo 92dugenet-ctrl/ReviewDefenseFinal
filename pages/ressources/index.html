@@ -13,9 +13,9 @@
 :root{color-scheme:light;--paper:#faf9f5;--ink:#252521;--muted:#77766f;--line:#eeece5;--tile-beige:#f1efe7;--tile-blue:#2457a6}body.resources-page{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body.resources-page *{box-sizing:border-box}.resources-page .page{max-width:1000px;margin:0 auto;padding:34px 22px 0}.resources-page .mosaic{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:155px;gap:12px}.resources-page .tile{min-width:0;min-height:0;overflow:hidden;border-radius:13px;background:var(--tile-beige);display:flex;align-items:center;justify-content:center;position:relative;color:var(--tile-blue);text-decoration:none;padding:14px;text-align:center}.resources-page .feature{grid-column:span 2;grid-row:span 2;flex-direction:column;background:var(--tile-beige);color:var(--tile-blue)}.resources-page .small-blog{grid-column:span 2;display:flex}.resources-page .video-card{grid-column:span 1;display:flex;background:var(--tile-beige);color:var(--tile-blue)}.resources-page .bottom-card{grid-column:span 1;display:flex}.resources-page .tile-label{display:block;width:100%;color:var(--tile-blue);font-size:15px;line-height:1.3;font-weight:600;overflow-wrap:anywhere}.resources-page .feature .tile-label{font-size:20px}.resources-page .tile:hover{background:#eae7dc}.resources-page .tile:focus-visible{outline:3px solid var(--tile-blue);outline-offset:3px}@media(max-width:700px){.resources-page .page{padding:24px 16px 0}.resources-page .mosaic{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:180px;gap:10px}.resources-page .feature{grid-column:span 2;grid-row:span 1}.resources-page .small-blog,.resources-page .video-card,.resources-page .bottom-card{grid-column:span 1;grid-row:span 1}.resources-page .tile-label{font-size:13px}.resources-page .feature .tile-label{font-size:16px}}
 </style>
 </head>
-<body class="resources-page">
+<body class="resources-page" data-resource-view="topics">
 <div data-global-header></div>
-<main class="page"><section class="mosaic" id="blog" aria-label="Articles et vidéos">
+<main class="page"><section class="mosaic" id="blog" data-topic-mosaic aria-label="Catégories d’articles">
 <a class="tile feature" href="./avis-fictifs.html"><span class="tile-label">Avis fictifs</span></a>
 <a class="tile small-blog" href="./avis-negatifs.html"><span class="tile-label">Avis négatifs</span></a>
 <a class="tile video-card" href="./repondre.html"><span class="tile-label">Répondre</span></a>
@@ -32,5 +32,6 @@
 </section></main>
 <div data-global-footer></div>
 <script src="../../scripts/main.js"></script>
+<script src="../../scripts/ressources.js"></script>
 <script src="../../scripts/motion.js"></script>
 </body></html>
