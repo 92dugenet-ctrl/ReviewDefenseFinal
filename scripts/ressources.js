@@ -139,7 +139,7 @@
         }
       }
       if (article.markdown) {
-        const response = await fetch(article.markdown, {headers: {"Accept":"text/markdown, text/plain"}});
+        const response = await fetch(sitePath(article.markdown), {headers: {"Accept":"text/markdown, text/plain"}});
         if (response.ok) {
           const markdown = (await response.text()).replace(/^# .+\n/, "").replace(/^\*\*.+?\*\*\n/m, "").replace(/^## SEO[\s\S]*?(?=^## )/m, "");
           body.innerHTML = markdownToHtml(markdown);
@@ -196,6 +196,7 @@
           title:item.title || "Ressource ReviewDefense",
           intro:item.meta_description || "",
           html,
+          markdown,
           illustration,
           seo_title:item.seo_title || "",
           meta_description:item.meta_description || "",
