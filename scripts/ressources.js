@@ -127,27 +127,35 @@
   const loadArticleBody = async article => {
     const body = document.querySelector("[data-article-body]");
     if (!body) return;
-    try {
-      if (article.html) {
+
+    // Une erreur réseau ou HTTP sur le HTML ne doit pas empêcher l’essai du Markdown.
+    if (article.html) {
+      try {
         const response = await fetch(sitePath(article.html), {headers: {"Accept":"text/html"}});
         if (response.ok) {
           const parsed = new DOMParser().parseFromString(await response.text(), "text/html");
           const articleBody = parsed.querySelector(".article-body") || parsed.querySelector("article");
           if (articleBody) { body.innerHTML = articleBody.innerHTML; return; }
         }
+      } catch (error) {
+        // Le fichier Markdown reste un recours possible si le HTML est inaccessible.
       }
-      if (article.markdown) {
+    }
+
+    if (article.markdown) {
+      try {
         const response = await fetch(sitePath(article.markdown), {headers: {"Accept":"text/markdown, text/plain"}});
         if (response.ok) {
           const markdown = (await response.text()).replace(/^# .+\n/, "").replace(/^\*\*.+?\*\*\n/m, "").replace(/^## SEO[\s\S]*?(?=^## )/m, "");
           body.innerHTML = markdownToHtml(markdown);
           return;
         }
+      } catch (error) {
+        // L’erreur est affichée plus bas si aucun format n’a pu être chargé.
       }
-      throw new Error("Contenu d’article introuvable");
-    } catch (error) {
-      body.innerHTML = '<p class="resource-connector-error">Le contenu complet de cet article n’est pas encore disponible. Vérifiez les fichiers dans content/articles/html et content/articles/markdown.</p>';
     }
+
+    body.innerHTML = '<p class="resource-connector-error">Le contenu complet de cet article n’est pas encore disponible. Vérifiez les fichiers dans content/articles/html et content/articles/markdown.</p>';
   };
 
   const renderArticle = () => {
