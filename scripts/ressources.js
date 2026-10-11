@@ -66,11 +66,9 @@
     const visible = topics.filter(topic => !query || `${topic.title} ${topic.description}`.toLocaleLowerCase("fr").includes(query));
     root.innerHTML = visible.map(topic => {
       const index = topics.indexOf(topic);
-      const symbol = ["◉","!","↗","G","∑","✓","◎","✳","!","▤","▦","§","↳"][index];
-      return `<a class="resource-topic rd-motion-item" href="theme.html?theme=${encodeURIComponent(topic.id)}" aria-label="Explorer la catégorie ${escapeHtml(topic.title)}, ${topic.count} articles">
-        <span class="resource-topic__visual" aria-hidden="true"><span class="resource-topic__visual-mark">${symbol}</span></span>
-        <span class="resource-topic__panel"><span class="resource-topic__number">${String(index + 1).padStart(2, "0")} / 13</span><h3>${escapeHtml(topic.title)}</h3><span class="resource-topic__meta">${topic.count} articles</span><p class="resource-topic__description">${escapeHtml(topic.description)}</p></span>
-        <span class="resource-topic__arrow" aria-hidden="true">↗</span>
+      const tileClass = index === 0 ? "tile feature" : index === 1 ? "tile small-blog" : [2, 3, 9].includes(index) ? "tile video-card" : "tile bottom-card";
+      return `<a class="${tileClass}" href="theme.html?theme=${encodeURIComponent(topic.id)}" aria-label="Explorer la catégorie ${escapeHtml(topic.title)}, ${topic.count} articles">
+        <span class="tile-label">${escapeHtml(topic.title)}</span>
       </a>`;
     }).join("");
     const empty = document.querySelector("[data-resource-empty]");
