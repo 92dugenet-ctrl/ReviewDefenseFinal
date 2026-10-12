@@ -130,25 +130,23 @@ def main() -> int:
         site_registry_path = root / "content/articles/data/articles.json"
         site_registry_path.parent.mkdir(parents=True, exist_ok=True)
         site_registry_path.write_text(registry_json, encoding="utf-8")
-        cards = []
-        for item, *_ in records:
-            title = html.escape(item["title"])
-            category = html.escape(str(item.get("category", "Ressources")).replace("_", " "))
-            slug = html.escape(item["slug"], quote=True)
-            cards.append(f'<a class="resource-card" href="./{slug}/" data-search="{title.lower()} {category.lower()}"><small>{category}</small><strong>{title}</strong><span>Lire l’article →</span></a>')
+        # Ne pas recréer l'ancien catalogue à 91 cartes : l'entrée publique Ressources
+        # est désormais une redirection vers la mosaïque validée des 13 thèmes.
         index_html = """<!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ressources et guides — ReviewDefense</title><meta name="description" content="91 guides pour comprendre les avis clients, analyser les signaux et choisir une action adaptée.">
-<link rel="stylesheet" href="../styles/main.css"><style>""" + ARTICLE_CSS + """</style><link rel="stylesheet" href="../components/header/header.css"></head><body>
-<div data-global-header></div>
-<main class="resources-index"><p class="article-kicker">CENTRE DE RESSOURCES</p><h1>Comprendre les avis. Décider avec méthode.</h1>
-<p class="resources-lede">91 guides pratiques sur l’analyse des avis, la réputation en ligne, les règles des plateformes et les actions possibles. Un avis négatif n’est pas automatiquement un faux avis : le contexte compte.</p>
-<label for="resource-search">Rechercher un guide</label><input id="resource-search" class="resources-search" type="search" placeholder="Ex. faux avis, Google, réponse, signalement" autocomplete="off">
-<p id="resource-count" aria-live="polite">91 articles</p><div class="resources-grid" id="resources-grid">""" + "\n".join(cards) + """</div></main>
-<footer class="article-site-footer">ReviewDefense — Comprendre avant d’agir.</footer>
-<script>const input=document.getElementById('resource-search');const cards=[...document.querySelectorAll('.resource-card')];const count=document.getElementById('resource-count');input.addEventListener('input',()=>{const q=input.value.trim().toLocaleLowerCase('fr');let n=0;for(const card of cards){const show=card.dataset.search.includes(q);card.hidden=!show;if(show)n++;}count.textContent=n+' article'+(n>1?'s':'');});</script>
-<script src="../scripts/main.js" defer></script>
-</body></html>"""
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="refresh" content="0; url=../pages/ressources/index.html">
+<link rel="canonical" href="../pages/ressources/index.html">
+<title>Ressources — ReviewDefense</title>
+<script>location.replace("../pages/ressources/index.html" + location.search + location.hash);</script>
+</head>
+<body>
+<p>Les ressources sont désormais organisées par thèmes. <a href="../pages/ressources/index.html">Accéder à la mosaïque des 13 thèmes</a>.</p>
+</body>
+</html>
+"""
         (root / "ressources/index.html").parent.mkdir(parents=True, exist_ok=True)
         (root / "ressources/index.html").write_text(index_html, encoding="utf-8")
         print(f"Import validé : {len(records)} articles, {len(records)} pages, {len(records)} Markdown et {len(records)} SVG.")
