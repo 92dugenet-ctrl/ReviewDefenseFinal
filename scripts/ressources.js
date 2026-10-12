@@ -56,7 +56,11 @@
   const articleHref = article => `article.html?article=${encodeURIComponent(article.id)}`;
   const card = (article, index) => {
     const topic = topicMap[article.topic] || topics[0];
-    return `<a class="resource-content rd-motion-item" href="${articleHref(article)}" style="--rd-span:${index%5===0?2:1}"><span class="resources-eyebrow">${escapeHtml(labelForType(article.type))}</span><h3>${escapeHtml(article.title)}</h3><p>${escapeHtml(topic.title)}</p></a>`;
+    const illustration = article.illustration
+      ? `<img class="resource-content__illustration" src="${escapeHtml(sitePath(article.illustration))}" alt="" loading="lazy">`
+      : "";
+    const intro = article.intro ? `<p class="resource-content__intro">${escapeHtml(article.intro)}</p>` : "";
+    return `<a class="resource-content rd-motion-item" href="${articleHref(article)}" style="--rd-span:${index%5===0?2:1}">${illustration}<div class="resource-content__copy"><span class="resources-eyebrow">${escapeHtml(labelForType(article.type))}</span><h3>${escapeHtml(article.title)}</h3>${intro}<p class="resource-content__topic">${escapeHtml(topic.title)} <span aria-hidden="true">↗</span></p></div></a>`;
   };
 
   const renderTopics = () => {
