@@ -34,3 +34,7 @@
 @media(max-width:760px){.rd-reponse .reponse-tone-section{grid-template-columns:minmax(0,1fr)}.rd-reponse .reponse-tone-section>.reponse-tone-preview,.rd-reponse .reponse-tone-section>.reponse-tone-control{grid-column:1;grid-row:auto}}
 @media(max-width:440px){.rd-reponse .reponse-understand-signals>div{grid-template-columns:1fr;gap:6px}.rd-reponse .reponse-compose-line{grid-template-columns:32px minmax(0,1fr);gap:12px}.rd-reponse .reponse-editor-toolbar{padding:12px 14px}}
 @media(prefers-reduced-motion:reduce){.rd-reponse .reponse-hero-flow span{animation:none}.rd-reponse .reponse-review-focus,.rd-reponse .reponse-decision-branches article,.rd-reponse .reponse-tone-control button,.rd-reponse .reponse-validation-actions button{transition:none}}
+
+.rd-reponse .reponse-hero-flow span{display:inline-flex;align-items:center;min-height:38px;padding:9px 14px;border:1px solid var(--rd-border);border-radius:999px;background:rgba(255,255,255,.9);color:var(--rd-ink);font-size:12px;font-weight:600}
+.rd-reponse .reponse-hero-flow b{color:var(--rd-primary);font-weight:500}
+.rd-reponse .reponse-type-orbit span{z-index:1;padding:10px 14px;border:1px solid rgba(23,105,255,.15);border-radius:999px;background:rgba(255,255,255,.92);color:var(--rd-ink);font-size:12px;box-shadow:0 6px 20px rgba(16,35,63,.04)}
