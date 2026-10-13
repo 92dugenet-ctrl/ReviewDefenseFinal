@@ -12,8 +12,11 @@
 
   buttons.forEach((button) => {
     button.addEventListener("click", () => {
-      buttons.forEach((item) => item.classList.remove("is-selected"));
-      button.classList.add("is-selected");
+      buttons.forEach((item) => {
+        const selected = item === button;
+        item.classList.toggle("is-selected", selected);
+        item.setAttribute("aria-pressed", String(selected));
+      });
       choice?.classList.add("has-choice");
       if (note) note.textContent = messages[button.dataset.choice] || "Comprendre avant d'agir.";
     });
