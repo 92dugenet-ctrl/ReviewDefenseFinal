@@ -1,0 +1,3 @@
+# Audit article 008
+
+Le SVG existe et le chemin correspond au registre et au HTML. Le rendu navigateur reste non verifie. Le libelle visible semble manquer des caracteres accentues (« Avis n gatifs »). Recommander une correction du libelle et de la description accessible dans une etape separee, sans modifier ici le SVG ou le HTML. Une photo Pexels sur le theme du feedback a ete examinee mais non retenue car elle ne s'accorde pas suffisamment avec le visuel vectoriel existant. Aucun article, visuel, registre, header ou footer n'a ete modifie.
