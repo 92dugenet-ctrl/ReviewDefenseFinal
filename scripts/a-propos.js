@@ -26,7 +26,9 @@
     let active = 0;
     const setMethod = (index) => {
       methods.forEach((item, itemIndex) => {
-        item.classList.toggle("is-active", itemIndex === index);
+        const selected = itemIndex === index;
+        item.classList.toggle("is-active", selected);
+        item.setAttribute("aria-pressed", String(selected));
       });
     };
     setMethod(active);
@@ -36,6 +38,10 @@
         setMethod(active);
       });
       item.addEventListener("focusin", () => {
+        active = index;
+        setMethod(active);
+      });
+      item.addEventListener("click", () => {
         active = index;
         setMethod(active);
       });
