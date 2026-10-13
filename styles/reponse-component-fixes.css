@@ -1,0 +1,36 @@
+/* Targeted component styles for the real markup in pages/reponse.html. */
+.rd-reponse .reponse-review-focus{display:flex;flex-direction:column;justify-content:center;min-height:250px;margin:0;padding:clamp(24px,4vw,42px);border:1px solid var(--rd-border);border-radius:22px;background:linear-gradient(145deg,#fff,#f4f7fc);box-shadow:0 14px 36px rgba(16,35,63,.05)}
+.rd-reponse .reponse-review-focus>span{color:var(--rd-primary);font-size:10px;font-weight:700;letter-spacing:.13em}
+.rd-reponse .reponse-review-focus p{margin:18px 0 0;font-size:clamp(23px,3vw,35px);line-height:1.25;letter-spacing:-.035em}
+.rd-reponse .reponse-understand-signals{display:grid;align-content:stretch;border-top:1px solid var(--rd-border)}
+.rd-reponse .reponse-understand-signals>div{display:grid;grid-template-columns:minmax(90px,.65fr) minmax(0,1fr);gap:14px;align-items:baseline;padding:20px 4px;border-bottom:1px solid var(--rd-border)}
+.rd-reponse .reponse-understand-signals strong{font-size:11px;letter-spacing:.08em}
+.rd-reponse .reponse-understand-signals span,.rd-reponse .reponse-note{color:var(--rd-ink-soft);font-size:13px;line-height:1.7}
+.rd-reponse .reponse-note{max-width:760px;margin:0}
+.rd-reponse .reponse-compose-card{display:grid;gap:0;padding-top:30px}
+.rd-reponse .reponse-compose-line{display:grid;grid-template-columns:40px minmax(0,1fr);align-items:start;gap:16px;padding:22px 0;border-bottom:1px solid var(--rd-border)}
+.rd-reponse .reponse-compose-line:last-child{border-bottom:0}
+.rd-reponse .reponse-compose-line>span{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--rd-primary-soft);color:var(--rd-primary);font-size:11px;font-weight:700}
+.rd-reponse .reponse-compose-line p{margin:2px 0 0;font-size:clamp(16px,1.8vw,20px)}
+.rd-reponse .reponse-tone-section{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;column-gap:clamp(24px,5vw,60px)}
+.rd-reponse .reponse-tone-section>.reponse-eyebrow,.rd-reponse .reponse-tone-section>h2{grid-column:1}
+.rd-reponse .reponse-tone-section>.reponse-tone-preview{grid-column:2;grid-row:1/span 2}
+.rd-reponse .reponse-tone-control{grid-column:2;display:flex;flex-wrap:wrap;gap:8px}
+.rd-reponse .reponse-tone-control button,.rd-reponse .reponse-validation-actions button{min-height:42px;padding:10px 16px;border:1px solid var(--rd-border);border-radius:999px;background:#fff;color:var(--rd-ink);font:inherit;font-size:12px;font-weight:600;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease,transform .2s ease}
+.rd-reponse .reponse-tone-control button.is-active{border-color:var(--rd-primary);background:var(--rd-primary-soft);color:var(--rd-primary)}
+.rd-reponse .reponse-editor-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;border-bottom:1px solid var(--rd-border);background:#f6f8fc;color:var(--rd-ink-soft);font-size:10px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.rd-reponse .reponse-editor-toolbar span:last-child{color:var(--rd-primary)}
+.rd-reponse .reponse-validation{align-content:center}
+.rd-reponse .reponse-validation-actions{display:flex;flex-wrap:wrap;gap:10px}
+.rd-reponse .reponse-validation-actions button.is-primary{border-color:var(--rd-primary);background:var(--rd-primary);color:#fff}
+.rd-reponse .reponse-decision-branches article{flex:1 1 240px;min-width:0;padding:24px;border:1px solid var(--rd-border);border-radius:18px;background:linear-gradient(145deg,#fff,#f8faff);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.rd-reponse .reponse-decision-branches article:hover{transform:translateY(-3px);border-color:rgba(23,105,255,.25);box-shadow:0 14px 34px rgba(16,35,63,.06)}
+.rd-reponse .reponse-decision-branches article>span{display:block;margin-bottom:18px;color:var(--rd-primary);font-size:10px;font-weight:700;letter-spacing:.1em}
+.rd-reponse .reponse-decision-branches article p{margin:10px 0 0;color:var(--rd-ink-soft);font-size:14px}
+.rd-reponse .reponse-hero-flow span{animation:rdReponseStep 5s ease-in-out infinite}
+.rd-reponse .reponse-hero-flow span:nth-of-type(2){animation-delay:.5s}
+.rd-reponse .reponse-hero-flow span:nth-of-type(3){animation-delay:1s}
+@keyframes rdReponseStep{0%,100%{transform:translateY(0)}45%{transform:translateY(-2px)}}
+@media(max-width:760px){.rd-reponse .reponse-tone-section{grid-template-columns:minmax(0,1fr)}.rd-reponse .reponse-tone-section>.reponse-tone-preview,.rd-reponse .reponse-tone-section>.reponse-tone-control{grid-column:1;grid-row:auto}}
+@media(max-width:440px){.rd-reponse .reponse-understand-signals>div{grid-template-columns:1fr;gap:6px}.rd-reponse .reponse-compose-line{grid-template-columns:32px minmax(0,1fr);gap:12px}.rd-reponse .reponse-editor-toolbar{padding:12px 14px}}
+@media(prefers-reduced-motion:reduce){.rd-reponse .reponse-hero-flow span{animation:none}.rd-reponse .reponse-review-focus,.rd-reponse .reponse-decision-branches article,.rd-reponse .reponse-tone-control button,.rd-reponse .reponse-validation-actions button{transition:none}}
