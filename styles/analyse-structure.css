@@ -352,6 +352,12 @@
   gap: 8px;
 }
 
+.rd-analyse .analyse-explanation-tabs,
+.rd-analyse .analyse-explanation-panels {
+  display: grid;
+  gap: 8px;
+}
+
 .rd-analyse .analyse-signal-list [role="tab"] {
   width: 100%;
   padding: 16px 18px;
